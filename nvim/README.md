@@ -39,12 +39,15 @@ nvim 0.9.4 이상에서 확인
 [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
 [ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
-> 키맵
-> \<leader\>ha : append
-> \<leader\>hr : remove
-> \<leader\>hc : remove all (clear)
-> \<leader\>hn : next
-> \<leader\>hp : previous
+
+```
+키맵
+\<leader\>ha : append
+\<leader\>hr : remove
+\<leader\>hc : remove all (clear)
+\<leader\>hn : next
+\<leader\>hp : previous
+```
 
 [lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - rainbow-delimiters integration
 
