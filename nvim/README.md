@@ -53,11 +53,21 @@ nvim 0.9.4 이상에서 확인
 <leader>hn : next
 <leader>hp : previous
 ```
-
 [lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - rainbow-delimiters integration
 
-
-
 [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+
+[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
+
+[kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
+```
+키맵
+<leader>lg : LazyGit
+```
+[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
+
+[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
+
+[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
 
 [christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
