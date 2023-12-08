@@ -10,11 +10,10 @@ nvim 0.9.4 이상에서 확인
 - 저장 시, 자동으로 Trailing whitespace 제거.
 - leader 키 : space
 
+------
 
-
-### 적용된 plugin
+### Plugins
 - 별도의 comment가 없는 것은 기본 키맵을 사용하는 것임.
-
 
 [stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
 ```
