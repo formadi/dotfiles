@@ -35,9 +35,6 @@ keymap.set("n", "<leader>q",  ":q<CR>",             { desc = "Quit" })
 keymap.set("n", "<leader>Q",  ":qa<CR>",            { desc = "Quit All" })
 keymap.set("n", "<C-s>",      ":w<CR>",             { desc = "Save" })
 
--- laztgit
-keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>",   { desc = "lazygit" })
-
 -- indent
 keymap.set("v", ">",          ">gv",                { desc = "Indent" })
 keymap.set("v", "<",          "<gv",                { desc = "Indent" })

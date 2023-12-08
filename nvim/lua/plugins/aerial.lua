@@ -23,8 +23,6 @@ return {
 			highlight_closest = true,
 		})
 
-		local keymap = vim.keymap -- for conciseness
-
-		keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Aerial Toggle" })
+		vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Aerial Toggle" })
 	end,
 }
