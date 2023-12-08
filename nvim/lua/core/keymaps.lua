@@ -30,6 +30,9 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>",      { desc = "Go to next tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>",      { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>",  { desc = "Open current buffer in new tab" })
 
+-- retab
+keymap.set("n", "<leader>rt", ":retab<CR>",         { desc = "retab" })
+
 -- save & quit
 keymap.set("n", "<leader>q",  ":q<CR>",             { desc = "Quit" })
 keymap.set("n", "<leader>Q",  ":qa<CR>",            { desc = "Quit All" })
