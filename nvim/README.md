@@ -1,6 +1,6 @@
-![screenshot1](/Users/elsa/.config/nvim/doc/screenshot1.png)
+![screenshot1](doc/screenshot1.png)
 
-[]()![screenshot1](/Users/elsa/.config/nvim/doc/screenshot2.png)
+![screenshot1](doc/screenshot2.png)
 
 심플한 구조, cappuccin colorscheme 적용, 배경은 모두 투명처리.
 
