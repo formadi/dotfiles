@@ -39,16 +39,16 @@ return {
       icons = {
         DEBUG = " ",
         ERROR = " ",
-        INFO = "􁊈 ",
+        INFO  = "􁊈 ",
         TRACE = "✎",
-        WARN = " ",
+        WARN  = " ",
       },
-      level = 2, -- display level
+      level         = 2, -- display level
       minimum_width = 50,
       maximum_width = 50,
-      render = "default",
-      stages = "slide",
-      timeout = 6000,
+      render        = "default",
+      stages        = "slide",
+      timeout       = 6000,
     })
   end,
 }
