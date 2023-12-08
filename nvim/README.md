@@ -15,6 +15,38 @@ nvim 0.9.4 이상에서 확인
 ### 적용된 plugin
 - 별도의 comment가 없는 것은 기본 키맵을 사용하는 것임.
 
+
+[stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
+```
+aerial 키맵
+<leader>a : aerial Toggle
+```
+[ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
+```
+harpoon 키맵
+<leader>ha : append
+<leader>hr : remove
+<leader>hc : remove all (clear)
+<leader>hn : next
+<leader>hp : previous
+```
+[kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
+```
+lazygit 키맵
+<leader>lg : LazyGit
+```
+[mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
+```
+nvim-lint 키맵
+<leader>ll : Trigger linting for current file
+```
+
+[nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim);
+```
+neo-tree 키맵
+<leader>e  : focus NeoTree
+<leader>tt : NeoTree Toggle
+```
 [neovim/nvim-lspconfig.nvim](https://github.com/neovim/nvim-lspconfig)
 
 [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
@@ -25,11 +57,7 @@ nvim 0.9.4 이상에서 확인
 
 [folka/lazy.nvim](https://github.com/folke/lazy.nvim)
 
-[stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
-```
-aerial 키맵
-<leader>a : aerial Toggle
-```
+[nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
 [goolord/alpha.nvim](https://github.com/goolord/alpha-nvim)
 
@@ -43,40 +71,12 @@ aerial 키맵
 
 [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
-[ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
-
-```
-harpoon 키맵
-<leader>ha : append
-<leader>hr : remove
-<leader>hc : remove all (clear)
-<leader>hn : next
-<leader>hp : previous
-```
-[lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - rainbow-delimiters integration
+[lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blanklVine.nvim) - rainbow-delimiters integration
 
 [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 
 [christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
 
-[kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
-```
-lazygit 키맵
-<leader>lg : LazyGit
-```
-[mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
-```
-nvim-lint 키맵
-<leader>ll : Trigger linting for current file
-```
-[nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-
-[nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim);
-```
-neo-tree 키맵
-<leader>e  : focus NeoTree
-<leader>tt : NeoTree Toggle
-```
 [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 
 [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
@@ -93,11 +93,17 @@ neo-tree 키맵
 
 [onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 
+[kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
 
+[nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
+[nvim-treesitter/nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
+
+[kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 
 [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-
+[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
