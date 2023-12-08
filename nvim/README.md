@@ -29,6 +29,7 @@ harpoon 키맵
 <leader>hc : remove all (clear)
 <leader>hn : next
 <leader>hp : previous
+<leader>hq : quick menu
 ```
 [kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 ```
@@ -57,6 +58,10 @@ neo-tree 키맵
 
 [folka/lazy.nvim](https://github.com/folke/lazy.nvim)
 
+[folka/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
+
+[folka/which-key.nvim](https://github.com/folke/which-key.nvim)
+
 [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
 [goolord/alpha.nvim](https://github.com/goolord/alpha-nvim)
@@ -71,7 +76,9 @@ neo-tree 키맵
 
 [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
-[lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blanklVine.nvim) - rainbow-delimiters integration
+[lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blanklVine.nvim) - rainbow-delimiters integrationV
+
+[HiPhish/rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
 
 [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 
@@ -101,9 +108,9 @@ neo-tree 키맵
 
 [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 
-[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+[nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+
+[luukvbaal/statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim)
+
+[nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+
