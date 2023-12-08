@@ -19,6 +19,5 @@ vim.cmd([[ hi Comment                  guifg=#797e99 ]])
 -- automatically remove trailing whitespace on save.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
-  -- command = [[%s/\s\+$//e | retap]],
   command = [[ %s/\s\+$//e ]],
 })
