@@ -17,22 +17,6 @@ vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
 vim.cmd([[ hi Comment                  guifg=#797e99 ]])
 
 -- automatically remove trailing whitespace on save.
-
-
--- -- 함수 정의: trailing whitespace 제거 및 retab 실행
--- local function cleanAndRetab()
---   -- trailing whitespace 제거
---   vim.cmd([[ %s/\s\+$//e ]])
---   -- Normal 모드에서 retab 실행
---   vim.api.nvim_feedkeys(":retab<CR>", "n", true)
--- end
---
--- -- autocmd 설정
--- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
---   pattern = { "*" },
---   command = "lua cleanAndRetab()",
--- })
-
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   -- command = [[%s/\s\+$//e | retap]],
