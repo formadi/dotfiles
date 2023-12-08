@@ -3,8 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 -- General Keymaps
-vim.api.nvim_set_keymap("n", ";",          ":",                  { noremap = true, silent = false })
-vim.api.nvim_set_keymap("n", "<leader>tw", [[:%s/\s\+$//e<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", ";", ":",              { noremap = true, silent = false })
 
 -- use jk to exit insert mode
 keymap.set("i", "jk",         "<ESC>",              { desc = "Exit insert mode with jk" })
