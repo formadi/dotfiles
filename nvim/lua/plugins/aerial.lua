@@ -5,8 +5,8 @@ return {
     backends = { "lsp", "treesitter", "markdown", "man", "objc" },
     show_guides = true,
     guides = {
-      mid_item = "├ ",
-      last_item = "└ ",
+      mid_item   = "├ ",
+      last_item  = "└ ",
       nested_top = "│ ",
       whitespace = "  ",
     },
