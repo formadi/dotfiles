@@ -8,6 +8,7 @@ nvim 0.9.4 이상에서 확인
 - 배경은 모두 투명처리.
 - Normal 모드에서 ;(semi-colon) 키인으로 Command 모드 변경.
 - 저장 시, 자동으로 Trailing whitespace 제거.
+- leader 키 : space
 
 
 
@@ -39,8 +40,20 @@ nvim 0.9.4 이상에서 확인
 
 [ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
 
-[williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
+> <leader>ha : append
+>
+> <leader>hr : remove
+>
+> <leader>hc : remove all (clear)
+>
+> <leader>hn : next
+>
+> <leader>hp : previous
 
-[nvimtools/none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
+[lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - rainbow-delimiters integration
 
-[folke/noice.nvim](https://github.com/folke/noice.nvim)
+
+
+[nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+
+[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
