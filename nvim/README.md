@@ -27,7 +27,7 @@ nvim 0.9.4 이상에서 확인
 
 [stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
 ```
-키맵
+aerial 키맵
 <leader>a : aerial Toggle
 ```
 
@@ -46,7 +46,7 @@ nvim 0.9.4 이상에서 확인
 [ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
 
 ```
-키맵
+harpoon 키맵
 <leader>ha : append
 <leader>hr : remove
 <leader>hc : remove all (clear)
@@ -61,13 +61,43 @@ nvim 0.9.4 이상에서 확인
 
 [kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 ```
-키맵
+lazygit 키맵
 <leader>lg : LazyGit
 ```
-[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
+[mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
+```
+nvim-lint 키맵
+<leader>ll : Trigger linting for current file
+```
+[nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
-[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
+[nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim);
+```
+neo-tree 키맵
+<leader>e  : focus NeoTree
+<leader>tt : NeoTree Toggle
+```
+[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 
-[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
+[hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
-[christoomey/nvim-tmux-navigator](https://github.com/alexghergh/nvim-tmux-navigation)
+[hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+
+[hrsh7th/cmp-path](https://github.com/hrsh7th/cmp-path)
+
+[L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+
+[saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+
+[refamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+
+[onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+
+
+
+
+[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+
