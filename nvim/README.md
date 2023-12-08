@@ -40,15 +40,15 @@ nvim 0.9.4 이상에서 확인
 
 [ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
 
-> <<leader>>ha : append
+> \<leader\>ha : append
 >
-> <leader>hr : remove
+> \<leader\>hr : remove
 >
-> <leader>hc : remove all (clear)
+> \<leader\>hc : remove all (clear)
 >
-> <leader>hn : next
+> \<leader\>hn : next
 >
-> <leader>hp : previous
+> \<leader\>hp : previous
 
 [lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - rainbow-delimiters integration
 
