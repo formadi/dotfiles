@@ -40,7 +40,7 @@ nvim 0.9.4 이상에서 확인
 
 [ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
 
-> <leader>ha : append
+> <<leader>>ha : append
 >
 > <leader>hr : remove
 >
