@@ -2,7 +2,7 @@ return {
   "stevearc/aerial.nvim",
   opts = {
     attach_mode = "global",
-    backends = { "lsp", "treesitter", "markdown", "man", "objc" },
+    backends    = { "lsp", "treesitter", "markdown", "man", "objc" },
     show_guides = true,
     guides = {
       mid_item   = "├ ",
