@@ -13,6 +13,7 @@ nvim 0.9.4 이상에서 확인
 
 
 ### 적용된 plugin
+- 별도의 comment가 없는 것은 기본 키맵을 사용하는 것임.
 
 [neovim/nvim-lspconfig.nvim](https://github.com/neovim/nvim-lspconfig)
 
