@@ -25,6 +25,10 @@ nvim 0.9.4 이상에서 확인
 [folka/lazy.nvim](https://github.com/folke/lazy.nvim)
 
 [stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
+```
+키맵
+<leader>a : aerial Toggle
+```
 
 [goolord/alpha.nvim](https://github.com/goolord/alpha-nvim)
 
@@ -42,11 +46,11 @@ nvim 0.9.4 이상에서 확인
 
 ```
 키맵
-\<leader\>ha : append
-\<leader\>hr : remove
-\<leader\>hc : remove all (clear)
-\<leader\>hn : next
-\<leader\>hp : previous
+<leader>ha : append
+<leader>hr : remove
+<leader>hc : remove all (clear)
+<leader>hn : next
+<leader>hp : previous
 ```
 
 [lukas-reineke/indent-blakline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - rainbow-delimiters integration
