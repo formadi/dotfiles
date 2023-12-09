@@ -1,6 +1,15 @@
 return {
   "kevinhwang91/nvim-ufo",
   dependencies = "kevinhwang91/promise-async",
+
+  -- config = function ()
+  --   require('ufo').setup({
+  --     provider_selector = function(bufnr, filettpe, buftype)
+  --       return {'treesitter', 'indent'}
+  --     end
+  --   })
+  -- end
+
   event = "VeryLazy",
   opts = {
     open_fold_hl_timeout = 400,

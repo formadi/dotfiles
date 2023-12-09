@@ -13,7 +13,7 @@ return {
         -- { text = { "%C" }, click = "v:lua.ScFa" },
         { text = { "%s" }, click = "v:lua.ScSa" },
         {
-          text      = { builtin.lnumfunc, " " }, -- line number와 editor사이의 간격 조정;
+          text      = { builtin.lnumfunc, " "}, -- line number와 editor사이의 간격 조정;
           condition = { true, builtin.not_empty },
           click     = "v:lua.ScLa",
         },
