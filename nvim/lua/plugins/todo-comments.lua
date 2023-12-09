@@ -8,6 +8,7 @@ return {
     -- TODO , HACK, WARN, PREF, NOTE, TEST
 
     -- set keymaps
-    vim.keymap.set("n", "<leader>tq", "<cmd>TodoQuickFix<CR>", { desc = "Todo Quick Fix" })
+    vim.keymap.set("n", "<leader>tq", "<cmd>TodoQuickFix<CR>",  { desc = "Todo Quick Fix" })
+    vim.keymap.set("n", "<leader>tt", "<cmd>TodoTelescope<CR>", { desc = "Todo Telescope"})
   end,
 }
