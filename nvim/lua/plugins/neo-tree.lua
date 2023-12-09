@@ -6,24 +6,7 @@ return {
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
-  -- TODO: fix later.. test
   cmd = "Neotree",
-  -- opts = {
-  --   filesystem = {
-  --     filtered_items = {
-  --       visible           = true,
-  --       show_hidden_count = true,
-  --       hide_dotfiles     = false,
-  --       hide_gitignored   = true,
-  --       hide_by_name = {
-  --         ".git",
-  --         ".github",
-  --         ".DS_Store",
-  --         "thumbs.db",
-  --       },
-  --     },
-  --   },
-  -- },
   -- init = function()
   --   vim.g.neo_tree_remove_legacy_commands = true
   -- end,
@@ -34,7 +17,25 @@ return {
     vim.fn.sign_define("DiagnosticSignInfo",  {text = " ", texthl = "DiagnosticSignInfo"})
     vim.fn.sign_define("DiagnosticSignHint",  {text = "󰌵",  texthl = "DiagnosticSignHint"})
 
-    require("neo-tree").setup()
+    require("neo-tree").setup({
+      filesystem = {
+        filtered_items = {
+          visible           = true,
+          show_hidden_count = true,
+          hide_dotfiles     = false,
+          hide_gitignored   = true,
+          never_show = {
+            ".git",
+            ".github",
+            ".DS_Store",
+            "thumbs.db",
+          },
+          never_show_by_pattern = {
+            "*lock*",
+          }
+        },
+      },
+    })
 
     -- set keymaps
     vim.keymap.set("n", "<leader>te", "<cmd>Neotree toggle<CR>", { desc = "NeoTree Toggle" })
