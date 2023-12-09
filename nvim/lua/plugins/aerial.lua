@@ -1,18 +1,26 @@
 return {
   "stevearc/aerial.nvim",
-  opts = {
-    attach_mode = "global",
-    backends    = { "lsp", "treesitter", "markdown", "man", "objc" },
-    show_guides = true,
-    guides = {
-      mid_item   = "├ ",
-      last_item  = "└ ",
-      nested_top = "│ ",
-      whitespace = "  ",
-    },
-  },
+
   config = function()
     require("aerial").setup({
+      attach_mode = "global",
+      backends = {
+        ['_']  = {"lsp", "treesitter", "markdown", "man" },
+        python = {"treesitter"},
+        swift  = {"lsp"},
+      },
+
+      -- backends = { "lsp", "treesitter", "markdown", "man" },
+      show_guides = true,
+      guides = {
+        mid_item   = "├ ",
+        last_item  = "└ ",
+        nested_top = "│ ",
+        whitespace = "  ",
+      },
+
+      -- nerd_font = "Hack Nerd Font",
+
       -- optionally use on_attach to set keymaps when aerial has attached to a buffer
       on_attach = function(bufnr)
         -- Jump forwards/backwards with '{' and '}'
