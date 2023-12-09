@@ -37,7 +37,7 @@ return {
     require("neo-tree").setup()
 
     -- set keymaps
-    vim.keymap.set("n", "<leader>tt", "<cmd>Neotree toggle<CR>", { desc = "NeoTree Toggle" })
+    vim.keymap.set("n", "<leader>te", "<cmd>Neotree toggle<CR>", { desc = "NeoTree Toggle" })
     vim.keymap.set("n", "<leader>e",  "<cmd>Neotree<CR>",        { desc = "focus NeoTree" })
   end,
 }
