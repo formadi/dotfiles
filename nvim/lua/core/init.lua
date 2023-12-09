@@ -23,7 +23,7 @@ require("lazy").setup({
 
   {
     import = "plugins.lsp"
-  }
+  },
 },
 
 {
@@ -38,7 +38,6 @@ require("lazy").setup({
     notify = false,
   },
 })
-
 
 
 require("core.commands")
