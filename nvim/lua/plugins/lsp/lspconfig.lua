@@ -137,7 +137,7 @@ return {
     --   on_attach = on_attach,
     -- })
 
-    -- configure clangd server
+    -- configure sourcekit lsp for swift
     lspconfig["sourcekit"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
