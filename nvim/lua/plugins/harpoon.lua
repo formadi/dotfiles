@@ -5,8 +5,11 @@ return {
     "nvim-lua/plenary.nvim",
   },
   config = function()
-    require("harpoon").setup()
+    local harpoon = require("harpoon")
 
+    harpoon:setup()
+
+    -- set keymaps
     vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end, {desc = "harpoon append"})
     vim.keymap.set("n", "<leader>hr", function() harpoon:list():remove() end, {desc = "harpoon remove"})
     vim.keymap.set("n", "<leader>hc", function() harpoon:list():clear()  end, {desc = "harpoon clear(remove all)"})

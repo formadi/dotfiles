@@ -23,6 +23,7 @@ return {
       highlight_closest = true,
     })
 
+    -- set keymaps
     vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Aerial Toggle" })
   end,
 }

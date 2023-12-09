@@ -4,5 +4,6 @@ return {
     "nvim-lua/plenary.nvim",
   },
 
+  -- set keymaps
   vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "lazygit" })
 }

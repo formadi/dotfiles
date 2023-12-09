@@ -59,6 +59,8 @@ return {
     end
     opts["fold_virt_text_handler"] = handler
     require("ufo").setup(opts)
+
+    -- set keymaps
     vim.keymap.set("n", "zR", require("ufo").openAllFolds)
     vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
     vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
