@@ -47,6 +47,10 @@ neo-tree 키맵
 <leader>e  : focus NeoTree
 <leader>tt : NeoTree Toggle
 ```
+[ggandor/leap.nvim](https://github.com/ggandor/leap.nvim)
+
+[kdheepak/tabline.nvim](https://github.com/kdheepak/tabline.nvim)
+
 [neovim/nvim-lspconfig.nvim](https://github.com/neovim/nvim-lspconfig)
 
 [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
@@ -112,4 +116,3 @@ neo-tree 키맵
 [luukvbaal/statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim)
 
 [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-
