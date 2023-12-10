@@ -16,3 +16,6 @@ set-option -ga terminal-override ",screen-256color:Tc"
 ```
 
 source ~/.zshrc
+
+termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, 와래와 같은 결과가 나와야 한다.
+![sshot1](doc/sshot1.png)
