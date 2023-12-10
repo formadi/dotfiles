@@ -4,6 +4,7 @@ return {
   config = function()
     local lualine     = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
+    local utils       = require("core.utils")
 
     local colors = {
       blue        = "#65D1FF",
@@ -88,9 +89,14 @@ return {
       tabline = {
         lualine_a = { "filename" },
         lualine_b = {},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {{'aerial', sep=' | '}, 'filetype'},
+        lualine_c = {
+          -- {
+          --   require("noice").api.status.message.get_hl,
+          --   cond = require("noice").api.status.message.has,
+          -- },
+        },
+        lualine_x = { utils.getWords },
+        lualine_y = { { 'aerial', sep=' | ' }, 'filetype' },
         lualine_z = {'progress'}
       },
       extensions = {},
