@@ -1,6 +1,7 @@
 # dotfiles
 macOS에 적용 중인 dotfile 저장소
 
+------
 
 ## tmux true color 설정
 .zshrc 에 다음과 같이 설정
