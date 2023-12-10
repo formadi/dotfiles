@@ -47,6 +47,8 @@ neo-tree 키맵
 <leader>e  : focus NeoTree
 <leader>tt : NeoTree Toggle
 ```
+[karb94/neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
+
 [ggandor/leap.nvim](https://github.com/ggandor/leap.nvim)
 
 [kdheepak/tabline.nvim](https://github.com/kdheepak/tabline.nvim)
