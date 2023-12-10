@@ -50,5 +50,9 @@ return {
       stages        = "slide",
       timeout       = 6000,
     })
+
+    -- set keymaps
+    vim.keymap.set("n", "<leader>nl", function() require("noice").cmd("last")    end, { desc = "noice last" })
+    vim.keymap.set("n", "<leader>nh", function() require("noice").cmd("history") end, { desc = "noice history"})
   end,
 }
