@@ -21,3 +21,12 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[ silent! %s/\s\+$//e | silent! %s#\($\n\s*\)\+\%$## ]],
 })
+
+-- centering automatically at scrolling
+-- vim.cmd [[
+--   augroup VCenterCursor
+--     au!
+--     au BufEnter,WinEnter,WinNew,VimResized *,*.*
+--           \ let &scrolloff=winheight(win_getid())/2
+--   augroup END
+-- ]]

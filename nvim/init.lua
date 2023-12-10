@@ -19,3 +19,4 @@ vim.g.python3_host_prog = "/Users/elsa/.config/venv/bin/python3"
 --   vim.g.tranparency = 1.0
 --   vim.g.neovide_background_color = "#242e41" .. alpha()
 -- end
+--
