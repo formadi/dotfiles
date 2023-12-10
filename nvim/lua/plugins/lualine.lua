@@ -78,7 +78,7 @@ return {
         },
       },
       inactive_sections = {
-        lualine_a = { 'filename' },
+        lualine_a = { "filename" },
         lualine_b = {},
         lualine_c = {},
         lualine_x = {},
@@ -86,7 +86,7 @@ return {
         lualine_z = { 'location' },
       },
       tabline = {
-        lualine_a = {require'tabline'.tabline_buffers},
+        lualine_a = { "filename" },
         lualine_b = {},
         lualine_c = {},
         lualine_x = {},
