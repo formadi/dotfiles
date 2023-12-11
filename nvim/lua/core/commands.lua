@@ -5,10 +5,16 @@ vim.cmd([[ hi VertSplit         guibg=NONE    ctermbg=NONE ]])
 vim.cmd([[ hi StatusLine        guibg=NONE    ctermbg=NONE ]])
 vim.cmd([[ hi StatusLineNC      guibg=NONE    ctermbg=NONE ]])
 vim.cmd([[ hi Folded            guibg=NONE    ctermbg=NONE ]])
-vim.cmd([[ hi NeoTreeNormal     guibg=#141c2b ctermbg=NONE ]])
+vim.cmd([[ hi NeoTreeNormal     guibg=NONE    ctermbg=NONE ]])
 vim.cmd([[ hi NormalNC          guibg=NONE    ctermbg=NONE ]])
-vim.cmd([[ hi AerialNormal      guibg=#141c2b    ctermbg=NONE ]])
-vim.cmd([[ hi NeoTreeNormalNC   guibg=#141c2b ctermbg=NONE ]])
+vim.cmd([[ hi AerialNormal      guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi NeoTreeNormalNC   guibg=NONE    ctermbg=NONE ]])
+
+-- vim.cmd([[ hi Lualine_a.normal   guibg=NONE    ctermbg=NONE ]])
+-- vim.cmd([[ hi lualine_b.normal   guibg=NONE    ctermbg=NONE ]])
+-- vim.cmd([[ hi lualine_c.normal  guibg=NONE    ctermbg=NONE ]])
+-- vim.cmd([[ hi lualine_x.normal   guibg=NONE    ctermbg=NONE ]])
+-- vim.cmd([[ hi lualine_y.normal   guibg=NONE    ctermbg=NONE ]])
 
 -- custom colors
 vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
@@ -16,6 +22,7 @@ vim.cmd([[ hi CursorLine               guibg=#393a52 ]])
 vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
 vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
 vim.cmd([[ hi Comment                  guifg=#797e99 ]])
+
 
 
 -- automatically remove trailing whitespaces & trailing newlines on save.

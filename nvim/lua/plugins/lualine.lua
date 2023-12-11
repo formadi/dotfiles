@@ -12,9 +12,9 @@ return {
       violet      = "#FF61EF",
       yellow      = "#FFDA7B",
       red         = "#FF4A4A",
-      fg          = "#c3ccdc",
-      bg          = "#141c2b",
-      inactive_bg = "#1f2c43",
+      fg          = "#232323",
+      bg          = "#112638",
+      inactive_bg = "#2c3843",
     }
 
     local custom_theme = {
@@ -49,6 +49,16 @@ return {
         c = { bg = colors.inactive_bg, fg = colors.semilightgray },
       },
     }
+
+     -- custom_theme.normal.a.bg = nil
+     -- custom_theme.normal.b.bg = nil
+     -- custom_theme.normal.c.bg = nil
+     -- custom_theme.insert.a.bg = nil
+     -- custom_theme.insert.b.bg = nil
+     -- custom_theme.insert.c.bg = nil
+     -- custom_theme.command.a.bg = nil
+     -- custom_theme.command.b.bg = nil
+     -- custom_theme.command.c.bg = nil
 
     -- configure lualine with modified theme
     lualine.setup({

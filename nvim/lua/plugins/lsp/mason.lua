@@ -35,7 +35,7 @@ return {
         "lua_ls",
         "prettier",
         "clangd",
-        "clang-format",
+        "typescript-language-server",
         -- "graphql",
         -- "emmet_ls",
         -- "prismals",
