@@ -16,26 +16,26 @@ vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
 vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
 vim.cmd([[ hi Comment                  guifg=#797e99 ]])
 
--- automatically remove trailing whitespace on save.
+
+-- automatically remove trailing whitespaces & trailing newlines on save.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[ silent! %s/\s\+$//e | silent! %s#\($\n\s*\)\+\%$## ]],
 })
 
 
--- insert mode : no cusorline, not insert mode : cursorline
+-- insert mode : no cusorline, the other mode : cursorline
 vim.cmd [[
   :autocmd InsertEnter * set nocul
   :autocmd InsertLeave * set cul
 ]]
 
 
-
 -- fold setting
 vim.o.foldlevel      = 99
 vim.o.foldcolumn     = '2'
 vim.wo.foldnestmax   = 10
-vim.wo.foldminlines  = 1
+vim.wo.foldminlines  = 2
 vim.o.foldenable     = true
 vim.o.foldlevelstart = 99
 vim.o.foldtext       = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' . '󱝁  ' . (v:foldend - v:foldstart + 1) . ' lines']]
