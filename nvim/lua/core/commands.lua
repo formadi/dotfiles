@@ -1,13 +1,14 @@
 -- background transparency
-vim.cmd([[ hi Normal            guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi SignColumn        guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi VertSplit         guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi StatusLine        guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi StatusLineNC      guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi Folded            guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi NeoTreeNormal     guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi NormalNC          guibg=NONE ctermbg=NONE ]])
-vim.cmd([[ hi NeoTreeNormalNC   guibg=NONE ctermbg=NONE ]])
+vim.cmd([[ hi Normal            guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi SignColumn        guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi VertSplit         guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi StatusLine        guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi StatusLineNC      guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi Folded            guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi NeoTreeNormal     guibg=#141c2b ctermbg=NONE ]])
+vim.cmd([[ hi NormalNC          guibg=NONE    ctermbg=NONE ]])
+vim.cmd([[ hi AerialNormal      guibg=#141c2b    ctermbg=NONE ]])
+vim.cmd([[ hi NeoTreeNormalNC   guibg=#141c2b ctermbg=NONE ]])
 
 -- custom colors
 vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])

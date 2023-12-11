@@ -13,8 +13,8 @@ return {
       yellow      = "#FFDA7B",
       red         = "#FF4A4A",
       fg          = "#c3ccdc",
-      bg          = "#112638",
-      inactive_bg = "#2c3043",
+      bg          = "#141c2b",
+      inactive_bg = "#1f2c43",
     }
 
     local custom_theme = {
