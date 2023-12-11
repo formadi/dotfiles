@@ -10,7 +10,7 @@ keymap.set("i", "jk",         "<ESC>",              { desc = "Exit insert mode w
 keymap.set("i", "<C-s>",      "<ESC>:w<CR>",        { desc = "Save" })
 
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>",          { desc = "Clear search highlights" })
+keymap.set("n", "<leader>ch", ":nohl<CR>",          { desc = "Clear search highlights" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>",               { desc = "Increment number" })
@@ -40,5 +40,3 @@ keymap.set("n", "<C-s>",      ":w<CR>",             { desc = "Save" })
 -- indent
 keymap.set("v", ">",          ">gv",                { desc = "Indent" })
 keymap.set("v", "<",          "<gv",                { desc = "Indent" })
-
-
