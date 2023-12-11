@@ -21,3 +21,10 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[ silent! %s/\s\+$//e | silent! %s#\($\n\s*\)\+\%$## ]],
 })
+
+
+-- insert mode : no cusorline, not insert mode : cursorline
+vim.cmd [[
+  :autocmd InsertEnter * set nocul
+  :autocmd InsertLeave * set cul
+]]
