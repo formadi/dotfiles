@@ -55,6 +55,8 @@ peepsight 키맵
 <leader>pd : Peepsight Disable
 ```
 
+[utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
+
 [FabianWirth/search.nvim](https://github.com/FabianWirth/search.nvim)
 
 [karb94/neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
