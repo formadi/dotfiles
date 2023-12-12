@@ -50,16 +50,6 @@ return {
       },
     }
 
-     -- custom_theme.normal.a.bg = nil
-     -- custom_theme.normal.b.bg = nil
-     -- custom_theme.normal.c.bg = nil
-     -- custom_theme.insert.a.bg = nil
-     -- custom_theme.insert.b.bg = nil
-     -- custom_theme.insert.c.bg = nil
-     -- custom_theme.command.a.bg = nil
-     -- custom_theme.command.b.bg = nil
-     -- custom_theme.command.c.bg = nil
-
     -- configure lualine with modified theme
     lualine.setup({
       options = {
