@@ -4,7 +4,7 @@
 nvim 0.9.4 이상에서 확인
 - 심플한 구조,
 - plugin 관리를 용이하게 하기 위해 개별 파일로 구성 (Install, config, keymap).
-- [cappuccin(Mocha)](https://github.com/catppuccin/nvim) colors cheme 적용.
+- [cappuccin(Mocha)](https://github.com/catppuccin/nvim) colors scheme 적용.
 - 배경은 모두 투명처리 (배경색은 터미널 배경색)
 - Normal 모드에서 ;(semi-colon) 키인으로 Command 모드 변경.
 - 저장 시, 자동으로 Trailing whitespace 제거.
