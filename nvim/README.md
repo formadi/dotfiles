@@ -48,6 +48,13 @@ neo-tree 키맵
 <leader>tt : NeoTree Toggle
 ```
 
+[koenverburg/poopsight.nvim](https://github.com/koenverburg/peepsight.nvim);
+```
+peepsight 키맵
+<leader>pe : Peepsight Enable
+<leader>pd : Peepsight Disable
+```
+
 [FabianWirth/search.nvim](https://github.com/FabianWirth/search.nvim)
 
 [karb94/neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
