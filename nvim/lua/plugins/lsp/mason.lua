@@ -17,8 +17,8 @@ return {
     mason.setup({
       ui = {
         icons = {
-          package_installed = "✓",
-          package_pending = "➜",
+          package_installed   = "✓",
+          package_pending     = "➜",
           package_uninstalled = "✗",
         },
       },
@@ -33,8 +33,9 @@ return {
         -- "tailwindcss",
         -- "svelte",
         "lua_ls",
-        "prettier",
+        -- "prettierd",
         "clangd",
+        "rust_analyzer",
         -- "graphql",
         -- "emmet_ls",
         -- "prismals",
