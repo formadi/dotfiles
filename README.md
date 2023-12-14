@@ -32,7 +32,7 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 
 ### tmux 사용법 간단 정리
 
-| ctrl-b               | command trigger                                              |
+| ctrl-b               | command prefix                                           |
 | -------------------- | ------------------------------------------------------------ |
 | ctrl-b + %           | panel를 세로로 추가                                          |
 | ctrl-b + "           | panel을 가로로 추가                                          |
@@ -40,4 +40,3 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 | ctrl+b + }           | panel의 위치를 변경 - 반 시계 방향                           |
 | ctrl-b + [space key] | 가로로 분할돤 panel을 세로로 변경 혹은 그 반대 경우로 toggle |
 | option + 방향키      | 커서를 해당 방향의 panel로 이동 (change focus)               |
-
