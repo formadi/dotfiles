@@ -2,7 +2,7 @@
 macOS에 적용 중인 dotfile 저장소
 
 ------
-### tmux true color 설정
+### tmux true color 설정.
 .zshrc 에 다음과 같이 설정
 ```
 export TERM=screen-256color
@@ -20,7 +20,7 @@ termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, �
 
 
 
-### tmux에서 nvim 실행 시, insert mode에서 커서가 변경되지 않는 문제
+### tmux에서 nvim 실행 시, insert mode에서 커서가 변경되지 않는 문제.
 
 .tmux.conf에 다음을 추가한다.
 ```
@@ -30,7 +30,7 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 
 ------
 
-### tmux 사용법 간단 정리
+### tmux 사용법 간단 정리.
 - command prefix(ctrl-b)키를 누른 후에 다음 키를 누를 때는, command prefix를 누르고 있지 않아도 됨.
 - 아래의 테이블에서 ctrl-b(command prefix)는 그냥 Prefix로 표현함
 - pane은 tmux window의 분활된 화면(panel)을 의미
