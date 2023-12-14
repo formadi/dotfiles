@@ -34,6 +34,7 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 - command prefix(ctrl-b)키를 누른 후에 다음 키를 누를 때는, command prefix를 누르고 있지 않아도 됨.
 - 아래의 테이블에서 ctrl-b(command prefix)는 그냥 Prefix로 표현함
 - pane은 tmux window의 분활된 화면(panel)을 의미
+
 | ctrl-b              | command prefix                                              |
 | ------------------- | ----------------------------------------------------------- |
 | Prefix  %           | pane를 세로로 추가                                          |
