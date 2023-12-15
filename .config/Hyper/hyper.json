@@ -1,0 +1,82 @@
+{
+  "$schema": "./schema.json",
+  "config": {
+    "updateChannel": "canary",
+    "fontSize": 12,
+    "fontFamily": "\"Sarasa-Term-K-Nerd-Font-ExtraLight\"",
+    "fontWeight": "normal",
+    "fontWeightBold": "bold",
+    "lineHeight": 1.15,
+    "letterSpacing": 0.5,
+    "scrollback": 1000,
+    "cursorColor": "#ffee17",
+    "cursorAccentColor": "#000",
+    "cursorShape": "UNDERLINE",
+    "cursorBlink": false,
+    "foregroundColor": "#ffffff",
+    "backgroundColor": "#0a1524",
+    "selectionColor": "rgba(248,28,229,0.3)",
+    "borderColor": "#333",
+    "css": "",
+    "termCSS": "",
+    "workingDirectory": "",
+    "showHamburgerMenu": "",
+    "showWindowControls": "",
+    "padding": "12px 14px",
+    "colors": {
+      "black"       : "#45475a",
+      "red"         : "#f38ba8",
+      "green"       : "#a6e3a1",
+      "yellow"      : "#f9e2af",
+      "blue"        : "#89b4fa",
+      "magenta"     : "#f5c2e7",
+      "cyan"        : "#94e2d5",
+      "white"       : "#bac2de",
+      "lightBlack"  : "#45475a",
+      "lightRed"    : "#f38ba8",
+      "lightGreen"  : "#a6e3a1",
+      "lightYellow" : "#f9e2af",
+      "lightBlue"   : "#89b4fa",
+      "lightMagenta": "#f5c2e7",
+      "lightCyan"   : "#94e2d5",
+      "lightWhite"  : "#bac2de",
+      "limeGreen"   : "#abff8b",
+      "lightCoral"  : "#e8586b"
+    },
+    "shell": "",
+    "shellArgs": [
+      "--login"
+    ],
+    "env": {},
+    "bell": "SOUND",
+    "bellSound": null,
+    "bellSoundURL": null,
+    "copyOnSelect": false,
+    "defaultSSHApp": true,
+    "quickEdit": false,
+    "macOptionSelectionMode": "vertical",
+    "webGLRenderer": true,
+    "webLinksActivationKey": "",
+    "disableLigatures": true,
+    "disableAutoUpdates": false,
+    "autoUpdatePlugins": true,
+    "preserveCWD": true,
+    "screenReaderMode": false,
+    "imageSupport": true,
+    "defaultProfile": "default",
+    "profiles": [
+      {
+        "name": "default",
+        "config": {}
+      }
+    ],
+    "opacity": 0.92
+  },
+  "plugins": [
+    "hyper-highlight-active-pane",
+    "hyper-fading-scrollbar",
+    "hyper-opacity"
+  ],
+  "localPlugins": [],
+  "keymaps": {}
+}
