@@ -20,14 +20,14 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump web-search)
 source $ZSH/oh-my-zsh.sh
 
 export "MICRO_TRUECOLOR=1"
-alias cr= "clear"
-alias ll= "ls -al"
-alias con= "cd ~/.config"
-alias v= "nvim"
-alias vi= "nvim"
-alias vim= "nvim"
-alias m= "micro"
-alias cdxp= "cd /Volumes/Kali/_xcode_projects"   # change directory xcode projects
+alias cr="clear"
+alias ll="ls -al"
+alias con="cd ~/.config"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias m="micro"
+alias cdxp="cd /Volumes/Kali/_xcode_projects"   # change directory xcode projects
 alias ls="exa"
 alias ll="exa -lah"
 alias la="exa -a"
