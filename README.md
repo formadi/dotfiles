@@ -3,21 +3,26 @@ macOS에 적용 중인 dotfile 저장소
 
 ------
 ### tmux true color 설정.
+~/.tmux.conf에 다음과 같이 설정
+```
+set -g default-terminal "tmux-256color"
+set-option -sa terminal-features ",xterm-256color:RGB"
+set-option -ga terminal-overrides ",eterm-256color:Tc"
+```
+
 .zshrc 에 다음과 같이 설정
 ```
-export TERM=screen-256color
 alias tmux="tmux -2"
 ```
-.tmux.conf에 다음과 같이 설정
+
+~/.config/kitty/kitty.conf에 다음과 같이 설정
 ```
-set -g default-terminal "screen-256color"
-set-option -sa terminal-feature ",screen-256color:RGB"
-set-option -ga terminal-override ",screen-256color:Tc"
+term        xterm-256color
 ```
+
 source ~/.zshrc
 termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, 아래와 같은 결과가 나와야 한다.
 ![sshot1](doc/sshot1.png)
-
 
 
 ### tmux에서 nvim 실행 시, insert mode에서 커서가 변경되지 않는 문제.
