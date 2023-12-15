@@ -3,6 +3,10 @@ require("core")
 vim.g.python3_host_prog    = "/Users/elsa/.config/venv/bin/python3"
 vim.g.loaded_perl_provider = 0
 
+
+
+
+
 -- if vim.g.neovide then
 --   vim.o.guifont = "Sarasa Term K Nerd Font ExtraLight:h12"
 --   vim.g.neovide_padding_top   = 10
