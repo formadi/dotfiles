@@ -58,3 +58,71 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 | Prefix  x           | 사용 중인 pane을 종료                                       |
 | Prefix ?            | tmux의 단축키 help, 종료는 q                                |
 | Prefix  방향키      | 커서를 해당 방향의 panel로 이동 (change focus)              |
+
+
+
+### tmux plugin manager TPM 설치 밑 catpppuccin theme 설치
+
+Tmux  Plugin Manager (TPM) 설치
+
+```shell
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+git lone이 완료되면, ~/.tmux.conf를 열고, 파일 제일 하단에 아래의 내용을 추가한다. 
+
+```shell
+# List of plugins
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+```
+
+파일을 저장하고 shell로 나와서 아래의 명령을 수행
+
+```shell
+tmux source-file ~/.tmux.conf
+```
+
+다시, ~/.tmux.conf 파일을 열고, catppccin plugin을 설치한다. 
+
+```shell
+# catppuccin plugin
+set -g @plugin 'catppuccin/tmux'
+set -g @catppuccin_flavour 'mocha' # or frappe, macchiato, mocha
+set -g @catppuccin_window_left_separator "█"
+set -g @catppuccin_window_right_separator "█ "
+set -g @catppuccin_window_number_position "right"
+set -g @catppuccin_window_middle_separator "  █"
+
+set -g @catppuccin_window_default_fill "number"
+
+set -g @catppuccin_window_current_fill "number"
+set -g @catppuccin_window_current_text "#{pane_current_path}"
+
+set -g @catppuccin_status_modules_right "application session date_time"
+set -g @catppuccin_status_left_separator  ""
+set -g @catppuccin_status_right_separator " "
+set -g @catppuccin_status_right_separator_inverse "yes"
+set -g @catppuccin_status_fill "all"
+set -g @catppuccin_status_connect_separator "no"
+
+# --------------------------------------------
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+```
+
+점선 위의 내용만 추가하면 된다.  추가가 완료 되었으면.. 저장 후, 다시 tmux shell로 나온다. 
+
+```shell
+Prefix + I 
+```
+
+ctrl-b + I (대문자 i)를 눌러주면, 아애롸 같은 화면이 나오면서  plugin을 설치하게 된다.  
+
+![tpm](doc/tmux_plugin_install.png)
