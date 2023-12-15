@@ -24,6 +24,14 @@ source ~/.zshrc
 termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, 아래와 같은 결과가 나와야 한다.
 ![sshot1](doc/sshot1.png)
 
+### kitty terminal 실행 시, tmux 자동 실행
+
+~/.zshrc를 열고, 제일 마지막에 다음을 추가
+```
+[ -z "$TMUX" ] && command -v tmux &> /dev/null && tmux
+```
+
+
 
 ### tmux에서 nvim 실행 시, insert mode에서 커서가 변경되지 않는 문제.
 
