@@ -25,6 +25,10 @@ source ~/.zshrc
 termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, 아래와 같은 결과가 나와야 한다.
 ![sshot1](doc/sshot1.png)
 
+
+
+------
+
 ### <span style="color:yellow">kitty terminal 실행 시, tmux 자동 실행</span>
 
 ~/.zshrc를 열고, 제일 마지막에 다음을 추가
@@ -34,6 +38,8 @@ termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, �
 
 
 
+------
+
 ### <span style="color:yellow">tmux에서 nvim 실행 시, insert mode에서 커서가 변경되지 않는 문제.</span>
 
 .tmux.conf에 다음을 추가한다.
@@ -41,6 +47,8 @@ termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, �
 set-option -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
 ```
 tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면 적용됨.
+
+
 
 ------
 
@@ -61,6 +69,8 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 | Prefix  방향키      | 커서를 해당 방향의 panel로 이동 (change focus)              |
 
 
+
+------
 
 ### <span style="color:yellow">tmux plugin manager TPM 설치 밑 catpppuccin theme 설치</span>
 
