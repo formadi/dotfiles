@@ -2,8 +2,9 @@
 macOS에 적용 중인 dotfile 저장소
 
 ------
-### tmux true color 설정.
+### <span style="color:yellow">tmux true color 설정.</span>
 ~/.tmux.conf에 다음과 같이 설정
+
 ```
 set -g default-terminal "tmux-256color"
 set-option -sa terminal-features ",xterm-256color:RGB"
@@ -24,7 +25,7 @@ source ~/.zshrc
 termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, 아래와 같은 결과가 나와야 한다.
 ![sshot1](doc/sshot1.png)
 
-### kitty terminal 실행 시, tmux 자동 실행
+### <span style="color:yellow">kitty terminal 실행 시, tmux 자동 실행</span>
 
 ~/.zshrc를 열고, 제일 마지막에 다음을 추가
 ```
@@ -33,7 +34,7 @@ termnial을 다시 실행하고, nvim에서 :checkhealth를 수행했을 때, �
 
 
 
-### tmux에서 nvim 실행 시, insert mode에서 커서가 변경되지 않는 문제.
+### <span style="color:yellow">tmux에서 nvim 실행 시, insert mode에서 커서가 변경되지 않는 문제.</span>
 
 .tmux.conf에 다음을 추가한다.
 ```
@@ -43,7 +44,7 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 
 ------
 
-### tmux 사용법 간단 정리.
+### <span style="color:yellow">tmux 사용법 간단 정리.</span>
 - command prefix(ctrl-b)키를 누른 후에 다음 키를 누를 때는, command prefix를 누르고 있지 않아도 됨.
 - 아래의 테이블에서 ctrl-b(command prefix)는 그냥 Prefix로 표현함
 - pane은 tmux window의 분활된 화면(panel)을 의미
@@ -61,7 +62,7 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 
 
 
-### tmux plugin manager TPM 설치 밑 catpppuccin theme 설치
+### <span style="color:yellow">tmux plugin manager TPM 설치 밑 catpppuccin theme 설치</span>
 
 Tmux  Plugin Manager (TPM) 설치
 
