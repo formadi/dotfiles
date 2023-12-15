@@ -20,14 +20,14 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump web-search)
 source $ZSH/oh-my-zsh.sh
 
 export "MICRO_TRUECOLOR=1"
-alias cr="clear"
-alias ll="ls -al"
-alias con="cd ~/.config"
-alias v="nvim"
-alias vim="nvim"
-alias vi="nvim"
-alias m="micro"
-alias cdxp="cd /Volumes/Kali/_xcode_projects"   # change directory xcode projects
+alias cr= "clear"
+alias ll= "ls -al"
+alias con= "cd ~/.config"
+alias v= "nvim"
+alias vi= "nvim"
+alias vim= "nvim"
+alias m= "micro"
+alias cdxp= "cd /Volumes/Kali/_xcode_projects"   # change directory xcode projects
 alias ls="exa"
 alias ll="exa -lah"
 alias la="exa -a"
@@ -39,10 +39,7 @@ alias cat="bat"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-# source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 eval "$(zoxide init zsh)"
 
-# 자동으로 tmux 실행
+# autorun tmux at terlinal launch
 [ -z "$TMUX" ] && command -v tmux &> /dev/null && tmux
