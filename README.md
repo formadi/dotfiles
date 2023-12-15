@@ -80,7 +80,7 @@ Tmux  Plugin Manager (TPM) 설치
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-git lone이 완료되면, ~/.tmux.conf를 열고, 파일 제일 하단에 아래의 내용을 추가한다. 
+git lone이 완료되면, ~/.tmux.conf를 열고, 파일 제일 하단에 아래의 내용을 추가한다.
 
 ```shell
 # List of plugins
@@ -99,7 +99,7 @@ run '~/.tmux/plugins/tpm/tpm'
 tmux source-file ~/.tmux.conf
 ```
 
-다시, ~/.tmux.conf 파일을 열고, catppccin plugin을 설치한다. 
+다시, ~/.tmux.conf 파일을 열고, catppccin plugin을 설치한다.
 
 ```shell
 # catppuccin plugin
@@ -128,12 +128,12 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 
 ```
 
-점선 위의 내용만 추가하면 된다.  추가가 완료 되었으면.. 저장 후, 다시 tmux shell로 나온다. 
+점선 위의 내용만 추가하면 된다.  추가가 완료 되었으면.. 저장 후, 다시 tmux shell로 나온다.
 
 ```shell
-Prefix + I 
+Prefix + I
 ```
 
-ctrl-b + I (대문자 i)를 눌러주면, 아애롸 같은 화면이 나오면서  plugin을 설치하게 된다.  
+ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면서  plugin을 설치하게 된다.
 
 ![tpm](doc/tmux_plugin_install.png)
