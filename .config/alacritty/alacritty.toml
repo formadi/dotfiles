@@ -1,0 +1,21 @@
+import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 11.5
+
+[font.normal]
+family = "Sarasa Term K Nerd font"
+style = "ExtraLight"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.9
+
+[window.padding]
+x = 18
+y = 16
