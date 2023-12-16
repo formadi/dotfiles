@@ -28,6 +28,9 @@ iceberg
 catppuccin
 ![catppuccin](doc/catppuccin.png)
 
+vscode
+![vscode](doc/vscode.png)
+
 
 
 

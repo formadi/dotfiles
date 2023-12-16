@@ -1,20 +1,32 @@
 -- setup color scheme
-if _G.color_scheme == "catppuccin" then
-  require(_G.color_scheme).setup({
-    flavour = "Mocha",
-  })
-else
-  if _G.color_scheme ~= "iceberg" then
-    require(_G.color_scheme).setup()
+if _G.color_scheme.setup == true then
+  if _G.color_scheme.name == "catppuccin" then
+      require(_G.color_scheme.name).setup({
+        flavour = "Mocha",
+      })
+  else
+    require(_G.color_scheme.name).setup()
+  end
+
+  if _G.color_scheme.name == "vscode" then
+    require('vscode').load()
   end
 end
 
 -- set colorscheme
-vim.cmd.colorscheme(_G.color_scheme)
+vim.cmd.colorscheme(_G.color_scheme.name)
+
+if _G.color_scheme.lualine == true then
+  require("lualine").setup ({
+    options = {
+      theme = _G.color_scheme.name,
+    },
+  })
+end
 
 
 -- custom color
-if     _G.color_scheme == "catppuccin" then
+if     _G.color_scheme.name == "catppuccin" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
   -- vim.cmd([[ hi CursorLine               guibg=#3e4a42 ]])
   vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
@@ -22,7 +34,7 @@ if     _G.color_scheme == "catppuccin" then
   vim.cmd([[ hi Comment                  guifg=#797e99 ]])
   vim.cmd([[ hi Visual                   guibg=#45475b ]])
 
-elseif _G.color_scheme == "everforest" then
+elseif _G.color_scheme.name == "everforest" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#7f989b ]])
   vim.cmd([[ hi CursorLine               guibg=#313825 ]])
   vim.cmd([[ hi LineNr                   guifg=#5b6e62 ]])
@@ -30,7 +42,7 @@ elseif _G.color_scheme == "everforest" then
   vim.cmd([[ hi Comment                  guifg=#6d848f ]])
   vim.cmd([[ hi Visual                   guibg=#3d3a33 ]])
 
-elseif _G.color_scheme == "nord" then
+elseif _G.color_scheme.name == "nord" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
   -- vim.cmd([[ hi CursorLine               guibg=#393a52 ]])
   vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
@@ -38,9 +50,17 @@ elseif _G.color_scheme == "nord" then
   vim.cmd([[ hi @comment                 guifg=#738fa4 ]])
   vim.cmd([[ hi Visual                   guibg=#354646 ]])
 
-elseif _G.color_scheme == "iceberg" then
+elseif _G.color_scheme.name == "iceberg" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
   vim.cmd([[ hi CursorLine               guibg=#393a52 ]])
+  vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
+  vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
+  vim.cmd([[ hi Comment                  guifg=#657997 ]])
+  vim.cmd([[ hi Visual                   guibg=#45475b ]])
+
+elseif _G.color_scheme.name == "vscode" then
+  vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
+  vim.cmd([[ hi CursorLine               guibg=#3f3f3f ]])
   vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
   vim.cmd([[ hi Comment                  guifg=#657997 ]])

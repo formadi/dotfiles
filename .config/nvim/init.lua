@@ -1,4 +1,5 @@
-_G.color_scheme = "iceberg"
+_G.color_scheme_name = "vscode"
+_G.color_scheme      = nil
 
 require("core")
 
