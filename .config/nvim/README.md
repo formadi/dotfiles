@@ -12,6 +12,28 @@ nvim 0.9.4 이상에서 확인
 
 ------
 
+
+
+### Themes
+
+forest
+![everforest](doc/everforest.png)
+
+nord
+![nord](doc/nord.png)
+
+iceberg
+![iceberg](doc/iceberg.png)
+
+catppuccin
+![catppuccin](doc/catppuccin.png)
+
+
+
+
+
+------
+
 ### Plugins
 - 별도의 comment가 없는 것은 기본 키맵을 사용하는 것임.
 

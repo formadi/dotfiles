@@ -1,4 +1,4 @@
-_G.color_scheme = "everforest"
+_G.color_scheme = "iceberg"
 
 require("core")
 
