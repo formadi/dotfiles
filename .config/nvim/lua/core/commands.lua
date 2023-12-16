@@ -10,6 +10,8 @@ if _G.color_scheme.setup == true then
 
   if _G.color_scheme.name == "vscode" then
     require('vscode').load()
+  -- elseif _G.color.scheme.name == "poimandres" then
+  --   vim.cmd('colorscheme poimandres')
   end
 end
 
@@ -65,6 +67,15 @@ elseif _G.color_scheme.name == "vscode" then
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
   vim.cmd([[ hi Comment                  guifg=#657997 ]])
   vim.cmd([[ hi Visual                   guibg=#45475b ]])
+
+elseif _G.color_scheme.name == "poimandres" then
+  vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
+  vim.cmd([[ hi CursorLine               guibg=#3f3f3f ]])
+  vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
+  vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
+  vim.cmd([[ hi Comment                  guifg=#757a92 ]])
+  vim.cmd([[ hi Visual                   guibg=#45475b ]])
+  vim.cmd([[ hi NonText                  guifg=#415162 ]])
 end
 
 

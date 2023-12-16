@@ -54,14 +54,29 @@ echo "yabai configuration loaded.."
 #yabai -m signal --add event=space_changed action="$HOME/.config/sketchybar/plugins/space_changes.sh"
 
 
+yabai -m rule --add app="^시스템 설정$" manage=off
+yabai -m rule --add app="^계산기$" manage=off
+yabai -m rule --add app="^활성 상태 보기$" manage=off
 yabai -m rule --add app="^Suri$" manage=off
 yabai -m rule --add app="^Python$" manage=off
+yabai -m rule --add app="^Window11$" manage=off
 yabai -m rule --add app="^BetterTouchTool$" manage=off
+yabai -m rule --add app="^screenshot plus$" manage=off
+yabai -m rule --add app="^Find Any File$" manage=off
+yabai -m rule --add app="^서체 관리자$" manage=off
 yabai -m rule --add app="^Docker Desktop$" manage=off
+yabai -m rule --add app="^App Cleaner & Uninstaller$" manage=off
+yabai -m rule --add app="^Ryujinx$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Transmission$" manage=off
+yabai -m rule --add app="^Radio Silence$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Sourcetree$" manage=off
 yabai -m rule --add app="^SF Symbols$" manage=off
 yabai -m rule --add app="^Image Optimizer$" manage=off
+yabai -m rule --add app="^미리보기$" manage=off
+yabai -m rule --add app="^아카이브 유틸리티$" manage=off
+yabai -m rule --add app="^음악$" manage=off
 yabai -m rule --add app="^Leaf$" manage=off
 yabai -m rule --add app="^Xcode$" manage=off
+yabai -m rule --add app="^Magnetola$" manage=off

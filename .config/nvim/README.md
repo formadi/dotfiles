@@ -25,6 +25,9 @@ nord
 iceberg
 ![iceberg](doc/iceberg.png)
 
+poimandres
+![poimandres](doc/poimandres.png)
+
 catppuccin
 ![catppuccin](doc/catppuccin.png)
 
