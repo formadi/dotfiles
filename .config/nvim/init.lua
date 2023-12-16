@@ -1,9 +1,9 @@
+_G.color_scheme = "everforest"
+
 require("core")
 
 vim.g.python3_host_prog    = "/Users/elsa/.config/venv/bin/python3"
 vim.g.loaded_perl_provider = 0
-
-
 
 
 

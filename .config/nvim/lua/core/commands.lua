@@ -1,36 +1,51 @@
--- color scheme
-COLOR_SCHEME = "everforest"
-BG_COLOR  = "#ffffff"
-
-if COLOR_SCHEME == "catppuccin" then
-  BG_COLOR = "#14222f"
-  require("catppuccin").setup({
+-- setup color scheme
+if _G.color_scheme == "catppuccin" then
+  require(_G.color_scheme).setup({
     flavour = "Mocha",
   })
 else
-  require(COLOR_SCHEME).setup()
-
-  if COLOR_SCHEME == "everforest" then
-    BG_COLOR = "#20262a"
-  elseif COLOR_SCHEME == "nord" then
-    BG_COLOR = "#21262f"
-  else -- iceberg
-    BG_COLOR = "#222329"
+  if _G.color_scheme ~= "iceberg" then
+    require(_G.color_scheme).setup()
   end
 end
 
-require("lualine").setup({
-  theme = COLOR_SCHEME,
-})
-
-vim.cmd.colorscheme(COLOR_SCHEME)
+-- set colorscheme
+vim.cmd.colorscheme(_G.color_scheme)
 
 
--- change kitty bacground color
--- vim.fn.system({"Users/elsa/.config/kitty_bgcolor.sh","#ff0000"})
+-- custom color
+if     _G.color_scheme == "catppuccin" then
+    vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
+    -- vim.cmd([[ hi CursorLine               guibg=#3e4a42 ]])
+    vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
+    vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
+    vim.cmd([[ hi Comment                  guifg=#797e99 ]])
+    vim.cmd([[ hi Visual                   guibg=#45475b ]])
 
+elseif _G.color_scheme == "everforest" then
+    vim.cmd([[ hi Winseparator  guibg=NONE guifg=#7f989b ]])
+    vim.cmd([[ hi CursorLine               guibg=#313825 ]])
+    vim.cmd([[ hi LineNr                   guifg=#5b6e62 ]])
+    vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
+    vim.cmd([[ hi Comment                  guifg=#6d848f ]])
+    vim.cmd([[ hi Visual                   guibg=#3d3a33 ]])
 
+elseif _G.color_scheme == "nord" then
+    vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
+    -- vim.cmd([[ hi CursorLine               guibg=#393a52 ]])
+    vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
+    vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
+    vim.cmd([[ hi @comment                 guifg=#738fa4 ]])
+    vim.cmd([[ hi Visual                   guibg=#354646 ]])
 
+else -- iceberg
+    vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
+    -- vim.cmd([[ hi CursorLine               guibg=#393a52 ]])
+    vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
+    vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
+    vim.cmd([[ hi Comment                  guifg=#657997 ]])
+    vim.cmd([[ hi Visual                   guibg=#45475b ]])
+end
 
 
 -- background transparency
@@ -52,12 +67,7 @@ vim.cmd([[ hi NeoTreeEndOfBuffer  guibg=NONE    ctermbg=NONE ]])
 -- vim.cmd([[ hi lualine_x.normal   guibg=NONE    ctermbg=NONE ]])
 -- vim.cmd([[ hi lualine_y.normal   guibg=NONE    ctermbg=NONE ]])
 
--- custom colors
-vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
-vim.cmd([[ hi CursorLine               guibg=#393a52 ]])
-vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
-vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
-vim.cmd([[ hi Comment                  guifg=#797e99 ]])
+
 
 
 

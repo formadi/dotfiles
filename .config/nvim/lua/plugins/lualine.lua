@@ -53,7 +53,7 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
-        -- theme = "everforest", -- custom_theme,
+        theme = _G.color_scheme, -- custom_theme,
         component_separators = '|',
         section_separators = { left = '', right = '' },
       },
