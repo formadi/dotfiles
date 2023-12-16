@@ -76,6 +76,7 @@ elseif _G.color_scheme.name == "poimandres" then
   vim.cmd([[ hi Comment                  guifg=#6688bc   cterm=italic  gui=italic ]])
   -- vim.cmd([[ hi Visual                   guibg=#45475b ]])
   vim.cmd([[ hi NonText                  guifg=#828990   cterm=italic  gui=italic ]])      -- virtual text
+  vim.cmd([[ hi @ibl.indent.char.1       guifg=#415162 ]])      -- default indent line color
 end
 
 
