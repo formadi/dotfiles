@@ -42,4 +42,4 @@ alias cat="bat"
 eval "$(zoxide init zsh)"
 
 # autorun tmux at terlinal launch
-[ -z "$TMUX" ] && command -v tmux &> /dev/null && tmux
+# [ -z "$TMUX" ] && command -v tmux &> /dev/null && tmux
