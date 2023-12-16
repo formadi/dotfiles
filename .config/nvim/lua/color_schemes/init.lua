@@ -50,7 +50,7 @@ local color_schemes = {
     "olivercederborg/poimandres.nvim",
     name     = "poimandres",
     setup    = true,
-    lualine  = true,
+    lualine  = false,
     priority = 1000,
   },
 }
