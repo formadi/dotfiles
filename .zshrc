@@ -43,3 +43,5 @@ eval "$(zoxide init zsh)"
 
 # autorun tmux at terlinal launch
 [ -z "$TMUX" ] && command -v tmux &> /dev/null && tmux
+
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
