@@ -7,8 +7,16 @@ return {
     "mfussenegger/nvim-dap",
   },
   config = function()
+    local rt = require("rust-tools")
 
-    require("rust-tools").setup ({
+    rt.setup ({
+      server = {
+        on_attach = function (_, bufnr)
+          -- Hover actions
+          vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+          vim.keymap.set("n", "<leader>b", rt.code_action_group.code_action_group, { buffer = bufnr })
+        end,
+      },
     })
   end,
 }
