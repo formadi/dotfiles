@@ -7,12 +7,12 @@ return {
     "mfussenegger/nvim-dap",
   },
   config = function()
-    local rt = require("rust-tools")
+    local rt             = require("rust-tools")
     local mason_registry = require("mason-registry")
-    local codelldb = mason_registry.get_package("codelldb")
+    local codelldb       = mason_registry.get_package("codelldb")
     local extension_path = codelldb:get_install_path() .. "/extension/"
-    local codelldb_path = extension_path .. "adapter/codelldb"
-    local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
+    local codelldb_path  = extension_path .. "adapter/codelldb"
+    local liblldb_path   = extension_path .. "lldb/lib/liblldb.dylib"
 
     rt.setup ({
       dap = {
@@ -20,10 +20,10 @@ return {
       },
       server = {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
-        on_attach = function (_, bufnr)
+        on_attach    = function (_, bufnr)
           -- Hover actions
-          vim.keymap.set("n", "<leader>k", rt.hover_actions.hover_actions, { buffer = bufnr })
-          vim.keymap.set("n", "<leader>b", rt.code_action_group.code_action_group, { buffer = bufnr })
+          vim.keymap.set("n", "<leader>rh", rt.hover_actions.hover_actions,         { buffer = bufnr, desc = "rust hover action" })
+          vim.keymap.set("n", "<leader>rc", rt.code_action_group.code_action_group, { buffer = bufnr, desc = "rust  code action" })
         end,
       },
       tools = {
