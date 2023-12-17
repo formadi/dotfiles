@@ -13,6 +13,8 @@ return {
 
       -- configure treesitter
       treesitter.setup({ -- enable syntax highlighting
+        sync_install = false,
+        auto_install = true,
         highlight = {
           enable = true,
         },
@@ -25,6 +27,7 @@ return {
         -- ensure these language parsers are installed
         ensure_installed = {
           "json",
+          "rust",
           "javascript",
           "typescript",
           --"tsx",
