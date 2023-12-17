@@ -2,7 +2,7 @@
 if _G.color_scheme.setup == true then
   if _G.color_scheme.name == "catppuccin" then
       require(_G.color_scheme.name).setup({
-        flavour = "Mocha",
+        flavour = "frappe",
       })
   else
     require(_G.color_scheme.name).setup()
@@ -29,7 +29,7 @@ end
 -- custom color
 if     _G.color_scheme.name == "catppuccin" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b ]])
-  vim.cmd([[ hi CursorLine               guibg=#2e3c3e ]])  -- #343e38 ]])
+  vim.cmd([[ hi CursorLine               guibg=#3e435b ]])  -- #343e38 ]])
   vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
   vim.cmd([[ hi Comment                  guifg=#8187a5   cterm=italic  gui=italic ]])
@@ -130,9 +130,9 @@ vim.wo.foldnestmax   = 10
 vim.wo.foldminlines  = 2
 vim.o.foldenable     = true
 vim.o.foldlevelstart = 99
+vim.o.fillchars      = [[eob: ,fold: ,foldopen:▽,foldsep:┊,foldclose:▷]]
 vim.o.foldtext       = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' . '󱝁  ' . (v:foldend - v:foldstart + 1) . ' lines']]
 vim.wo.foldmethod    = "indent"
 vim.wo.foldexpr      = "nvim_treesitter#foldexpr()"
-vim.o.fillchars      = [[eob: ,fold: ,foldopen:▽,foldsep:┊,foldclose:▷]]
 vim.cmd('highlight Folded     ctermbg=NONE guibg=NONE')
 vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
