@@ -18,10 +18,26 @@ return {
     })
 
     -- set keymaps..
-    vim.keymap.set("n", "<leader>nt", "<cmd>Neorg journal today<CR>"            , { desc = "neorg journal today" })
-    vim.keymap.set("n", "<leader>nw", "<cmd>Neorg workspace work_notes<CR>"     , { desc = "neorg workspace notes" })
-    vim.keymap.set("n", "<leader>nm", "<cmd>Neorg workspace main<CR>"           , { desc = "neorg workspace main" })
-    vim.keymap.set("n", "<leader>nk", "<cmd>Neorg workspace knowledge_base<CR>" , { desc = "neorg knowledge base" })
-    vim.keymap.set("n", "<leader>nc", "<cmd>Neorg workspace config<CR>"         , { desc = "neorg config" })
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>"] = {
+        n = {
+          name = "Noice / Neorg",
+          j = {
+            name = "Neorg Journal",
+            t = { "<cmd>Neorg journal today<CR>"    , "journal 'today'"     },
+            y = { "<cmd>Neorg journal yesterday<CR>", "journal 'yesterday'" },
+            n = { "<cmd>Neorg journal tomorrow<CR>" , "journal 'tomorrow'"  },
+          },
+          w = {
+            name = "Neorg Workspace",
+            w = { "<cmd>Neorg workspace work_notes<CR>"     , "workspace 'work notes'"      },
+            m = { "<cmd>Neorg workspace main<CR>"           , "workspace 'main'"            },
+            k = { "<cmd>Neorg workspace knowledge_base<CR>" , "workspace 'knowledge base'"  },
+            c = { "<cmd>Neorg workspace config<CR>"         , "workspace 'config'"          },
+          },
+        },
+      },
+    })
   end,
 }

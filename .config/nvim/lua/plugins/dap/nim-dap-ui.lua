@@ -18,15 +18,20 @@ return {
         dapui.close()
       end
 
-      -- set keymaps
-      -- vim.keymap.set("n", "<leader>dt", ':DapToggleBreakpoint<CR>',  { desc = "DAP - toggle break point"})
-      vim.keymap.set("n", "<leader>dx", ':DapTerminate<CR>'       ,  { desc = "DAP - terminate"})
-      -- vim.keymap.set("n", "<leader>do", ':DapStepOver<CR>'        ,  { desc = "DAP - step over"})
-      vim.keymap.set("n", "<leader>dc", "<Cmd>lua require'dap'.continue()<CR>"          ,  { desc = "DAP - continue"})
-      vim.keymap.set("n", "<leader>do", "<Cmd>lua require'dap'.step_over()<CR>"         ,  { desc = "DAP - step over"})
-      vim.keymap.set("n", "<leader>di", "<Cmd>lua require'dap'.step_into()<CR>"         ,  { desc = "DAP - step into"})
-      vim.keymap.set("n", "<leader>dt", "<Cmd>lua require'dap'.step_out()<CR>"          ,  { desc = "DAP - step out"})
-      vim.keymap.set("n", "<leader>db", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>" ,  { desc = "DAP - toggle breakpoint"})
-
+    -- set keymaps..
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>"] = {
+        d = {
+          name = "DAP",
+          x = { "<cmd>:DapTerminate<CR>"                        , "exit"              },
+          c = { "<cmd>lua require'dap'.continue()<CR>"          , "continue"          },
+          o = { "<cmd>lua require'dap'.step_over()<CR>"         , "step over"         },
+          i = { "<cmd>lua require'dap'.step_into()<CR>"         , "step into"         },
+          t = { "<cmd>lua require'dap'.step_out()<CR>"          , "step out"          },
+          b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>" , "toggle breakpoint" },
+        },
+      },
+    })
   end,
 }
