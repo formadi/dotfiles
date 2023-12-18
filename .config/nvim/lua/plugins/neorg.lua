@@ -11,6 +11,7 @@ return {
           config = {
             workspaces = {
               notes = "/Volumes/Kali/neorg/notes",
+              rust  = "/Volumes/Kali/neorg/rust",
             },
             default_workspace = "notes",
           },
@@ -24,22 +25,27 @@ return {
       ["<leader>"] = {
         n = {
           name = "Noice / Neorg",
-          n = { "<cmd>Neorg<CR>", "Neorg" },
-          c = { "<cmd>Neorg toggle-concealer<CR>", "Neorg toggle concealer"},
+          n = { "<cmd>Neorg<CR>"                 , "Neorg" },
+          c = { "<cmd>Neorg toggle-concealer<CR>", "Neorg toggle concealer" },
+          i = { "<cmd>Neorg index<CR>"           , "Neorg index" },
+          k = {
+            name = "Neorg keybind",
+            l = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<CR>", "Neorg looking-glass"},
+            n = { "<cmd>Neorg keybind all core.dirman.new.note<CR>"                 , "Neorg new note"     },
+          },
           j = {
             name = "Neorg Journal",
             t = { "<cmd>Neorg journal today<CR>"    , "journal 'today'"     },
             y = { "<cmd>Neorg journal yesterday<CR>", "journal 'yesterday'" },
             n = { "<cmd>Neorg journal tomorrow<CR>" , "journal 'tomorrow'"  },
-
           },
-          -- w = {
-          --   name = "Neorg Workspace",
-          --   n = { "<cmd>Neorg workspace work_notes<CR>"     , "workspace 'work notes'"      },
-          --   m = { "<cmd>Neorg workspace main<CR>"           , "workspace 'main'"            },
+          w = {
+            name = "Neorg Workspace",
+            r = { "<cmd>Neorg workspace rust<CR>"     , "workspace 'rust'"         },
+            n = { "<cmd>Neorg workspace notes<CR>"    , "workspace 'notes(main)'"  },
           --   k = { "<cmd>Neorg workspace knowledge_base<CR>" , "workspace 'knowledge base'"  },
           --   c = { "<cmd>Neorg workspace config<CR>"         , "workspace 'config'"          },
-          -- },
+          },
         },
       },
     })
