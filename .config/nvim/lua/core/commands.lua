@@ -81,7 +81,7 @@ elseif _G.color_scheme.name == "poimandres" then
   vim.cmd([[ hi LineNr                   guifg=#676a88 ]])
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe ]])
   vim.cmd([[ hi Comment                  guifg=#6c82a2   cterm=italic  gui=italic ]])
-  -- vim.cmd([[ hi Visual                   guibg=#45475b ]])
+  vim.cmd([[ hi Visual                   guibg=#3a4957 ]])
   vim.cmd([[ hi NonText                  guifg=#828990   cterm=italic  gui=italic ]])      -- virtual text
   vim.cmd([[ hi @ibl.indent.char.1       guifg=#415162 ]])      -- default indent line color
   vim.cmd([[ hi GitSignsCurrentLineBlame guifg=#b5b5b5   cterm=italic  gui=italic ]])      -- default indent line color
