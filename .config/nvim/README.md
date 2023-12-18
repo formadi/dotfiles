@@ -82,6 +82,15 @@ peepsight 키맵
 <leader>pe : Peepsight Enable
 <leader>pd : Peepsight Disable
 ```
+[nvim-neorg/neorg](https://github.com/nvim-neorg/neorg)
+```
+neorg 키맵
+<leader>nn  : Neorg
+<leader>njt : Journal Today
+<leader>njy : Journal Yesterday
+<leader>njn : Journal Tomorrow
+```
+
 
 [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 
