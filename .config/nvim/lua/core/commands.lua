@@ -129,6 +129,7 @@ vim.cmd [[
 vim.o.foldlevel      = 99
 vim.o.foldcolumn     = '1'
 vim.wo.foldnestmax   = 10
+vim.wo.conceallevel  = 2
 vim.wo.foldminlines  = 2
 vim.o.foldenable     = true
 vim.o.foldlevelstart = 99
