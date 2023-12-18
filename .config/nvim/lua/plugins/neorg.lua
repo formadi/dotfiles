@@ -10,8 +10,9 @@ return {
         ["core.dirman"] = { -- Manages Neorg workspaces
           config = {
             workspaces = {
-              notes = "~/notes",
+              notes = "/Volumes/Kali/neorg/notes",
             },
+            default_workspace = "notes",
           },
         },
       },
@@ -24,11 +25,13 @@ return {
         n = {
           name = "Noice / Neorg",
           n = { "<cmd>Neorg<CR>", "Neorg" },
+          c = { "<cmd>Neorg toggle-concealer<CR>", "Neorg toggle concealer"},
           j = {
             name = "Neorg Journal",
             t = { "<cmd>Neorg journal today<CR>"    , "journal 'today'"     },
             y = { "<cmd>Neorg journal yesterday<CR>", "journal 'yesterday'" },
             n = { "<cmd>Neorg journal tomorrow<CR>" , "journal 'tomorrow'"  },
+
           },
           -- w = {
           --   name = "Neorg Workspace",
