@@ -1,5 +1,5 @@
 return {
-  "simrat39/rust-tools.nvim",
+  "formadi/rust-tools.nvim",
   ft = "rust",
   dependencies = {
     "neovim/nvim-lspconfig",
