@@ -1,4 +1,4 @@
-![screenshot1](doc/screenshot.png)
+![screenshot1](doc/screenshot.jpg)
 
 
 nvim 0.9.4 이상에서 확인

@@ -1,6 +1,8 @@
 # dotfiles
 macOS에 적용 중인 dotfile 저장소
 
+![screenshot](doc/screenshot.png)
+
 ------
 ### <span style="color:yellow">tmux true color 설정.</span>
 ~/.tmux.conf에 다음과 같이 설정
