@@ -51,4 +51,4 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 -- end)
 
 -- auto execute Neotree at nvim start
-vim.cmd('autocmd VimEnter * Neotree')
+-- vim.cmd('autocmd VimEnter * Neotree')
