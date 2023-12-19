@@ -91,9 +91,9 @@ neorg 키맵
 <leader>njn : Journal Tomorrow
 ```
 
-[3rd/image.nvim](https://github.com/3rd/image.nvim)
+[3rd/image.nvim](https://github.com/3rd/image.nvim)    -- kitty terminal에서 nvim을 사용할 경우, markdown 문서, neorg 등에서 이미지를 표시.
 ```
-실행환경 설정
+# 필수 설치
 brew install imagemagick luarocks lua51
 
 # luarocks을 이용한 magick 설치
@@ -109,8 +109,6 @@ set -gq allow-passthrough on
 # .tmux.conf 파일을 저장한 후, shell 에서 tmux source ~/.tmux.conf 를 실행
 
 ```
-
-
 
 [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 
