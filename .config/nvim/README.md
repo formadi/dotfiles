@@ -91,6 +91,26 @@ neorg 키맵
 <leader>njn : Journal Tomorrow
 ```
 
+[3rd/image.nvim](https://github.com/3rd/image.nvim)
+```
+실행환경 설정
+brew install imagemagick luarocks lua51
+
+# luarocks을 이용한 magick 설치
+luarocks --local --lua-version=5.1 install magick
+
+# dylib 설정
+# imagemagick 버전에 따라 폴더명과 libMagicWand-****.dylib 파일명은 다를 수 있음
+sudo ln -sv /opt/homebrew/Cellar/imagemagick/7.1.1-23/lib/libMagickWand-7.Q16HDRI.dylib /usr/local/lib/libMagickWand-7.Q16HDRI.dylib
+
+# tmux를 사용하는 경우
+# .tmux.conf 파일에 아래의 내용을 추가
+set -gq allow-passthrough on
+# .tmux.conf 파일을 저장한 후, shell 에서 tmux source ~/.tmux.conf 를 실행
+
+```
+
+
 
 [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 
