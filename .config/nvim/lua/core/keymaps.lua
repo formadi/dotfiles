@@ -40,3 +40,7 @@ keymap.set("n", "<C-s>",      ":w<CR>",             { desc = "Save" })
 -- indent
 keymap.set("v", ">",          ">gv",                { desc = "Indent" })
 keymap.set("v", "<",          "<gv",                { desc = "Indent" })
+
+-- Lazy & Mason
+keymap.set("n", "<leader>L",  "<cmd>Lazy<CR>",      { desc = "Lazy" })
+keymap.set("n", "<leader>M",  "<cmd>Mason<CR>",     { desc = "Mason" })

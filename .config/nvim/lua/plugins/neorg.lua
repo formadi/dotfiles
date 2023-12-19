@@ -7,15 +7,21 @@ return {
       load = {
         ["core.defaults"] = {}, -- Loads default behaviour
         ["core.concealer"] = {}, -- Adds pretty icons to your documents
+ 				["core.ui"] = {},
+				-- ["core.ui.calendar"] = {},
+				-- ["core.tempus"] = {},
         ["core.dirman"] = { -- Manages Neorg workspaces
           config = {
             workspaces = {
-              notes = "/Volumes/Kali/neorg/notes",
-              rust  = "/Volumes/Kali/neorg/rust",
+              main    = "/Volumes/Kali/neorg",
+              journal = "/Volumes/Kali/neorg/journal",
+              notes   = "/Volumes/Kali/neorg/notes",
+              rust    = "/Volumes/Kali/neorg/rust",
             },
-            default_workspace = "notes",
+            default_workspace = "main",
           },
         },
+        ["core.summary"] = {},
       },
     })
 

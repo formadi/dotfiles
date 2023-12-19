@@ -25,17 +25,17 @@ vim.g.loaded_perl_provider = 0
 --   vim.g.neovide_background_color = "#242e41" .. alpha()
 -- end
 
-
+-- for image.nvim
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
-vim.opt.number = true
-vim.opt.conceallevel = 2
-vim.opt.winbar = "image.nvim demo"
-vim.opt.signcolumn = "yes:2"
 
 -- If you need to verify whether image.nvim is functioning correctly
 -- ------------------------------------------------------------------
+-- vim.opt.number = true
+-- vim.opt.conceallevel = 2
+-- vim.opt.winbar = "image.nvim demo"
+-- vim.opt.signcolumn = "yes:2"
 -- local content = [[
 -- # Hello World
 --
@@ -49,3 +49,6 @@ vim.opt.signcolumn = "yes:2"
 --   vim.api.nvim_set_current_buf(buf)
 --   vim.cmd("split")
 -- end)
+
+-- auto execute Neotree at nvim start
+vim.cmd('autocmd VimEnter * Neotree')
