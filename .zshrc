@@ -35,6 +35,8 @@ alias lt="exa -aT -L1 --color=always --group-directories-first --icons"
 alias lt2="exa -aT -L2 --color=always --group-directories-first --icons"
 alias lt3="exa -aT -L3 --color=always --group-directories-first --icons"
 alias cat="bat"
+alias calendar="calcurse -D /Volumes/Kali/calcurse"
+alias b="brew"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -42,6 +44,10 @@ alias cat="bat"
 eval "$(zoxide init zsh)"
 
 # autorun tmux at terlinal launch
+tmux source ~/.tmux.conf
 [ -z "$TMUX" ] && command -v tmux &> /dev/null && tmux
 
 # export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+
+cd ~/.config/nvim
