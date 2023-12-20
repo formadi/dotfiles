@@ -42,10 +42,10 @@ opt.splitright      = true    -- split vertical window to the right
 opt.splitbelow      = true    -- split horizontal window to the bottom
 
 -- undo files
-local undodir = vim.fn.expand("~/.config/nvim_undodir")
-if vim.fn.isdirectory(undodir) == 0 then
-  vim.fn.mkdir(undodir, "", 0700)
-end
-
-opt.undodir  = undodir
-opt.undofile = true
+-- local undodir = vim.fn.expand("~/.config/nvim_undodir")
+-- if vim.fn.isdirectory(undodir) == 0 then
+--   vim.fn.mkdir(undodir, "", 0700)
+-- end
+--
+-- opt.undodir  = undodir
+-- opt.undofile = true
