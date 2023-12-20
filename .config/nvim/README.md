@@ -99,6 +99,8 @@ brew install imagemagick luarocks lua51
 # luarocks을 이용한 magick 설치
 luarocks --local --lua-version=5.1 install magick
 
+# 위의 magick 설치까지만 하면 정상적으로 동작해야 함.
+# 만일 magick을 설치했음에도, 설치 하지 않았다는 오류가 발생한다면.. 아래의 dylib 설정을 시도 해 본다.
 # dylib 설정
 # imagemagick 버전에 따라 폴더명과 libMagicWand-****.dylib 파일명은 다를 수 있음
 sudo ln -sv /opt/homebrew/Cellar/imagemagick/7.1.1-23/lib/libMagickWand-7.Q16HDRI.dylib /usr/local/lib/libMagickWand-7.Q16HDRI.dylib
