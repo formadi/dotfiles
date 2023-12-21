@@ -69,11 +69,24 @@ return {
     telescope.load_extension("fzf")
 
     -- set keymaps
-    local keymap = vim.keymap -- for conciseness
+    -- local keymap = vim.keymap -- for conciseness
+    --
+    -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>",  { desc = "Fuzzy find files in cwd" })
+    -- keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>",    { desc = "Fuzzy find recent files" })
+    -- keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>",   { desc = "Find string in cwd(Live Grep)" })
+    -- keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 
-    keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>",  { desc = "Fuzzy find files in cwd" })
-    keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>",    { desc = "Fuzzy find recent files" })
-    keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>",   { desc = "Find string in cwd(Live Grep)" })
-    keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>"] = {
+        f = {
+          name = "Telescope",
+          f = { "<cmd>Telescope find_files<CR>",   "find - files in cwd"          },
+          r = { "<cmd>Telescope oldfiles<CR>",     "find - recent files"          },
+          w = { "<cmd>Telescope live_grep<CR>",    "find - string in cwd (Live Grep)"   },
+          c = { "<cmd>Telescope grep_string<CR>",  "find - string under cursor in cwd"  },  -- exclusive main
+        },
+      },
+    })
   end,
 }

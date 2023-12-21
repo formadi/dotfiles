@@ -32,6 +32,6 @@ return {
     })
 
     -- set keymaps
-    vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Aerial Toggle" })
+    vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "toggle aerial" })
   end,
 }

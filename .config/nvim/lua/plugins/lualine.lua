@@ -87,7 +87,12 @@ return {
         lualine_z = { 'location' },
       },
       tabline = {
-        lualine_a = { "filename" },
+        lualine_a = {
+          {
+            "buffers",
+            max_length = vim.o.columns*0.5,
+          },
+        }, -- { "filename" },
         lualine_b = {},
         lualine_c = {
           -- {

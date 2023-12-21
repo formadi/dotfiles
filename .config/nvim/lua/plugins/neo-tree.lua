@@ -38,8 +38,8 @@ return {
     })
 
     -- set keymaps
-    vim.keymap.set("n", "<leader>te", "<cmd>Neotree toggle<CR>", { desc = "NeoTree Toggle" })
-    vim.keymap.set("n", "<leader>e",  "<cmd>Neotree<CR>",        { desc = "focus NeoTree" })
+    vim.keymap.set("n", "<leader>te", "<cmd>Neotree toggle<CR>", { desc = "NeoTree toggle" })
+    vim.keymap.set("n", "<leader>e",  "<cmd>Neotree<CR>",        { desc = "NeoTree focus" })
 
     -- customize highlight color
     vim.cmd([[ hi NeoTreeDotfile  guifg=#808080 ]])

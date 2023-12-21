@@ -21,7 +21,19 @@ return {
     -- })
     --
     -- set keymaps
-    vim.keymap.set("n", "<leader>pe", "<cmd>PeepsightEnable<CR>", { desc = "Peepsight Enable" })
-    vim.keymap.set("n", "<leader>pd", "<cmd>PeepsightDisable<CR>", { desc = "Peepsight Disable" })
+    -- vim.keymap.set("n", "<leader>pe", "<cmd>PeepsightEnable<CR>", { desc = "Peepsight Enable" })
+    -- vim.keymap.set("n", "<leader>pd", "<cmd>PeepsightDisable<CR>", { desc = "Peepsight Disable" })
+
+    -- set keymaps..
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>"] = {
+        p = {
+          name = "Peepsight",
+          e = { "<cmd>PeepsightEnable<CR>",    "enable"      },
+          d = { "<cmd>PeepsightDisable<CR>",   "disable"     },
+        },
+      },
+    })
   end,
 }

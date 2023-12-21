@@ -32,6 +32,7 @@ return {
           },
         },
         ["core.summary"] = {},
+        ["core.integrations.treesitter"] = {},
       },
     })
 
@@ -40,31 +41,31 @@ return {
     wk.register({
       ["<leader>"] = {
         n = {
-          name = "Noice / Neorg",
-          n = { "<cmd>Neorg<CR>"                 ,                                    "Neorg popup"              },
-          c = { "<cmd>Neorg toggle-concealer<CR>",                                    "toggle concealer"         },
+          name = "Neorg",
+          n = { "<cmd>Neorg<CR>"                 ,                                    "popup"                    },
+          c = { "<cmd>Neorg toggle-concealer<CR>",                                    "concealer"                },
           i = { "<cmd>Neorg index<CR>"           ,                                    "goto index"               },
           s = { "<cmd>Neorg generate-workspace-summary journal notes rust<CR>",       "generate index"           },  -- exclusive main
           k = {
-            name = "Neorg keybind",
+            name = "Keybind",
             l = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<CR>", "looking-glass"            },
             n = { "<cmd>Neorg keybind all core.dirman.new.note<CR>"                 , "new note"                 },
           },
           j = {
-            name = "Neorg Journal",
+            name = "Journal",
             t = { "<cmd>Neorg journal today<CR>"    ,                                 "journal 'today'"          },
             y = { "<cmd>Neorg journal yesterday<CR>",                                 "journal 'yesterday'"      },
             n = { "<cmd>Neorg journal tomorrow<CR>" ,                                 "journal 'tomorrow'"       },
           },
           w = {
-            name = "Neorg Workspace",
+            name = "Workspace",
             r = { "<cmd>Neorg workspace rust<CR>"     ,                               "workspace 'rust'"         },
             n = { "<cmd>Neorg workspace notes<CR>"    ,                               "workspace 'notes'"        },
             j = { "<cmd>Neorg workspace journal<CR>"  ,                               "workspace 'journal'"      },
             m = { "<cmd>Neorg workspace main<CR>"  ,                                  "workspace 'main'"         },
           },
           m = {
-            name = "Neorg Metagen",
+            name = "Metagen",
             i = { "<cmd>Neorg inject-metadata<CR>" ,                                  "inject metadata"         },
             u = { "<cmd>Neorg update-metadata<CR>" ,                                  "update metadata"         },
           },

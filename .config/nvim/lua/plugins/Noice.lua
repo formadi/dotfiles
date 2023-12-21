@@ -57,8 +57,16 @@ return {
     })
 
     -- set keymaps
-    vim.keymap.set("n", "<leader>nl", function() require("noice").cmd("last")    end, { desc = "Noice last" })
-    vim.keymap.set("n", "<leader>nh", function() require("noice").cmd("history") end, { desc = "Noice history"})
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>"] = {
+        N = {
+          name = "Noice",
+        },
+      },
+    })
 
+    vim.keymap.set("n", "<leader>Nl", function() require("noice").cmd("last")    end, { desc = "show last" })
+    vim.keymap.set("n", "<leader>Nh", function() require("noice").cmd("history") end, { desc = "show history"})
   end,
 }
