@@ -111,6 +111,14 @@ set -gq allow-passthrough on
 # .tmux.conf 파일을 저장한 후, shell 에서 tmux source ~/.tmux.conf 를 실행
 
 ```
+[pocco81/true-zen.nvim](https://github.com/pocco81/true-zen.nvim)
+```
+true-zen 키맵
+<leader>zn : narrow mode
+<leader>zf : focus mode
+<leader>zm : minimalist mode
+<leader>za : ataraxis mode
+```
 
 [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 
