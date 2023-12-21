@@ -27,7 +27,7 @@ return {
             hl.blend = 100
             vim.api.nvim_set_hl(0, 'Cursor', hl)
             vim.opt.guicursor:append('a:Cursor/lCursor')
-            vim.cmd('Neotree action=refresh')
+            vim.cmd([[Neotree action=refresh]])
             -- autocmd BufEnter normal! R
           end
         },
