@@ -22,8 +22,7 @@ return {
         {
           event = "neo_tree_buffer_enter",
           handler = function()
-            -- This effectively hides the cursor
-            -- vim.cmd 'highlight! Cursor guibg=NONE guifg=NONE blend=100
+            -- hide cursor
             local hl = vim.api.nvim_get_hl_by_name('Cursor', true)
             hl.blend = 100
             vim.api.nvim_set_hl(0, 'Cursor', hl)
@@ -33,8 +32,7 @@ return {
         {
           event = "neo_tree_buffer_leave",
           handler = function()
-            -- Make this whatever your current Cursor highlight group is.
-            -- vim.cmd 'highlight! Cursor guibg=#7cb0e7 blend=0'
+            -- show cursor
             local hl = vim.api.nvim_get_hl_by_name('Cursor', true)
             hl.blend = 0
             vim.api.nvim_set_hl(0, 'Cursor', hl)
