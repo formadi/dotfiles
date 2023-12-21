@@ -15,9 +15,9 @@ return {
         z = {
           name = "True-Zen",
           n = { "<cmd>TZNarrow<CR>",         "narrow mode"      },
-          c = { "<cmd>TZFocus<CR>",          "focus mode"       },
-          i = { "<cmd>TZMinimalist<CR>",     "minimalist mode"  },
-          s = { "<cmd>TZAtaraxis<CR>",       "ataraxis mode"    },  -- exclusive main
+          f = { "<cmd>TZFocus<CR>",          "focus mode"       },
+          m = { "<cmd>TZMinimalist<CR>",     "minimalist mode"  },
+          a = { "<cmd>TZAtaraxis<CR>",       "ataraxis mode"    },  -- exclusive main
         },
       },
     })
