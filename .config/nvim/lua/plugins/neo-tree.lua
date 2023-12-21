@@ -7,9 +7,9 @@ return {
     "MunifTanjim/nui.nvim",
   },
   cmd = "Neotree",
-  -- init = function()
-  --   vim.g.neo_tree_remove_legacy_commands = true
-  -- end,
+  init = function()
+    vim.g.neo_tree_remove_legacy_commands = true
+  end,
   config = function()
     -- If you want icons for diagnostic errors, you'll need to define them somewhere:
     vim.fn.sign_define("DiagnosticSignError", {text = " ", texthl = "DiagnosticSignError"})
@@ -18,6 +18,23 @@ return {
     vim.fn.sign_define("DiagnosticSignHint",  {text = "󰌵",  texthl = "DiagnosticSignHint"})
 
     require("neo-tree").setup({
+      event_handlers = {
+        {
+          event = "neo_tree_buffer_enter",
+          handler = function()
+            -- This effectively hides the cursor
+            vim.cmd 'highlight! Cursor blend=100'
+          end
+        },
+        {
+          event = "neo_tree_buffer_leave",
+          handler = function()
+            -- Make this whatever your current Cursor highlight group is.
+            vim.cmd 'highlight! Cursor guibg=#5f87af blend=0'
+          end
+        }
+      },
+
       filesystem = {
         filtered_items = {
           visible           = true,
