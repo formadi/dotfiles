@@ -74,6 +74,7 @@ return {
   "shortcuts/no-neck-pain.nvim",
   config = function()
     require("no-neck-pain").setup({
+
       buffers = {
         scratchPad = {
           -- set to `false` to
@@ -102,8 +103,8 @@ return {
           name = "Zen Mode",
           z = { "<cmd>NoNeckPain<CR>",              "toggle"                },
           r = { "<cmd>NoNeckPainResize 160<CR>",    "resize to 160"         },
-          i = { "<cmd>NoNeckPainWidthUp<CR>",       "window size increse"   },
-          d = { "<cmd>NoNeckPainWidthDown<CR>",     "window size decrese"   },
+          i = { "<cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR>",             "window size increse"   },
+          d = { "<cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR>",     "window size decrese"   },
         },
       },
     })
