@@ -81,7 +81,7 @@ neo-tree 키맵
 <leader>eb  : current buffer's directory
 ```
 
-```
+
 [nvim-neorg/neorg](https://github.com/nvim-neorg/neorg)
 ```
 neorg 키맵
@@ -100,7 +100,7 @@ neorg 키맵
 ```
 
 [3rd/image.nvim](https://github.com/3rd/image.nvim)    -- kitty terminal에서 nvim을 사용할 경우, markdown 문서, neorg 등에서 이미지를 표시.
-```
+
 # 필수 설치
 brew install imagemagick luarocks lua51
 
