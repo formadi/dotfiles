@@ -78,7 +78,7 @@ elseif _G.color_scheme.name == "vscode" then
 
 elseif _G.color_scheme.name == "poimandres" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b                           ]])
-  -- vim.cmd([[ hi CursorLine                           guibg=#3f3f3f            ]])
+  vim.cmd([[ hi CursorLine                              guibg=#404455            ]])
   vim.cmd([[ hi LineNr                   guifg=#676a88                           ]])
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe                           ]])
   vim.cmd([[ hi Comment                  guifg=#6c82a2  cterm=italic  gui=italic ]])
@@ -90,6 +90,7 @@ elseif _G.color_scheme.name == "poimandres" then
   vim.cmd([[ hi TelescopeBorder          guifg=#6c7086  guibg=#212532            ]])      -- floating border
   vim.cmd([[ hi TelescopePromptBorder    guifg=#a6accd  guibg=#282c39            ]])      -- floating border
   vim.cmd([[ hi TelescopeNormal                         guibg=#2e3343            ]])      -- floating border
+  vim.cmd([[ hi NeoTreeFloatBorder       guifg=#6c7086  guibg=#212532            ]])      -- floating border
 
 end
 
