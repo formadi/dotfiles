@@ -100,7 +100,7 @@ neorg 키맵
 ```
 
 [3rd/image.nvim](https://github.com/3rd/image.nvim)    -- kitty terminal에서 nvim을 사용할 경우, markdown 문서, neorg 등에서 이미지를 표시.
-
+```
 # 필수 설치
 brew install imagemagick luarocks lua51
 
@@ -117,8 +117,8 @@ sudo ln -sv /opt/homebrew/Cellar/imagemagick/7.1.1-23/lib/libMagickWand-7.Q16HDR
 # .tmux.conf 파일에 아래의 내용을 추가
 set -gq allow-passthrough on
 # .tmux.conf 파일을 저장한 후, shell 에서 tmux source ~/.tmux.conf 를 실행
-
 ```
+
 [pocco81/true-zen.nvim](https://github.com/pocco81/true-zen.nvim)
 ```
 zen mode 키맵
