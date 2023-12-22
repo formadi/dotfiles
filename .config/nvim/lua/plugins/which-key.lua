@@ -11,10 +11,10 @@ return {
       ["<leader>"] = {
         w = {
           name = "Window",
-          v = { "<C-w>v",             "sprit vertically"        },
-          h = { "<C-w>s",             "sprit horizontalliy"     },
-          e = { "<C-w>=",             "make  equal size"        },
-          x = { "<cmd>close<CR>",     "close cwd"               },  -- exclusive main
+          v = { "<C-w>v",             "sprit vertically"               },
+          h = { "<C-w>s",             "sprit horizontalliy"            },
+          e = { "<C-w>=",             "make  equal size"               },
+          x = { "<cmd>close<CR>",     "close cwd"                      },  -- exclusive main
         },
         t = {
           name = "Tab",
