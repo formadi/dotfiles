@@ -32,6 +32,15 @@ return {
     })
 
     -- set keymaps
-    vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "toggle aerial" })
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>"] = {
+        a = {
+          name = "Aerial",
+          t = { "<cmd>AerialToggle! right<CR>",   "toggle left"     },   -- ! .. cursor remain at source buffer
+          f = { "<cmd>AerialToggle  float<CR>",   "toggle float"    },
+        },
+      },
+    })
   end,
 }

@@ -18,10 +18,10 @@ keymap.set("n", "<leader>-",       "<C-x>",           { desc = "decrement number
 
 -- windows & tabs
 -- Refer to nvim/lua/lougins/which-key.nim
-keymap.set("n", "<leader><Up>",    "<C-w>k",          { desc = "move to upper window"     })
-keymap.set("n", "<leader>MDown>",  "<C-w>j",          { desc = "move to lower window"     })
-keymap.set("n", "<leader><Left>",  "<C-w>h",          { desc = "move to left window"      })
-keymap.set("n", "<leader><Right>", "<C-w>l",          { desc = "move to right window"     })
+keymap.set("n", "<leader>w<Up>",    "<C-w>k",         { desc = "move to upper window"     })
+keymap.set("n", "<leader>w<Down>",  "<C-w>j",         { desc = "move to lower window"     })
+keymap.set("n", "<leader>w<Left>",  "<C-w>h",         { desc = "move to left window"      })
+keymap.set("n", "<leader>w<Right>", "<C-w>l",         { desc = "move to right window"     })
 
 -- retab
 keymap.set("n", "<leader>r",       ":retab<CR>",      { desc = "retab"                    })
