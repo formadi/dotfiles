@@ -46,7 +46,9 @@ vscode
 [stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
 ```
 aerial 키맵
-<leader>a : aerial Toggle
+<leader>at : aerial toggle (right)
+<leader>af : aerial toggle (float)
+
 ```
 [ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
 ```
@@ -61,7 +63,7 @@ harpoon 키맵
 [kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 ```
 lazygit 키맵
-<leader>lg : LazyGit
+<leader>l : LazyGit
 ```
 [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 ```
@@ -76,22 +78,25 @@ neo-tree 키맵
 <leader>el  : left
 <leader>er  : right
 <leader>ee  : toggle
-<leader>eb  : focused buffer's directory
+<leader>eb  : current buffer's directory
 ```
 
-[koenverburg/poopsight.nvim](https://github.com/koenverburg/peepsight.nvim);
-```
-peepsight 키맵
-<leader>pe : Peepsight Enable
-<leader>pd : Peepsight Disable
 ```
 [nvim-neorg/neorg](https://github.com/nvim-neorg/neorg)
 ```
 neorg 키맵
-<leader>nn  : Neorg
+<leader>nn  : Neorg (popup)
 <leader>njt : Journal Today
 <leader>njy : Journal Yesterday
 <leader>njn : Journal Tomorrow
+<leader>nc  : toggle concealer
+<leader>ni  : goto index
+<leader>ns  : generate summary
+<leader>nkl : looking-glass
+<leader>nkn : new note
+<leader>nwm :    main workspace
+<leader>nwn :   notes workspace
+<leader>nwj : journal workspace
 ```
 
 [3rd/image.nvim](https://github.com/3rd/image.nvim)    -- kitty terminal에서 nvim을 사용할 경우, markdown 문서, neorg 등에서 이미지를 표시.
