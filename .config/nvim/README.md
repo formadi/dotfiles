@@ -72,8 +72,11 @@ nvim-lint 키맵
 [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim);
 ```
 neo-tree 키맵
-<leader>e  : focus NeoTree
-<leader>tt : NeoTree Toggle
+<leader>ef  : float
+<leader>el  : left
+<leader>er  : right
+<leader>ee  : toggle
+<leader>eb  : focused buffer's directory
 ```
 
 [koenverburg/poopsight.nvim](https://github.com/koenverburg/peepsight.nvim);
@@ -113,11 +116,11 @@ set -gq allow-passthrough on
 ```
 [pocco81/true-zen.nvim](https://github.com/pocco81/true-zen.nvim)
 ```
-true-zen 키맵
-<leader>zn : narrow mode
-<leader>zf : focus mode
-<leader>zm : minimalist mode
-<leader>za : ataraxis mode
+zen mode 키맵
+<leader>zz : toggle zen mode
+<leader>zr : resize zen-window to 160
+<leader>zi : increase zen-window size
+<leader>zd : decrease zen-window size
 ```
 
 [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
