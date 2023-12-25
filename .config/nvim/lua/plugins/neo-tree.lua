@@ -61,7 +61,7 @@ return {
       },
 
       window = {
-        position = "float",     -- default mode
+        position = "left",     -- default mode
         popup = {               -- settings that apply to float position only
           size = { height = "25", width = "60" },
           position = "50%",      -- 50% means center it

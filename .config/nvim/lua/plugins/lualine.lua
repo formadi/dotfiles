@@ -17,6 +17,14 @@ return {
       inactive_bg = "#2c3843",
     }
 
+    -- local function getBufferCount()
+    --   return len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+    -- end
+
+    local function getWords()
+      return tostring(vim.fn.wordcount().words) .. "w"
+    end
+
     local custom_theme = {
       normal = {
         a = { bg = colors.blue,   fg = colors.bg, gui = "bold" },
@@ -86,25 +94,30 @@ return {
         lualine_y = {},
         lualine_z = { 'location' },
       },
-      tabline = {
-        lualine_a = {
-          {
-            "buffers",
-            max_length = vim.o.columns*0.5,
-          },
-        }, -- { "filename" },
-        lualine_b = {},
-        lualine_c = {
-          -- {
-          --   require("noice").api.status.message.get_hl,
-          --   cond = require("noice").api.status.message.has,
-          -- },
-        },
-        lualine_x = { utils.getWords },
-        lualine_y = { { 'aerial', sep=' | ' }, 'filetype' },
-        lualine_z = {'progress'}
-      },
+      -- tabline = {
+      --   lualine_a = { getWords },
+      --   lualine_b = {
+      --     {
+      --       "buffers",
+      --       max_length = vim.o.columns*0.5,
+      --     },
+      --   }, -- { "filename" },
+      --   lualine_c = {
+      --     -- {
+      --     --   require("noice").api.status.message.get_hl,
+      --     --   cond = require("noice").api.status.message.has,
+      --     -- },
+      --   },
+      --   lualine_x = { getWords },
+      --   lualine_y = { { 'aerial', sep=' | ' }, 'filetype' },
+      --   lualine_z = {'progress'}
+      -- },
       extensions = {},
+    })
+
+    require('lualine').hide({
+      place = {'tabline'},
+      unhide = false,
     })
   end,
 }
