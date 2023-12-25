@@ -79,6 +79,7 @@ neo-tree 키맵
 <leader>el  : left
 <leader>er  : right
 <leader>ee  : toggle
+<leader>nc  : focus
 <leader>eb  : current buffer's directory
 ```
 

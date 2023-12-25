@@ -79,6 +79,7 @@ return {
           l = { "<cmd>Neotree left<CR>",           "left"    },
           r = { "<cmd>Neotree right<CR>" ,         "right"   },
           e = { "<cmd>Neotree toggle<CR>" ,        "toggle"  },
+          c = { "<cmd>Neotree focus<CR>" ,         "focus"   },
         },
       },
     })
