@@ -1,7 +1,7 @@
 -- setup color scheme
 if _G.color_scheme.setup == true then
   if _G.color_scheme.name == "catppuccin" then
-      require(_G.color_scheme.name).setup({
+    require(_G.color_scheme.name).setup({
         flavour = "frappe",
       })
   else
@@ -41,22 +41,27 @@ if     _G.color_scheme.name == "catppuccin" then
 
 elseif _G.color_scheme.name == "everforest" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#7f989b                           ]])
-  vim.cmd([[ hi CursorLine               guibg=#313825                           ]])
+  vim.cmd([[ hi CursorLine               guibg=#3b432d                           ]])
   vim.cmd([[ hi LineNr                   guifg=#5b6e62                           ]])
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe                           ]])
   vim.cmd([[ hi Comment                  guifg=#6d848f  cterm=italic  gui=italic ]])
-  vim.cmd([[ hi Visual                   guibg=#3d3a33                           ]])
+  vim.cmd([[ hi Visual                   guibg=#514d44                           ]])
   vim.cmd([[ hi GitSignsCurrentLineBlame guifg=#82947a  cterm=italic  gui=italic ]])      -- default indent line color
+  vim.cmd([[ hi WhichKeyFloat                           guibg=#2b3539            ]])      -- floating border
+  vim.cmd([[ hi FloatBorder              guifg=#6c82a2                           ]])      -- floating border
 
 elseif _G.color_scheme.name == "nord" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b                           ]])
   vim.cmd([[ hi CursorLine               guibg=#333947                           ]])
   vim.cmd([[ hi LineNr                   guifg=#6b7886                           ]])
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe                           ]])
-  vim.cmd([[ hi @comment                 guifg=#738fa4  cterm=italic  gui=italic ]])
+  vim.cmd([[ hi @comment                 guifg=#6f7882  cterm=italic  gui=italic ]])
   vim.cmd([[ hi NonText                  guifg=#828990  cterm=italic  gui=italic ]])      -- virtual text
-  vim.cmd([[ hi Visual                   guibg=#293636                           ]])
+  vim.cmd([[ hi Visual                   guibg=#314242                           ]])
   vim.cmd([[ hi GitSignsCurrentLineBlame guifg=#8fa387  cterm=italic  gui=italic ]])      -- default indent line color
+  vim.cmd([[ hi WhichKeyGroup            guifg=#f9d695                           ]])      -- floating border
+  vim.cmd([[ hi WhichKeyFloat                           guibg=#3a4151            ]])      -- floating border
+  vim.cmd([[ hi ErrorMsg                 guifg=#ff8f88  guibg=NONE               ]])      -- floating border
 
 elseif _G.color_scheme.name == "iceberg" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#5f7a9b                           ]])
@@ -91,6 +96,8 @@ elseif _G.color_scheme.name == "poimandres" then
   vim.cmd([[ hi TelescopePromptBorder    guifg=#a6accd  guibg=#282c39            ]])      -- floating border
   vim.cmd([[ hi TelescopeNormal                         guibg=#2e3343            ]])      -- floating border
   vim.cmd([[ hi NeoTreeFloatBorder       guifg=#6c7086  guibg=#212532            ]])      -- floating border
+  vim.cmd([[ hi WhichKeyGroup            guifg=#e06c75                           ]])      -- floating border
+  vim.cmd([[ hi WhichKeyFloat                           guibg=#303340            ]])      -- floating border
 
 end
 
@@ -116,6 +123,8 @@ vim.cmd([[ hi GitGutterChangeDelete  guibg=NONE    ctermbg=NONE ]])
 vim.cmd([[ hi GitGutterDelete        guibg=NONE    ctermbg=NONE ]])
 
 
+
+
 -- automatically remove trailing whitespaces & trailing newlines on save.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
@@ -128,19 +137,3 @@ vim.cmd [[
   :autocmd InsertEnter * set nocul
   :autocmd InsertLeave * set cul
 ]]
-
-
--- -- fold setting
--- vim.o.foldlevel      = 99
--- vim.o.foldcolumn     = '1'
--- vim.wo.foldnestmax   = 10
--- vim.wo.conceallevel  = 2
--- vim.wo.foldminlines  = 2
--- vim.o.foldenable     = true
--- vim.o.foldlevelstart = 99
--- vim.o.fillchars      = [[eob: ,fold: ,foldopen:▽,foldsep:┊,foldclose:▷]]
--- vim.o.foldtext       = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' . '󱝁  ' . (v:foldend - v:foldstart + 1) . ' lines']]
--- vim.wo.foldmethod    = "indent"
--- vim.wo.foldexpr      = "nvim_treesitter#foldexpr()"
--- vim.cmd('highlight Folded     ctermbg=NONE guibg=NONE')
--- vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')

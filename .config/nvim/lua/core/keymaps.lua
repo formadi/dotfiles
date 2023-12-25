@@ -24,7 +24,7 @@ keymap.set("n", "<leader>w<Left>",  "<C-w>h",         { desc = "move to left win
 keymap.set("n", "<leader>w<Right>", "<C-w>l",         { desc = "move to right window"     })
 
 -- retab
-keymap.set("n", "<leader>r",       ":retab<CR>",      { desc = "retab"                    })
+-- keymap.set("n", "<leader>r",       ":retab<CR>",      { desc = "retab"                    })
 
 -- save & quit
 keymap.set("n", "<leader>q",       ":q<CR>",          { desc = "quit"                     })
@@ -38,3 +38,6 @@ keymap.set("v", "<",               "<gv",             { desc = "< indent"       
 -- Lazy & Mason
 keymap.set("n", "<leader>L",       "<cmd>Lazy<CR>",   { desc = "lazy"                     })
 keymap.set("n", "<leader>M",       "<cmd>Mason<CR>",  { desc = "mason"                    })
+
+-- Noraml Mode.
+keymap.set("n", "<leader>i", ":call append(line('.'), '')<CR>", {desc = "add newline"     })

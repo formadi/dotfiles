@@ -68,9 +68,10 @@ require("lazy").setup({
   ui = {
     -- border =  { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 		border = "single",
-		size = {
-			width  = 0.4,
-			height = 0.4,
+		-- window size 80%
+    size = {
+			width  = 0.8,
+			height = 0.8,
 		},
   },
 
@@ -85,3 +86,4 @@ require("lazy").setup({
 
 
 require("core.commands")
+require("core.utils")

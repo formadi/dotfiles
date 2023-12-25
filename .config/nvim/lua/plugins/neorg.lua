@@ -27,6 +27,7 @@ return {
               journal = "/Volumes/Kali/neorg/journal",
               notes   = "/Volumes/Kali/neorg/notes",
               rust    = "/Volumes/Kali/neorg/rust",
+              blog    = "/Volumes/Kali/neorg/blog"
             },
             default_workspace = "main",
           },
@@ -45,7 +46,7 @@ return {
           n = { "<cmd>Neorg<CR>"                 ,                                    "popup"                    },
           c = { "<cmd>Neorg toggle-concealer<CR>",                                    "concealer"                },
           i = { "<cmd>Neorg index<CR>"           ,                                    "goto index"               },
-          s = { "<cmd>Neorg generate-workspace-summary journal notes rust<CR>",       "generate index"           },  -- exclusive main
+          s = { "<cmd>Neorg generate-workspace-summary journal notes blog rust<CR>",  "generate index"           },  -- exclusive main
           k = {
             name = "Keybind",
             l = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<CR>", "looking-glass"            },
@@ -59,15 +60,16 @@ return {
           },
           w = {
             name = "Workspace",
-            r = { "<cmd>Neorg workspace rust<CR>"     ,                               "workspace 'rust'"         },
-            n = { "<cmd>Neorg workspace notes<CR>"    ,                               "workspace 'notes'"        },
-            j = { "<cmd>Neorg workspace journal<CR>"  ,                               "workspace 'journal'"      },
-            m = { "<cmd>Neorg workspace main<CR>"  ,                                  "workspace 'main'"         },
+            r = { "<cmd>Neorg workspace rust<CR>"     ,                               "rtst"                     },
+            n = { "<cmd>Neorg workspace notes<CR>"    ,                               "notes"                    },
+            j = { "<cmd>Neorg workspace journal<CR>"  ,                               "journal"                  },
+            m = { "<cmd>Neorg workspace main<CR>"     ,                               "main"                     },
+            b = { "<cmd>Neorg workspace blog<CR>"     ,                               "blog"                     },
           },
           m = {
             name = "Metagen",
-            i = { "<cmd>Neorg inject-metadata<CR>" ,                                  "inject metadata"         },
-            u = { "<cmd>Neorg update-metadata<CR>" ,                                  "update metadata"         },
+            i = { "<cmd>Neorg inject-metadata<CR>" ,                                  "inject metadata"          },
+            u = { "<cmd>Neorg update-metadata<CR>" ,                                  "update metadata"          },
           },
         },
       },

@@ -23,15 +23,17 @@ local color_schemes = {
     "oahlen/iceberg.nvim",
     name     = "iceberg",
     setup    = false,
-    lualine  = true,
+    lualine  = false,
     priority = 1000,
   },
 
   -- nord
   {
-    "gbprod/nord.nvim",
+    -- "gbprod/nord.nvim",
+    -- "arcticicestudio/nord-vim",
+    "nordtheme/vim",
     name     = "nord",
-    setup    = true,
+    setup    = false,
     lualine  = true,
     priority = 1000,
   },
@@ -42,6 +44,15 @@ local color_schemes = {
     name     = "vscode",
     setup    = true,
     lualine  = false,
+    priority = 1000,
+  },
+
+  -- monochrome
+  {
+    "fxn/vim-monochrome",
+    name     = "monochrome",
+    setup    = false,
+    lualine  = true,
     priority = 1000,
   },
 
@@ -61,6 +72,7 @@ _G.color_scheme = nil
 for _, scheme in ipairs(color_schemes) do
   if scheme.name == _G.color_scheme_name then
     _G.color_scheme = scheme
+    _G.color_scheme.event = "VeryLazy"
     break
   end
 end

@@ -21,7 +21,19 @@ return {
       server = {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
         on_attach    = function (_, bufnr)
+
+          -- set keymaps..
+          local wk = require("which-key")
+          wk.register({
+            ["<leader>"] = {
+              r = {
+                name = "Rust",
+              },
+            },
+          })
+
           -- Hover actions
+          vim.keymap.set("n", "<leader>ds", "<cmd>RustDebuggable<CR>",              { desc = "_rust DAP start" })
           vim.keymap.set("n", "<leader>rh", rt.hover_actions.hover_actions,         { buffer = bufnr, desc = "rust hover action" })
           vim.keymap.set("n", "<leader>rc", rt.code_action_group.code_action_group, { buffer = bufnr, desc = "rust  code action" })
         end,
