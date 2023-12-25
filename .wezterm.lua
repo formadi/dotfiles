@@ -21,10 +21,10 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 config.color_scheme = "Catppuccin Mocha" -- Tokyo Night"
 config.font = wezterm.font_with_fallback({
-  { family = "Sarasa Term K Nerd Font",  scale = 1.2, weight = "ExtraLight", italic = false },
+  { family = "Sarasa Term K Nerd Font",  scale = 1.0, weight = "Regular", italic = false },
   --{ family = "CaskaydiaCove Nerd Font",  scale = 1.2 },
 })
-config.window_background_opacity = 0.92
+config.window_background_opacity = 0.97
 config.line_height=1.12
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
@@ -33,7 +33,8 @@ config.default_workspace = "main"
 
 -- custom catppucicin Mocha
 config.colors = {
-  background = "#292c3c"
+  -- everforest
+  background = "#1f221f"
 }
 
 -- Dim inactive panes
