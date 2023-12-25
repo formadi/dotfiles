@@ -128,6 +128,18 @@ zen mode 키맵
 <leader>zd : decrease zen-window size
 ```
 
+[wojciech-kulik/xcodebuild.nvim](https://github.com/wojciech-kulik/xcodebuild.nvim)
+```
+Xcodebuild 키맵
+<leader>xp : show menu
+<leader>xb : build
+<leader>xc : show config
+<leader>xd : debug
+<leader>xl : select project
+<leader>xr : run
+<leader>xs : setup
+
+```
 [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 
 [FabianWirth/search.nvim](https://github.com/FabianWirth/search.nvim)
