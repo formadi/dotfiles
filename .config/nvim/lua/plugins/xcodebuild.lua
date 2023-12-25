@@ -15,42 +15,42 @@ return {
     local extension_path = codelldb:get_install_path() .. "/extension/"
     local codelldb_path  = extension_path .. "adapter/codelldb"
     local liblldb_path   = extension_path .. "lldb/lib/liblldb.dylib"
-    local dap = require("dap")
-    local xcodebuild = require("xcodebuild.dap")
+    local dap            = require("dap")
+    local xcodebuild     = require("xcodebuild.dap")
 
     dap.configurations.swift = {
       {
-        name = "macOS app Debugger",
-        type = "codelldb",
-        request = "launch", -- "attach",
-        program = xcodebuild.get_program_path,
-        cwd = "${workspaceFolder}",
-        stopOnEntry = false,
-        waitFor = true,
+        name          = "macOS swift app Debugger",
+        type          = "codelldb",
+        request       = "launch", -- "attach",
+        program       = xcodebuild.get_program_path,
+        cwd           = "${workspaceFolder}",
+        stopOnEntry   = false,
+        waitFor       = true,
         runinTerminal = false,
       }
     }
 
     dap.configurations.objc = {
       {
-        name = "macOS app Debugger",
-        type = "codelldb",
-        request = "launch", -- "attach",
-        program = xcodebuild.get_program_path,
-        cwd = "${workspaceFolder}",
-        stopOnEntry = false,
-        waitFor = true,
+        name          = "macOS objc app Debugger",
+        type          = "codelldb",
+        request       = "launch", -- "attach",
+        program       = xcodebuild.get_program_path,
+        cwd           = "${workspaceFolder}",
+        stopOnEntry   = false,
+        waitFor       = true,
         runinTerminal = false,
       }
     }
 
     dap.adapters.codelldb = {
-      type = "server",
-      port = "13000",
-      host = "127.0.0.1",
+      type       = "server",
+      port       = "13000",
+      host       = "127.0.0.1",
       executable = {
         command = codelldb_path,
-        args = {
+        args    = {
           "--liblldb",
           liblldb_path,
           "--port",
