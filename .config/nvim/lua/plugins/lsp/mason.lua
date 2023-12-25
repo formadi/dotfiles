@@ -43,7 +43,7 @@ return {
         -- "prettierd",
         -- "clangd",
         "rust_analyzer",
-        -- "debugpy",
+        "debugpy",
         -- "graphql",
         -- "emmet_ls",
         -- "prismals",
