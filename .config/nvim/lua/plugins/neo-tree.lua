@@ -99,7 +99,7 @@ return {
       require('neo-tree.command').execute({
         action = "focus",          -- OPTIONAL, this is the default value
         source = "filesystem",     -- OPTIONAL, this is the default value
-        position = "float",        -- OPTIONAL, this is the default value
+        position = "left",        -- OPTIONAL, this is the default value
         reveal_file = reveal_file, -- path to file or folder to reveal
         reveal_force_cwd = true,   -- change cwd without asking if needed
       })
