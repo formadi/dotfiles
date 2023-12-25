@@ -8,7 +8,7 @@ return {
   config = function()
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
-
+    local util = require("lspconfig.util")
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -26,13 +26,13 @@ return {
       -- keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
       -- opts.desc = "Show LSP definitions"
-      -- keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+      -- keymap.set("n", "<leader>ld", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
       -- opts.desc = "Show LSP implementations"
-      -- keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+      -- keymap.set("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
       -- opts.desc = "Show LSP type definitions"
-      -- keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+      -- keymap.set("n", "<leader>lt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
       -- opts.desc = "See available code actions"
       -- keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
@@ -132,10 +132,10 @@ return {
     -- })
 
     -- configure python server
-    -- lspconfig["pyright"].setup({
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    -- })
+    lspconfig["pyright"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
 
     -- configure sourcekit lsp for swift
     lspconfig["sourcekit"].setup({

@@ -24,8 +24,8 @@ return {
 
         border = "single",
         size = {
-          width  = 0.4,
-          height = 0.4,
+          width  = 0.8,
+          height = 0.8,
         },
       },
     })
@@ -39,8 +39,9 @@ return {
         -- "tailwindcss",
         -- "svelte",
         "lua_ls",
+        "codelldb",
         -- "prettierd",
-        "clangd",
+        -- "clangd",
         "rust_analyzer",
         -- "debugpy",
         -- "graphql",
