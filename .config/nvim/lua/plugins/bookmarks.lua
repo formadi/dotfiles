@@ -4,6 +4,8 @@ return {
   event = "VimEnter",
   config = function()
     require("bookmarks").setup ({
+      sign_priority = 1000,
+
       on_attach = function(bufnr)
         local bm = require "bookmarks"
         local map = vim.keymap.set

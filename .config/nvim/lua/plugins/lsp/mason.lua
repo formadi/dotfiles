@@ -43,11 +43,12 @@ return {
         -- "prettierd",
         -- "clangd",
         "rust_analyzer",
-        "debugpy",
         -- "graphql",
         -- "emmet_ls",
         -- "prismals",
-        -- "pyright",
+        "debugpy",
+        "ruff_lsp",
+        "ruff",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -59,7 +60,9 @@ return {
         --"stylua", -- lua formatter
         --"isort", -- python formatter
         --"black", -- python formatter
-        "pylint", -- python linter
+        "ruff_lsp", -- python lsp
+        "ruff",  -- python linter
+        "debugpy", -- python DAP
         "eslint_d", -- js linter
       },
     })

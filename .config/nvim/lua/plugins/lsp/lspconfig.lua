@@ -131,10 +131,61 @@ return {
     --   filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     -- })
 
+    -- for python ruff
+    -- See: https://github.com/neovim/nvim-lspconfig/tree/54eb2a070a4f389b1be0f98070f81d23e2b1a715#suggested-configuration
+    local opts = { noremap=true, silent=true }
+
+    -- set keymaps
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>"] = {
+        r = {
+          name = "Ruff",
+        },
+      },
+    })
+    vim.keymap.set('n', '<space>re', vim.diagnostic.open_float, { desc = "diagnostic float", noremap=true, silent=true } )
+    vim.keymap.set('n', '<space>rq', vim.diagnostic.setloclist, { desc = "diagnostic setloclist", noremap=true, silent=true })
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+
+    -- Use an on_attach function to only map the following keys
+    -- after the language server attaches to the current buffer
+    local on_attach = function(client, bufnr)
+      -- Enable completion triggered by <c-x><c-o>
+      vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+      -- Mappings.
+      -- See `:help vim.lsp.*` for documentation on any of the below functions
+      local bufopts = { noremap=true, silent=true, buffer=bufnr }
+      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+      vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+      vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+      vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+      vim.keymap.set('n', '<space>ra', vim.lsp.buf.add_workspace_folder,    { desc = "add workspace folder",    noremap=true, silent=true, buffer=bufnr } )
+      vim.keymap.set('n', '<space>rr', vim.lsp.buf.remove_workspace_folder, { desc = "remove workspace folder", noremap=true, silent=true, buffer=bufnr } )
+      vim.keymap.set('n', '<space>rd', vim.lsp.buf.type_definition,         { desc = "type definition",    noremap=true, silent=true, buffer=bufnr })
+      vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename,                  { desc = "rename",             noremap=true, silent=true, buffer=bufnr })
+      vim.keymap.set('n', '<space>rc', vim.lsp.buf.code_action,             { desc = "code action",        noremap=true, silent=true, buffer=bufnr })
+      vim.keymap.set('n', '<space>rl', function()
+        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+      end, { ddesc = "list workspace folder", noremap=true, silent=true, buffer=bufnr } )
+      vim.keymap.set('n', '<space>rf', function() vim.lsp.buf.format { async = true } end, { desc = "format",   noremap=true, silent=true, buffer=bufnr })
+    end
+
     -- configure python server
-    lspconfig["pyright"].setup({
+    lspconfig.ruff_lsp.setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      init_options = {
+        settings = {
+          args = {
+            "--config=$HOME/.ruff.toml",
+          },
+        }
+      }
     })
 
     -- configure sourcekit lsp for swift
