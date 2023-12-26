@@ -72,4 +72,4 @@ vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
 -- end)
 
 -- auto execute Neotree at nvim start
--- vim.cmd('autocmd VimEnter * Neotree')
+vim.cmd('autocmd VimEnter * Neotree')

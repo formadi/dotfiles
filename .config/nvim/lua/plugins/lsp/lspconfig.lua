@@ -6,57 +6,55 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
-    local util = require("lspconfig.util")
-    -- import cmp-nvim-lsp plugin
+    local lspconfig    = require("lspconfig")
+    local util         = require("lspconfig.util")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
+    local keymap       = vim.keymap -- for conciseness
+    local opts         = { noremap = true, silent = true }
 
-    local keymap = vim.keymap -- for conciseness
-
-    local opts = { noremap = true, silent = true }
     local on_attach = function(client, bufnr)
+
       opts.buffer = bufnr
 
       -- set keybinds
-      -- opts.desc = "Show LSP references"
-      -- keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+      opts.desc = "Show LSP references"
+      keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
-      -- opts.desc = "Go to declaration"
-      -- keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+      opts.desc = "Go to declaration"
+      keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
-      -- opts.desc = "Show LSP definitions"
-      -- keymap.set("n", "<leader>ld", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+      opts.desc = "Go to previous diagnostic"
+      keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
 
-      -- opts.desc = "Show LSP implementations"
-      -- keymap.set("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+      opts.desc = "Go to next diagnostic"
+      keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
-      -- opts.desc = "Show LSP type definitions"
-      -- keymap.set("n", "<leader>lt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+      opts.desc = "Show documentation for what is under cursor"
+      keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
-      -- opts.desc = "See available code actions"
-      -- keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+      opts.desc = "Show LSP definitions"
+      keymap.set("n", "<leader>rd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
-      -- opts.desc = "Smart rename"
-      -- keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+      opts.desc = "Show LSP implementations"
+      keymap.set("n", "<leader>ri", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
-      -- opts.desc = "show buffer diagnostics"
-      -- keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+      opts.desc = "Show LSP type definitions"
+      keymap.set("n", "<leader>rt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
-      -- opts.desc = "Show line diagnostics"
-      -- keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+      opts.desc = "See available code actions"
+      keymap.set({ "n", "v" }, "<leader>rc", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
-      -- opts.desc = "Go to previous diagnostic"
-      -- keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+      opts.desc = "Smart rename"
+      keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
-      -- opts.desc = "Go to next diagnostic"
-      -- keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+      opts.desc = "show buffer diagnostics"
+      keymap.set("n", "<leader>rD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
-      -- opts.desc = "Show documentation for what is under cursor"
-      -- keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+      opts.desc = "Show line diagnostics"
+      keymap.set("n", "<leader>rf", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
-      -- opts.desc = "Restart LSP"
-      -- keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+      opts.desc = "Restart LSP"
+      keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
     end
 
     -- used to enable autocompletion (assign to every lsp server config)
@@ -67,7 +65,7 @@ return {
     local signs = { Error = "E", Warn = "W", Hint = "H", Info = "I" }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+      vim.fn.sign_define(hl, {uuuxt = icon, texthl = hl, numhl = "" })
     end
 
     -- configure html server
@@ -132,57 +130,33 @@ return {
     -- })
 
     -- for python ruff
-    -- See: https://github.com/neovim/nvim-lspconfig/tree/54eb2a070a4f389b1be0f98070f81d23e2b1a715#suggested-configuration
-    local opts = { noremap=true, silent=true }
-
-    -- set keymaps
-    local wk = require("which-key")
-    wk.register({
-      ["<leader>"] = {
-        r = {
-          name = "Ruff",
-        },
-      },
-    })
-    vim.keymap.set('n', '<space>re', vim.diagnostic.open_float, { desc = "diagnostic float", noremap=true, silent=true } )
-    vim.keymap.set('n', '<space>rq', vim.diagnostic.setloclist, { desc = "diagnostic setloclist", noremap=true, silent=true })
-    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-
-    -- Use an on_attach function to only map the following keys
-    -- after the language server attaches to the current buffer
-    local on_attach = function(client, bufnr)
-      -- Enable completion triggered by <c-x><c-o>
-      vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-      -- Mappings.
-      -- See `:help vim.lsp.*` for documentation on any of the below functions
-      local bufopts = { noremap=true, silent=true, buffer=bufnr }
-      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-      vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-      vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-      vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-      vim.keymap.set('n', '<space>ra', vim.lsp.buf.add_workspace_folder,    { desc = "add workspace folder",    noremap=true, silent=true, buffer=bufnr } )
-      vim.keymap.set('n', '<space>rr', vim.lsp.buf.remove_workspace_folder, { desc = "remove workspace folder", noremap=true, silent=true, buffer=bufnr } )
-      vim.keymap.set('n', '<space>rd', vim.lsp.buf.type_definition,         { desc = "type definition",    noremap=true, silent=true, buffer=bufnr })
-      vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename,                  { desc = "rename",             noremap=true, silent=true, buffer=bufnr })
-      vim.keymap.set('n', '<space>rc', vim.lsp.buf.code_action,             { desc = "code action",        noremap=true, silent=true, buffer=bufnr })
-      vim.keymap.set('n', '<space>rl', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-      end, { ddesc = "list workspace folder", noremap=true, silent=true, buffer=bufnr } )
-      vim.keymap.set('n', '<space>rf', function() vim.lsp.buf.format { async = true } end, { desc = "format",   noremap=true, silent=true, buffer=bufnr })
-    end
-
     -- configure python server
     lspconfig.ruff_lsp.setup({
       capabilities = capabilities,
-      on_attach = on_attach,
+      on_attach = on_attach, -- function (_, bufnr)
+        -- set keymaps
+      --   local wk = require("which-key")
+      --   wk.register({
+      --     ["<leader>"] = {
+      --       r = {
+      --         name = "Ruff",
+      --       },
+      --     },
+      --   })
+      --
+      --   vim.keymap.set('n', '<space>re', vim.diagnostic.open_float,           { desc = "diagnostic float",        noremap=true, silent=true, buffer=bufnr } )
+      --   vim.keymap.set('n', '<space>rq', vim.diagnostic.setloclist,           { desc = "diagnostic setloclist",   noremap=true, silent=true, buffer=bufnr } )
+      --   vim.keymap.set('n', '<space>ra', vim.lsp.buf.add_workspace_folder,    { desc = "add workspace folder",    noremap=true, silent=true, buffer=bufnr } )
+      --   vim.keymap.set('n', '<space>rr', vim.lsp.buf.remove_workspace_folder, { desc = "remove workspace folder", noremap=true, silent=true, buffer=bufnr } )
+      --   vim.keymap.set('n', '<space>rd', vim.lsp.buf.type_definition,         { desc = "type definition",         noremap=true, silent=true, buffer=bufnr } )
+      --   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename,                  { desc = "rename",                  noremap=true, silent=true, buffer=bufnr } )
+      --   vim.keymap.set('n', '<space>rc', vim.lsp.buf.code_action,             { desc = "code action",             noremap=true, silent=true, buffer=bufnr } )
+      -- end,-- on_attach,
       init_options = {
         settings = {
           args = {
-            "--config=$HOME/.ruff.toml",
+            "--config=~/.ruff.toml",
+            "--fix",
           },
         }
       }

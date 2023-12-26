@@ -75,11 +75,11 @@ return {
       ["<leader>"] = {
         e = {
           name = "Neotree",
-          f = { "<cmd>Neotree float<CR>",          "float"   },
-          l = { "<cmd>Neotree left<CR>",           "left"    },
-          r = { "<cmd>Neotree right<CR>" ,         "right"   },
-          e = { "<cmd>Neotree toggle<CR>" ,        "toggle"  },
-          c = { "<cmd>Neotree focus<CR>" ,         "focus"   },
+          f = { "<cmd>Neotree float<CR>",         "float"   },
+          l = { "<cmd>Neotree left<CR>",          "left"    },
+          r = { "<cmd>Neotree right<CR>" ,        "right"   },
+          e = { "<cmd>Neotree focus<CR>" ,        "focus"   },
+          t = { "<cmd>Neotree toggle<CR>" ,       "toggle"  },
         },
       },
     })

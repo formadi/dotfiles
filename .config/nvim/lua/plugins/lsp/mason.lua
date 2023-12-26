@@ -39,16 +39,16 @@ return {
         -- "tailwindcss",
         -- "svelte",
         "lua_ls",
-        "codelldb",
+        -- "codelldb",
         -- "prettierd",
         -- "clangd",
         "rust_analyzer",
         -- "graphql",
         -- "emmet_ls",
         -- "prismals",
-        "debugpy",
+        -- "debugpy",
         "ruff_lsp",
-        "ruff",
+        -- "ruff",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -60,6 +60,7 @@ return {
         --"stylua", -- lua formatter
         --"isort", -- python formatter
         --"black", -- python formatter
+        "codelldb",
         "ruff_lsp", -- python lsp
         "ruff",  -- python linter
         "debugpy", -- python DAP
