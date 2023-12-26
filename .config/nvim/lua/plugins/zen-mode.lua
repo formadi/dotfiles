@@ -53,7 +53,7 @@ return {
             location = "/Volumes/Kali/scratch_pad/",
           },
           bo = {
-            filetype = "md"
+            filetype = "norg"
           },
           -- left = {
           --   backgroundColor = "catppuccin-frappe",

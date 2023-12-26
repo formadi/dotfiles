@@ -8,7 +8,7 @@ return {
         ["core.defaults"] = {}, -- Loads default behaviour
         ["core.concealer"] = {}, -- Adds pretty icons to your documents
  				["core.ui"] = {},
-				-- ["core.ui.calendar"] = {},
+				["core.ui.calendar"] = {},
 				-- ["core.tempus"] = {},
         ['core.journal'] = {
           config = {
@@ -43,14 +43,17 @@ return {
       ["<leader>"] = {
         n = {
           name = "Neorg",
-          n = { "<cmd>Neorg<CR>"                 ,                                    "popup"                    },
-          c = { "<cmd>Neorg toggle-concealer<CR>",                                    "concealer"                },
-          i = { "<cmd>Neorg index<CR>"           ,                                    "goto index"               },
-          s = { "<cmd>Neorg generate-workspace-summary journal notes blog rust<CR>",  "generate index"           },  -- exclusive main
+          p = { "<cmd>Neorg<CR>"                 ,                                   "popup"                    },
+          c = { "<cmd>Neorg toggle-concealer<CR>",                                   "concealer"                },
+          i = { "<cmd>Neorg index<CR>"           ,                                   "goto index"               },
+          s = { "<cmd>Neorg generate-workspace-summary<CR>", "generate index"           },  -- exclusive main , journal notes blog rust
+          l = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<CR>" , "looking-glass"            },
+          n = { "<cmd>Neorg keybind all core.dirman.new.note<CR>"                  , "new note"                 },
+          d = { "<cmd>Neorg keybind all core.tempus.insert-date-insert-mode<CR>"   , "insert date"              },
+          t = { "<cmd>Neorg toc<CR>"                                               , "toc"                      },
           k = {
-            name = "Keybind",
-            l = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<CR>", "looking-glass"            },
-            n = { "<cmd>Neorg keybind all core.dirman.new.note<CR>"                 , "new note"                 },
+            name = "keybind",
+            t = { "<cmd>Neorg keybind all core.pivot.toggle-list-type<CR>"         , "list type toggle"         },
           },
           j = {
             name = "Journal",
@@ -74,5 +77,18 @@ return {
         },
       },
     })
+
+    -- <leader>nui 를 누르면, 자동으로 index를 재 생성해 준다.
+    -- 단 * index 요 위에 커서를 올려 놓은 상태에서 해야 한다.
+    vim.keymap.set("n", "<Leader>nu", function()
+        -- 현재 위치에서 한 줄 아래로 이동
+        vim.cmd('normal! j')
+        -- 시각 모드(V-모드)로 전환하여 파일 끝까지 선택
+        vim.cmd('normal! VG')
+        -- 선택된 텍스트 삭제
+        vim.cmd('normal! d')
+        -- "ns" 키 입력
+        vim.cmd("Neorg generate-workspace-summary")
+    end, { desc = "update index", noremap = true, silent = true })
   end,
 }
