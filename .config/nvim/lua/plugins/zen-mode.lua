@@ -70,7 +70,7 @@ return {
           z = {
             name = "Zen Mode",
             z = { "<cmd>NoNeckPain<CR>",              "toggle"                },
-            r = { "<cmd>NoNeckPainResize 160<CR>",    "resize to 160"         },
+            r = { "<cmd>NoNeckPainResize 200<CR>",    "resize to 160"         },
             i = { "<cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR>",             "window size increse"   },
             d = { "<cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR>",     "window size decrese"   },
           },
