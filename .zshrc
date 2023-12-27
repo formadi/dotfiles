@@ -37,6 +37,8 @@ alias lt3="exa -aT -L3 --color=always --group-directories-first --icons"
 alias cat="bat"
 alias calendar="calcurse -D /Volumes/Kali/calcurse"
 alias b="brew"
+alias cd="z"
+alias rm="rip"
 alias suri="cd /Volumes/Kali/suri_project"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
