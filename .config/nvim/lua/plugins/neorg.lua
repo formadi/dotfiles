@@ -244,9 +244,9 @@ return {
       end
 
 
-      local neorg_module_dirman = require("neorg").modules.get_module("core.dirman")
-      local current_ws_table    = neorg_module_dirman.get_current_workspace()
-      local current_ws          = current_ws_table[1]  -- table의 인텓스는 1부터 임.
+      -- local neorg_module_dirman = require("neorg").modules.get_module("core.dirman")
+      -- local current_ws_table    = neorg_module_dirman.get_current_workspace()
+      -- local current_ws          = current_ws_table[1]  -- table의 인텓스는 1부터 임.
 
       -- 특정 문자열이 포함된 라인이 있는지 확인
       if target_line_number then
@@ -261,21 +261,9 @@ return {
           vim.cmd('normal! VG')
           -- 선택된 텍스트 삭제
           vim.cmd('normal! d')
-
-          if current_ws == "main" then
-            vim.cmd("Neorg generate-workspace-summary")
-          else
-            vim.cmd("Neorg generate-workspace-summary " .. current_ws)
-          end
-
-        else
-          if current_ws == "main" then
-            vim.cmd("Neorg generate-workspace-summary")
-          else
-            vim.cmd("Neorg generate-workspace-summary " .. current_ws)
-          end
         end
 
+        vim.cmd("Neorg generate-workspace-summary")
       -- * Index 가 포함되어 있지 않은 경우..
       else
         -- print("해당 문자열이 포함된 라인이 없습니다.")
@@ -287,11 +275,7 @@ return {
           -- Normal 모드로 변경하면서 "* Index"의 I 자리로 이동
           vim.api.nvim_command('normal! Gk')
 
-          if current_ws == "main" then
-            vim.cmd("Neorg generate-workspace-summary")
-          else
-            vim.cmd("Neorg generate-workspace-summary " .. current_ws)
-          end
+          vim.cmd("Neorg generate-workspace-summary")
         end
       end
 
