@@ -23,6 +23,7 @@ return {
           n = { "<cmd>tabn<CR>",      "goto next tab"                  },
           p = { "<cmd>tabp<CR>",      "goto previous tab"              },
           f = { "<cmd>tabnew %<CR>",  "open current buffer in new tab" },
+          b = { "<cmd>%bd | e# | bd#<CR>",  "close all but current"          },
         },
       },
     })
