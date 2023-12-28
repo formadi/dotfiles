@@ -1,7 +1,7 @@
 -- catppuccin ,  everforest  , nord , iceberg , vscode , poimandres , monochrome
 _G.color_scheme_name = "catppuccin"
 _G.color_scheme      = nil
-
+_G.zem_toggle        = false
 
 require("core")
 

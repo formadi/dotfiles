@@ -1,41 +1,4 @@
 return {
-  {
-    -- "Pocco81/true-zen.nvim",
-    -- config = function()
-    --   require("true-zen").setup({
-    --     integrations = {
-    --       lualine = true,
-    --     },
-    --     modes = {
-    --       narrow = {
-    --         folds_style = "informative",
-    --         list = false,
-    --         statusline = "%#Normal#",
-    --       },
-    --       minimalist = {
-    --         options = {
-    --           list = false,
-    --           statusline = "%#Normal#",
-    --         },
-    --       },
-    --     },
-    --   })
-    --
-    --   -- set keymaps..
-    --   local wk = require("which-key")
-    --   wk.register({
-    --     ["<leader>"] = {
-    --       z = {
-    --         n = { "<cmd>TZNarrow<CR>",         "narrow mode"      },
-    --         f = { "<cmd>TZFocus<CR>",          "focus mode"       },
-    --         m = { "<cmd>TZMinimalist<CR>",     "minimalist mode"  },
-    --         a = { "<cmd>TZAtaraxis<CR>",       "ataraxis mode"    },  -- exclusive main
-    --       },
-    --     },
-    --   })
-    -- end,
-  },
-
   -- order is important.
   -- no-nect-pain first and zen-mode last.
   {
@@ -51,6 +14,17 @@ return {
             -- set to `nil` to default
             -- to current working directory
             location = "/Volumes/Kali/scratch_pad/",
+          },
+          wo = {
+            colorcolumn    = "0",
+            cursorcolumn   = false,
+            cursorline     = false,
+            foldenable     = false,
+            linebreak      = true,
+            list           = false,
+            number         = false,
+            relativenumber = false,
+            wrap           = false,
           },
           bo = {
             filetype = "norg"
@@ -69,38 +43,38 @@ return {
         ["<leader>"] = {
           z = {
             name = "Zen Mode",
-            z = { "<cmd>NoNeckPain<CR>",              "toggle"                },
-            r = { "<cmd>NoNeckPainResize 200<CR>",    "resize to 160"         },
+            r = { "<cmd>NoNeckPainResize 120<CR>",    "resize to 160"         },
             i = { "<cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR><cmd>NoNeckPainWidthUp<CR>",             "window size increse"   },
             d = { "<cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR><cmd>NoNeckPainWidthDown<CR>",     "window size decrese"   },
           },
         },
       })
+
+      -- Zen Mode Toggle = Neotree Toggle
+      vim.keymap.set("n", "<Leader>zz", function()
+        if _G.zen_toggle == false then
+          vim.cmd("Neotree toggle")
+          vim.cmd("NoNeckPain")
+          vim.cmd("NoNeckPainResize 120")  -- customiz size...
+          _G.zen_toggle = true
+        else
+          vim.cmd("Neotree left") -- restore left mode
+          vim.cmd("NoNeckPain")
+          _G.zen_toggle = false
+        end
+      end, { desc = "toggle", noremap = true, silent = true })
     end,
   },
 
   {
     "folke/zen-mode.nvim",
     opts = {
-
     },
 
     config = function()
-
       -- set keymaps..
       vim.keymap.set("n", "<leader>zt",  "<cmd>ZenMode<CR>",      { desc = "zen mode" })
 
     end,
   },
 }
-
-
--- Yey Another Zen Mode
--- return  {
---   "Snikimonkd/yazmp",
---
---   config = function()
---     -- set keymaps..
---     vim.keymap.set("n", "<leader>z",  "<cmd>Zenmode<CR>",      { desc = "zen mode" })
---   end
--- }

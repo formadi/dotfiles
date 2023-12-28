@@ -24,7 +24,7 @@ return {
           config = {
             workspaces = {
               main    = "/Volumes/Kali/neorg",
-              journal = "/Volumes/Kali/neorg/journal",
+              -- journal = "/Volumes/Kali/neorg/journal",
               notes   = "/Volumes/Kali/neorg/notes",
               rust    = "/Volumes/Kali/neorg/rust",
               blog    = "/Volumes/Kali/neorg/blog"
@@ -32,7 +32,11 @@ return {
             default_workspace = "main",
           },
         },
-        ["core.summary"] = {},
+        ["core.summary"] = {
+          config = {
+            strategy = "default",
+          },
+        },
         ["core.integrations.treesitter"] = {},
       },
     })
@@ -132,12 +136,15 @@ return {
         local current_ws          = current_ws_table[1]  -- table의 인텓스는 1부터 임.
 
         -- ws와 일치하는 항목은 빼 버린다.
-        for i = #directories, 1, -1 do
-          if directories[i] == current_ws then
-            table.remove(directories, i)
-            break
+         for i = #directories, 1, -1 do
+            if directories[i] == current_ws then
+              table.remove(directories, i)
+            -- neorg 업데이트로 journal에는 접근할 수 없음
+            -- main에서 직접 관리
+            elseif directories[i] == "journal" then
+                table.remove(directories, i)
+            end
           end
-        end
 
         return directories
       end

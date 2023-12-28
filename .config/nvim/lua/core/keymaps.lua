@@ -4,6 +4,7 @@ local keymap    = vim.keymap -- for conciseness
 
 -- General Keymaps
 vim.api.nvim_set_keymap("n", ";", ":",                { noremap = true, silent = false    })
+vim.api.nvim_set_keymap("v", ";", ":",                { noremap = true, silent = false    })
 
 -- use jk to exit insert mode
 keymap.set("i", "jk",              "<ESC>",           { desc = "exit insert mode with jk" })

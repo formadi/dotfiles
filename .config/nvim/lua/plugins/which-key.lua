@@ -11,18 +11,17 @@ return {
       ["<leader>"] = {
         w = {
           name = "Window",
-          v = { "<C-w>v",             "sprit vertically"               },
-          h = { "<C-w>s",             "sprit horizontalliy"            },
-          e = { "<C-w>=",             "make  equal size"               },
-          x = { "<cmd>close<CR>",     "close cwd"                      },  -- exclusive main
+          v = { "<C-w>v",             "sprit vertically"                     },
+          h = { "<C-w>s",             "sprit horizontalliy"                  },
+          e = { "<C-w>=",             "make  equal size"                     },
+          x = { "<cmd>close<CR>",     "close cwd"                            },  -- exclusive main
         },
-        t = {
-          name = "Tab",
-          c = { "<cmd>tabnew<CR>",    "create new tab"                 },
-          x = { "<cmd>tabclose<CR>",  "close current tab"              },
-          n = { "<cmd>tabn<CR>",      "goto next tab"                  },
-          p = { "<cmd>tabp<CR>",      "goto previous tab"              },
-          f = { "<cmd>tabnew %<CR>",  "open current buffer in new tab" },
+        b = {
+          name = "Buffer",
+          c = { "<cmd>vnew<CR>",            "create new buffer"              },
+          x = { "<cmd>bd<CR>",              "close buffer"                   },
+          n = { "<cmd>bn<CR>",              "next buffer"                    },
+          p = { "<cmd>bp<CR>",              "prev buffer"                    },
           b = { "<cmd>%bd | e# | bd#<CR>",  "close all but current"          },
         },
       },
