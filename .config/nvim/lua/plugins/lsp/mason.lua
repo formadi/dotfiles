@@ -58,12 +58,12 @@ return {
       ensure_installed = {
         "prettier", -- prettier formatter
         --"stylua", -- lua formatter
-        --"isort", -- python formatter
-        --"black", -- python formatter
+        --"isort",  -- python formatter
+        --"black",  -- python formatter
         "codelldb",
         "ruff_lsp", -- python lsp
-        "ruff",  -- python linter
-        "debugpy", -- python DAP
+        "ruff",     -- python linter
+        "debugpy",  -- python DAP
         "eslint_d", -- js linter
       },
     })

@@ -71,7 +71,7 @@ local color_schemes = {
 _G.color_scheme = nil
 for _, scheme in ipairs(color_schemes) do
   if scheme.name == _G.color_scheme_name then
-    _G.color_scheme = scheme
+    _G.color_scheme       = scheme
     _G.color_scheme.event = "VeryLazy"
     break
   end

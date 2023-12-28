@@ -8,10 +8,10 @@ return {
         separator_style = "thin",
         offsets = {
           {
-            filetype = "neo-tree",
-            text = " << sidebar >> " ,
+            filetype   = "neo-tree",
+            text       = " << sidebar >> " ,
             text_align = "center",
-            separator = true,
+            separator  = true,
           },
         },
       },

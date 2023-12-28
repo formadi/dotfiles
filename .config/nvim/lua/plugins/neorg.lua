@@ -77,7 +77,7 @@ return {
     -- neorg main 의 하위 디렉토르를 확인한다.
     vim.keymap.set("n", "<Leader>nx", function()
       local neorg_module_dirman = require("neorg").modules.get_module("core.dirman")
-      local ws           = neorg_module_dirman.get_current_workspace()
+      local ws                  = neorg_module_dirman.get_current_workspace()
       -- example : ws = {"main, "/Volumes/Kali/neorg}
       -- :Neorg workspace 명령 실행
       -- local neorg_workspace_output = vim.cmd('Neorg workspace')
@@ -174,13 +174,13 @@ return {
         local win_id = vim.api.nvim_open_win(bufnr, true, {
           -- 창 생성 옵션 설정
           relative = 'win',
-          row = row,
-          col = col,
-          width = 30,
-          height = #lines + 2,
-          style = 'minimal',
-          border = 'single',
-          title = " Select a workspace : " .. current_ws .. " "
+          row      = row,
+          col      = col,
+          width    = 30,
+          height   = #lines + 2,
+          style    = 'minimal',
+          border   = 'single',
+          title    = " Select a workspace : " .. current_ws .. " "
         })
 
         -- cursorline" 활성화

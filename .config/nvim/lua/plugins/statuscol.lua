@@ -8,9 +8,9 @@ return {
       segments = {
         { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
         {
-          text = { " ", builtin.lnumfunc, " " },
+          text      = { " ", builtin.lnumfunc, " " },
           condition = { true, builtin.not_empty },
-          click = "v:lua.ScLa",
+          click     = "v:lua.ScLa",
         },
         { text = { "%s"}, click = "v:lua.ScSa", auto=true },
         -- {

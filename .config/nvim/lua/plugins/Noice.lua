@@ -10,17 +10,17 @@ return {
       lsp = {
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-          ["vim.lsp.util.stylize_markdown"] = true,
-          ["cmp.entry.get_documentation"] = true,
+          ["vim.lsp.util.stylize_markdown"]                = true,
+          ["cmp.entry.get_documentation"]                  = true,
         },
-        hover     = { enabled = true },
-        signature = { enabled = true },
-        progress  = {
+        hover         = { enabled = true },
+        signature     = { enabled = true },
+        progress      = {
           enabled     = true,
           format      = "lsp_progress",
           format_done = "lsp_progress_done",
           throttle    = 1000 / 30, -- frequency to update lsp progress message
-          view = "mini",
+          view        = "mini",
         },
       },
       presets = {
@@ -34,12 +34,12 @@ return {
       messages = {
         -- NOTE: If you enable messages, then the cmdline is enabled automatically.
         -- This is a current Neovim limitation.
-        enabled = true, -- enables the Noice messages UI
-        view = "notify", -- default view for messages
-        view_error = "notify", -- view for errors
-        view_warn = "notify", -- view for warnings
+        enabled      = true, -- enables the Noice messages UI
+        view         = "notify", -- default view for messages
+        view_error   = "notify", -- view for errors
+        view_warn    = "notify", -- view for warnings
         view_history = "messages", -- view for :messages
-        view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
+        view_search  = "virtualtext", -- view for search count messages. Set to `false` to disable
       },
 
       commands = {
