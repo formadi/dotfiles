@@ -4,7 +4,9 @@ macOS에 적용 중인 dotfile 저장소
 ![screenshot](doc/screenshot.png)
 
 ------
-### <span style="color:yellow">tmux true color 설정.</span>
+<details>
+  <Summary>tmux 설정</summary>
+### tmux true color 설정
 ~/.tmux.conf에 다음과 같이 설정
 
 ```
@@ -139,3 +141,4 @@ Prefix + I
 ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면서  plugin을 설치하게 된다.
 
 ![tpm](doc/tmux_plugin_install.png)
+</detail>
