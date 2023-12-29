@@ -42,7 +42,7 @@ catppuccin
 ------
 
 ### DAP
-<<<details>
+<details>
   <summary>rust</summary>
   <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/rust-dap.png"/>
 </details>
