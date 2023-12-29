@@ -62,6 +62,21 @@ end, { desc = "journal tommorow", noremap = true, silent = true })
 
 
 
+-- keymap.. Noerg > concealer
+-- ---------------------------------------------------------------------------
+vim.keymap.set("n", "<Leader>nc", function()
+  if vim.wo.conceallevel == 2 then
+    vim.wo.concealcursor = ""
+    vim.wo.conceallevel  = 0
+  else
+    vim.wo.concealcursor = "n"
+    vim.wo.conceallevel  = 2
+  end
+
+  vim.api.nvim_command("Neorg toggle-concealer")
+end, { desc = "journal tommorow", noremap = true, silent = true })
+
+
 
 -- keymap.. Noerg > workspace
 -- ---------------------------------------------------------------------------

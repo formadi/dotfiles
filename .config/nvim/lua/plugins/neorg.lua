@@ -5,12 +5,20 @@ return {
   config = function()
     require("neorg").setup ({
       load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.ui"] = {},
+        ["core.defaults"]    = {}, -- Loads default behaviour
+        ["core.ui"]          = {},
+        ["core.syntax"]      = {},
 				["core.ui.calendar"] = {},
-				-- ["core.tempus"] = {},
-        ['core.journal'] = {
+        ["core.concealer"]   = { -- Adds pretty icons to your documents
+          config = {
+            icons = {
+              code_block = {
+                conceal = true
+              },
+            },
+          },
+        },
+        ['core.journal']     = {
           config = {
             -- workspace = "journal",
             strategy  = "flat",
@@ -55,7 +63,7 @@ return {
         n = {
           name = "Neorg",
           p = { "<cmd>Neorg<CR>",                                                    "show popup-menu"     },
-          c = { "<cmd>Neorg toggle-concealer<CR>",                                   "toggle concealer"    },
+          -- c = { "<cmd>Neorg toggle-concealer<CR>",                                   "toggle concealer"    },
           i = { "<cmd>Neorg index<CR>",                                              "show index"          },
           l = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<CR>",  "run looking-glass"   },
           n = { "<cmd>Neorg keybind all core.dirman.new.note<CR>",                   "create new note"     },
