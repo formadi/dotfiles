@@ -17,10 +17,9 @@ nvim 0.9.4 이상에서 확인
 
 ### Themes
 
-everforest
 <details>
   <summary>everforest</summary>
-  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/everforest.png" alt="everforest">
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/everforest.png">
 </details>
 
 ![everforest](doc/everforest.png)
