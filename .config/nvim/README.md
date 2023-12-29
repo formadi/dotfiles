@@ -50,6 +50,10 @@ catppuccin
   <summary>python</summary>
   <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/python-dap.png"/>
 </details>
+<details>
+  <summary>swift</summary>
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/swift-dap.png"/>
+</details>
 
 
 ### Plugins
