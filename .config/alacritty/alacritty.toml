@@ -9,12 +9,16 @@ size = 13
 
 [font.normal]
 family = "Sarasa Term K Nerd font"
-style = "Light"
+style  = "Light"
+
+[font.offset]
+x = 0
+y = 3
 
 [window]
-decorations = "buttonless"
+decorations     = "buttonless"
 dynamic_padding = false
-opacity = 0.97
+opacity         = 0.97
 
 [window.padding]
 x = 18
