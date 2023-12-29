@@ -19,13 +19,12 @@ nvim 0.9.4 이상에서 확인
 
 ### Themes
 
+catppuccin
+<img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/catppuccin.png"/>
+
 <details>
   <summary>everforest</summary>
   <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/everforest.png"/>
-</details>
-<details>
-  <summary>catppuccin</summary>
-  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/catppuccin.png"/>
 </details>
 <details>
   <summary>iceberg</summary>
