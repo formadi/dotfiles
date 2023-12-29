@@ -80,3 +80,4 @@ yabai -m rule --add app="^음악$" manage=off
 yabai -m rule --add app="^Leaf$" manage=off
 yabai -m rule --add app="^Xcode$" manage=off
 yabai -m rule --add app="^Magnetola$" manage=off
+yabai -m rule --add app="^Git Credential Manager$" manage=off

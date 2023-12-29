@@ -13,6 +13,26 @@ return {
   config = function()
     require("neo-tree").setup({
       event_handlers = {
+        -- neo_tree_popup_buffer_enter
+        --neo_tree_window_after_open
+        {
+          event = "neo_tree_window_after_open",
+          handler = function()
+            -- hide cursor
+            local hl = vim.api.nvim_get_hl(0,{name = 'Cursor'})
+            hl.blend = 100
+            vim.api.nvim_set_hl(0, 'Cursor', hl)
+            vim.opt.guicursor:append('a:Cursor/lCursor')
+            -- autocmd iBufEnter normal! R
+            _G.neotree_open = true
+          end
+        },
+        {
+          event = "neo_tree_window_before_close",
+          handler = function()
+            _G.neotree_open = false
+          end
+        },
         {
           event = "neo_tree_buffer_enter",
           handler = function()
@@ -33,7 +53,35 @@ return {
             vim.api.nvim_set_hl(0, 'Cursor', hl)
             vim.opt.guicursor:remove('a:Cursor/lCursor')
           end
+        },
+
+        {
+          event = "neo_tree_popup_buffer_enter",
+          handler = function()
+            -- show cursor
+            local hl = vim.api.nvim_get_hl(0,{name = 'Cursor'})
+            hl.blend = 0
+            vim.api.nvim_set_hl(0, 'Cursor', hl)
+            vim.opt.guicursor:append('a:Cursor/lCursor')
+            -- autocmd BufEnter normal! R
+          end
+        },
+        {
+          event = "neo_tree_popup_buffer_leave",
+          handler = function()
+            -- hide cursor
+            local hl = vim.api.nvim_get_hl(0, {name = 'Cursor'})
+            hl.blend = 100
+            vim.api.nvim_set_hl(0, 'Cursor', hl)
+            vim.opt.guicursor:remove('a:Cursor/lCursor')
+          end
         }
+      },
+
+      default_component_configs = {
+        modified = {
+          symbol = "􀒋 ",
+        },
       },
 
       filesystem = {

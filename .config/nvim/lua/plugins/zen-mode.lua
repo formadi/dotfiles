@@ -53,13 +53,17 @@ return {
       -- Zen Mode Toggle = Neotree Toggle
       vim.keymap.set("n", "<Leader>zz", function()
         if _G.zen_toggle == false then
-          vim.cmd("Neotree toggle")
-          vim.cmd("NoNeckPain")
-          vim.cmd("NoNeckPainResize 120")  -- customiz size...
+          if _G.neotree_open == true then
+            vim.api.nvim_command("Neotree toggle")
+          end
+          vim.api.nvim_command("NoNeckPain")
+          vim.api.nvim_command("NoNeckPainResize 120")  -- customiz size...
           _G.zen_toggle = true
         else
-          vim.cmd("Neotree left") -- restore left mode
-          vim.cmd("NoNeckPain")
+          if _G.neotree_open == false then
+            vim.api.nvim_command("Neotree left") -- restore left mode
+          end
+          vim.api.nvim_command("NoNeckPain")
           _G.zen_toggle = false
         end
       end, { desc = "toggle", noremap = true, silent = true })
