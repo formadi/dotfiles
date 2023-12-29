@@ -19,7 +19,7 @@ return {
             colorcolumn    = "0",
             cursorcolumn   = false,
             cursorline     = false,
-            foldenable     = false,
+            foldenable     = true,
             linebreak      = true,
             list           = false,
             number         = false,
