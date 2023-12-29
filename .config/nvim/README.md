@@ -46,6 +46,10 @@ catppuccin
   <summary>rust</summary>
   <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/rust-dap.png"/>
 </details>
+<details>
+  <summary>python</summary>
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/python-dap.png"/>
+</details>
 
 
 ### Plugins
