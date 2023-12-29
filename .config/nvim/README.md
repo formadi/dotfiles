@@ -10,10 +10,10 @@ nvim 0.9.4 이상에서 확인
 - 배경은 모두 투명처리 (배경색은 터미널 배경색)
 - Normal/Visual 모드에서 ;(semi-colon) 키인으로 Command 모드 변경.
 - 저장 시, 자동으로 Trailing whitespace 제거.
-- *DAP* : rust, python, objc, swift
-- *note-taking* : Neorg
-- *Zen Mode* : [No-pain-pain.nvim](https://github.com/shortcuts/no-neck-pain.nvim) + [zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
-- *leader 키* : space
+- **DAP** : rust, python, objc, swift
+- **note-taking** : Neorg
+- **Zen Mode** : [No-pain-pain.nvim](https://github.com/shortcuts/no-neck-pain.nvim) + [zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
+- **leader 키** : space
 
 ------
 
