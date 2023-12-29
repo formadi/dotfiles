@@ -4,8 +4,9 @@ macOS에 적용 중인 dotfile 저장소
 ![screenshot](doc/screenshot.png)
 
 ------
+
 <details>
-  <Summary>tmux 설정</summary>
+  <Summary>tmux 설치/설정</summary>
 
 ### 설치
 ```shell
