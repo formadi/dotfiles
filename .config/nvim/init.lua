@@ -19,22 +19,6 @@ require("core")
 vim.g.python3_host_prog    = "/Users/elsa/.config/venv/bin/python3"
 vim.g.loaded_perl_provider = 0
 
--- fold setting
--- vim.o.foldlevel      = 99
--- vim.o.foldcolumn     = '1'
--- vim.wo.foldnestmax   = 10
--- vim.wo.conceallevel  = 2
--- vim.wo.foldminlines  = 2
--- vim.o.foldenable     = true
--- vim.o.foldlevelstart = 99
--- vim.o.fillchars      = [[eob: ,fold: ,foldopen:▽,foldsep:┊,foldclose:▷]]
--- vim.o.foldtext       = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' . '󱝁  ' . (v:foldend - v:foldstart + 1) . ' lines']]
--- vim.wo.foldmethod    = "indent"
--- vim.wo.foldexpr      = "nvim_treesitter#foldexpr()"
--- vim.cmd('highlight Folded     ctermbg=NONE guibg=NONE')
--- vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
-
-
 
 -- ### when using neovide.app
 -- ------------------------------------------------------------
@@ -74,6 +58,7 @@ vim.g.loaded_perl_provider = 0
 --   vim.api.nvim_set_current_buf(buf)
 --   vim.cmd("split")
 -- end)
+
 
 -- auto execute Neotree at nvim start
 vim.cmd('autocmd VimEnter * Neotree')

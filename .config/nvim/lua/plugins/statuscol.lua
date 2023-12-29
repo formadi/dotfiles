@@ -12,6 +12,7 @@ return {
           condition = { true, builtin.not_empty },
           click     = "v:lua.ScLa",
         },
+        { text = { builtin.foldfunc, ' ' }, click = "v:lua.ScFa" },
         -- {
         --   sign = { name = { ".*" }, maxwidth = 4, colwidth = 2, auto = true, wrap = false },
         --   click = "v:lua.ScSa"

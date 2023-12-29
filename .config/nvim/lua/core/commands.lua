@@ -41,6 +41,7 @@ if     _G.color_scheme.name == "catppuccin" then
   vim.cmd([[ hi lualine_b_inactive       guifg=#7f89b1                           ]])      -- default indent line color
   vim.cmd([[ hi lualine_b_normal         guifg=#b4cbff  guibg=#4e536d            ]])      -- default indent line color
   vim.cmd([[ hi NeotreeTitleBar          guifg=#7683a1                           ]])      -- default indent line color
+  vim.cmd([[ hi FoldColumn               guifg=#a7a37c                           ]])      -- default indent line color
   -- vim.cmd([[ hi lualine_b_normal         guifg=#262938  guibg=#99d1db            ]])      -- default indent line color
   -- vim.cmd([[ hi NormalFloat                             guibg=#3c4158            ]])      -- default indent line color
   -- vim.cmd([[ hi FloatBorder              guifg=#8caaee  guibg=#3c4158            ]])      -- floating border

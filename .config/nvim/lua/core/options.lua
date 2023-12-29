@@ -51,8 +51,24 @@ opt.splitbelow      = true    -- split horizontal window to the bottom
 -- opt.undodir  = undodir
 -- opt.undofile = true
 
+-- fold setting
+vim.o.foldlevel      = 99
+vim.o.foldcolumn     = '1'
+vim.wo.foldnestmax   = 10
+vim.wo.conceallevel  = 2
+vim.wo.foldminlines  = 2
+vim.o.foldenable     = true
+vim.o.foldlevelstart = 99
+vim.o.fillchars      = [[eob: ,fold: ,foldopen:▽,foldsep: ,foldclose:▷]]  -- ┊
+vim.o.foldtext       = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' . '󱝁  ' . (v:foldend - v:foldstart + 1) . ' lines']]
+vim.wo.foldmethod    = "indent"
+vim.wo.foldexpr      = "nvim_treesitter#foldexpr()"
+vim.cmd('highlight Folded     ctermbg=NONE guibg=NONE')
+vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
 
 
-opt.signcolumn = "auto:2"
-opt.numberwidth = 3
--- opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:lnum ? v:lnum : v:relnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
+opt.signcolumn = "auto:3"
+-- opt.numberwidth = 3
+
+-- remove vim-signature mark "~"
+vim.opt.shada = "!,'0,f0,<50,s10,h"

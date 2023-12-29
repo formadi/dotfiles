@@ -32,6 +32,7 @@ return {
           event = "neo_tree_window_after_open",
           handler = function()
             hide_cursor(true)
+            vim.cmd("setlocal nonumber")
             _G.neotree_open = true
           end
         },
@@ -39,13 +40,21 @@ return {
           event = "neo_tree_window_before_close",
           handler = function()
             _G.neotree_open = false
+            hide_cursor(false)
           end
         },
         {
           event = "neo_tree_buffer_enter",
           handler = function()
             hide_cursor(true)
+            vim.cmd("setlocal nonumber")
             vim.cmd('normal! <C-r>')
+          end
+        },
+        {
+          event = "vim_buffer_added",
+          handler = function()
+            hide_cursor(false)
           end
         },
         {
@@ -70,7 +79,7 @@ return {
 
       default_component_configs = {
         modified = {
-          symbol = "􀒋 ",
+          symbol = "󰙏 ", --  ", -- 􀒋 ",
         },
       },
 
