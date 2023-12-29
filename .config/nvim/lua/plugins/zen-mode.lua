@@ -19,8 +19,8 @@ return {
             colorcolumn    = "0",
             cursorcolumn   = false,
             cursorline     = false,
-            foldenable     = true,
-            linebreak      = true,
+            foldenable     = true,   -- true
+            linebreak      = true,   -- true
             list           = false,
             number         = false,
             relativenumber = false,
