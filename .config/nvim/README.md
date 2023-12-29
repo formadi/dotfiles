@@ -41,6 +41,13 @@ catppuccin
 
 ------
 
+### DAP
+<<<details>
+  <summary>rust</summary>
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/rust-dap.png"/>
+</details>
+
+
 ### Plugins
 - 별도의 comment가 없는 것은 기본 키맵을 사용하는 것임.
 ```
