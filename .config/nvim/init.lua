@@ -3,6 +3,9 @@ _G.color_scheme_name = "catppuccin"
 _G.color_scheme      = nil
 _G.zen_toggle        = false
 _G.working_directory = vim.fn.getcwd()
+_G.neotree_open      = false
+
+
 
 print("현재의 디렉코리는 : " .. _G.working_directory)
 
