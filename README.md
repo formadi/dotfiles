@@ -7,6 +7,10 @@ macOS에 적용 중인 dotfile 저장소
 <details>
   <Summary>tmux 설정</summary>
 
+### 설치
+```shell
+brew install tmux
+```
 ### tmux true color 설정
 
 ~/.tmux.conf에 다음과 같이 설정
