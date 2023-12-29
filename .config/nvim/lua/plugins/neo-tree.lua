@@ -45,6 +45,7 @@ return {
           event = "neo_tree_buffer_enter",
           handler = function()
             hide_cursor(true)
+            vim.cmd('normal! <C-r>')
           end
         },
         {
