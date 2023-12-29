@@ -1,3 +1,5 @@
+<!-- panvimdoc-ignore-start -->
+
 ![screenshot1](doc/screenshot.jpg)
 
 
@@ -19,7 +21,7 @@ nvim 0.9.4 이상에서 확인
 
 <details>
   <summary>everforest</summary>
-  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/everforest.png">
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/everforest.png"/>
 </details>
 
 ![everforest](doc/everforest.png)
