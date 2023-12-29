@@ -23,27 +23,22 @@ nvim 0.9.4 이상에서 확인
   <summary>everforest</summary>
   <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/everforest.png"/>
 </details>
-
-![everforest](doc/everforest.png)
-
-nord
-![nord](doc/nord.png)
-
-iceberg
-![iceberg](doc/iceberg.png)
-
-poimandres
-![poimandres](doc/poimandres.png)
-
-catppuccin
-![catppuccin](doc/catppuccin.png)
-
-vscode
-![vscode](doc/vscode.png)
-
-
-
-
+<details>
+  <summary>catppuccin</summary>
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/catppuccin.png"/>
+</details>
+<details>
+  <summary>iceberg</summary>
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/iceberg.png"/>
+</details>
+<details>
+  <summary>nord</summary>
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/nord.png"/>
+</details>
+<details>
+  <summary>vscode</summary>
+  <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/vscode.png"/>
+</details>
 
 ------
 
