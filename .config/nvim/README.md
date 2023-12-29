@@ -10,10 +10,10 @@ nvim 0.9.4 이상에서 확인
 - 배경은 모두 투명처리 (배경색은 터미널 배경색)
 - Normal/Visual 모드에서 ;(semi-colon) 키인으로 Command 모드 변경.
 - 저장 시, 자동으로 Trailing whitespace 제거.
-- <span style="color:blue">DAP</span> : rust, python, objc, swift
-- <b>note-taking</b> : Neorg
-- <b>Zen Mode</b> : [No-pain-pain.nvim](https://github.com/shortcuts/no-neck-pain.nvim) + [zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
-- <b>leader 키</b>: space
+- DAP : rust, python, objc, swift
+- note-taking : Neorg
+- Zen Mode : [No-pain-pain.nvim](https://github.com/shortcuts/no-neck-pain.nvim) + [zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
+- leader 키 : space
 
 ------
 
@@ -76,21 +76,22 @@ neo-tree 키맵
 ```
 ```
 neorg 키맵
-<leader>nn  : Neorg (popup)
+<leader>np  : Neorg (popup)
 <leader>njt : Journal Today
 <leader>njy : Journal Yesterday
 <leader>njn : Journal Tomorrow
 <leader>nc  : toggle concealer
+<leader>nd  : insert date
+<leader>nt  : show toc
 <leader>ni  : goto index
-<leader>ns  : generate summary
-<leader>nkl : looking-glass
-<leader>nkn : new note
-<leader>nwm :    main workspace
-<leader>nwn :   notes workspace
-<leader>nwj : journal workspace
+<leader>nl  : looking-glass
+<leader>nn  : new note
+<leader>nm  : change workspace
 ```
-image.nvim
+[3rd/image.nvim](https://github.com/3rd/image.nvim)
 ```
+- kitty terminal emuator에서 사용가능, neorg에 image를 삽입할 수 있는 plug-in
+
 # 필수 설치
 brew install imagemagick luarocks lua51
 
@@ -110,14 +111,15 @@ set -gq allow-passthrough on
 ```
 ```
 zen mode 키맵
-<leader>zz : toggle zen mode
-<leader>zr : resize zen-window to 160
+<leader>zz : toggle default zen mode (3 buffers)
+<leader>zt : toggle deep zen mode (single buffer)
+<leader>zr : resize zen-window to 120
 <leader>zi : increase zen-window size
 <leader>zd : decrease zen-window size
 ```
 ```
 Xcodebuild 키맵
-<leader>xp : show menu
+<leader>xp : show popup menu
 <leader>xb : build
 <leader>xc : show config
 <leader>xd : debug
