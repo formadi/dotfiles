@@ -43,15 +43,11 @@ catppuccin
 
 ### Plugins
 - 별도의 comment가 없는 것은 기본 키맵을 사용하는 것임.
-
-[stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
 ```
 aerial 키맵
 <leader>at : aerial toggle (right)
 <leader>af : aerial toggle (float)
-
 ```
-[ThePrimeagen/harpoon.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Harpoon2 branch
 ```
 harpoon 키맵
 <leader>ha : append
@@ -61,18 +57,14 @@ harpoon 키맵
 <leader>hp : previous
 <leader>hq : quick menu
 ```
-[kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 ```
 lazygit 키맵
 <leader>l : LazyGit
 ```
-[mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 ```
 nvim-lint 키맵
 <leader>ll : Trigger linting for current file
 ```
-
-[nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim);
 ```
 neo-tree 키맵
 <leader>ef  : float
@@ -82,9 +74,6 @@ neo-tree 키맵
 <leader>nc  : focus
 <leader>eb  : current buffer's directory
 ```
-
-
-[nvim-neorg/neorg](https://github.com/nvim-neorg/neorg)
 ```
 neorg 키맵
 <leader>nn  : Neorg (popup)
@@ -100,8 +89,7 @@ neorg 키맵
 <leader>nwn :   notes workspace
 <leader>nwj : journal workspace
 ```
-
-[3rd/image.nvim](https://github.com/3rd/image.nvim)    -- kitty terminal에서 nvim을 사용할 경우, markdown 문서, neorg 등에서 이미지를 표시.
+image.nvim
 ```
 # 필수 설치
 brew install imagemagick luarocks lua51
@@ -120,8 +108,6 @@ sudo ln -sv /opt/homebrew/Cellar/imagemagick/7.1.1-23/lib/libMagickWand-7.Q16HDR
 set -gq allow-passthrough on
 # .tmux.conf 파일을 저장한 후, shell 에서 tmux source ~/.tmux.conf 를 실행
 ```
-
-[pocco81/true-zen.nvim](https://github.com/pocco81/true-zen.nvim)
 ```
 zen mode 키맵
 <leader>zz : toggle zen mode
@@ -129,8 +115,6 @@ zen mode 키맵
 <leader>zi : increase zen-window size
 <leader>zd : decrease zen-window size
 ```
-
-[wojciech-kulik/xcodebuild.nvim](https://github.com/wojciech-kulik/xcodebuild.nvim)
 ```
 Xcodebuild 키맵
 <leader>xp : show menu
