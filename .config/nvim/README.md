@@ -1,6 +1,6 @@
 <!-- panvimdoc-ignore-start -->
 
-![screenshot1](doc/screenshot.jpg)
+<img src="https://github.com/formadi/dotfiles/raw/main/.config/nvim/doc/screenshot.jpg"/>
 
 
 nvim 0.9.4 이상에서 확인
