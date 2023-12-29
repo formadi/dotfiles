@@ -1,3 +1,16 @@
+local function hide_cursor(on_off)
+  local hl = vim.api.nvim_get_hl(0,{name = 'Cursor'})
+  if on_off == true then
+    hl.blend = 100  -- hide
+  else
+    hl.blend = 0    -- show
+  end
+  vim.api.nvim_set_hl(0, 'Cursor', hl)
+  vim.opt.guicursor:append('a:Cursor/lCursor')
+end
+
+-- -------------------------------------------------------------------------------------
+
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "main",
@@ -18,12 +31,7 @@ return {
         {
           event = "neo_tree_window_after_open",
           handler = function()
-            -- hide cursor
-            local hl = vim.api.nvim_get_hl(0,{name = 'Cursor'})
-            hl.blend = 100
-            vim.api.nvim_set_hl(0, 'Cursor', hl)
-            vim.opt.guicursor:append('a:Cursor/lCursor')
-            -- autocmd iBufEnter normal! R
+            hide_cursor(true)
             _G.neotree_open = true
           end
         },
@@ -36,44 +44,25 @@ return {
         {
           event = "neo_tree_buffer_enter",
           handler = function()
-            -- hide cursor
-            local hl = vim.api.nvim_get_hl(0,{name = 'Cursor'})
-            hl.blend = 100
-            vim.api.nvim_set_hl(0, 'Cursor', hl)
-            vim.opt.guicursor:append('a:Cursor/lCursor')
-            -- autocmd BufEnter normal! R
+            hide_cursor(true)
           end
         },
         {
           event = "neo_tree_buffer_leave",
           handler = function()
-            -- show cursor
-            local hl = vim.api.nvim_get_hl(0, {name = 'Cursor'})
-            hl.blend = 0
-            vim.api.nvim_set_hl(0, 'Cursor', hl)
-            vim.opt.guicursor:remove('a:Cursor/lCursor')
+            hide_cursor(false)
           end
         },
-
         {
           event = "neo_tree_popup_buffer_enter",
           handler = function()
-            -- show cursor
-            local hl = vim.api.nvim_get_hl(0,{name = 'Cursor'})
-            hl.blend = 0
-            vim.api.nvim_set_hl(0, 'Cursor', hl)
-            vim.opt.guicursor:append('a:Cursor/lCursor')
-            -- autocmd BufEnter normal! R
+            hide_cursor(false)
           end
         },
         {
           event = "neo_tree_popup_buffer_leave",
           handler = function()
-            -- hide cursor
-            local hl = vim.api.nvim_get_hl(0, {name = 'Cursor'})
-            hl.blend = 100
-            vim.api.nvim_set_hl(0, 'Cursor', hl)
-            vim.opt.guicursor:remove('a:Cursor/lCursor')
+            hide_cursor(true)
           end
         }
       },
