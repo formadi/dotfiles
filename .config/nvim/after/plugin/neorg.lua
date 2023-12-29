@@ -301,30 +301,30 @@ augroup END
 -- -----------------------------------------------------------------------
 -- line number 감추기 여부를 결정할 함수
 function ShouldHideLineNumber()
-    -- 현재 buffer의 확장자 가져오기
-    local file_extension = vim.fn.expand("%:e")
+  -- 현재 buffer의 확장자 가져오기
+  local file_extension = vim.fn.expand("%:e")
 
-    -- 파일 확장자가 "norg"인 경우에는 line number 감춤
-    return file_extension == "norg"
+  -- 파일 확장자가 "norg"인 경우에는 line number 감춤
+  return file_extension == "norg"
 end
 
 -- line number 감춤 여부 설정
 function ToggleLineNumber()
-    -- if ShouldHideLineNumber() then
-    if vim.bo.filetype == 'norg' then
-      vim.wo.number = false
-    else
-      vim.wo.number = true
-    end
+  -- if ShouldHideLineNumber() then
+  if vim.bo.filetype == 'norg' then
+    vim.wo.number = false
+  else
+    vim.wo.number = true
+  end
 end
 
 -- BufferWritePost 이벤트에 대한 autocmd 추가
 vim.cmd(
-    [[
-    augroup HideLineNumber
-        autocmd!
-        autocmd BufReadPost * lua ToggleLineNumber()
-    augroup END
-    ]],
-    false
+  [[
+  augroup HideLineNumber
+    autocmd!
+    autocmd BufReadPost * lua ToggleLineNumber()
+  augroup END
+  ]],
+  false
 )
