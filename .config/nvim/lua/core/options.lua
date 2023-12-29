@@ -41,6 +41,7 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright      = true    -- split vertical window to the right
 opt.splitbelow      = true    -- split horizontal window to the bottom
 
+
 -- undo files
 -- local undodir = vim.fn.expand("~/.config/nvim_undodir")
 -- if vim.fn.isdirectory(undodir) == 0 then
@@ -49,3 +50,9 @@ opt.splitbelow      = true    -- split horizontal window to the bottom
 --
 -- opt.undodir  = undodir
 -- opt.undofile = true
+
+
+
+opt.signcolumn = "auto:2"
+opt.numberwidth = 3
+-- opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:lnum ? v:lnum : v:relnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"

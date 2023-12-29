@@ -4,7 +4,7 @@ return {
   config = function()
     local lualine     = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-    local utils       = require("core.utils")
+    -- local utils       = require("core.utils")
 
     local colors = {
       blue        = "#65D1FF",
@@ -17,12 +17,22 @@ return {
       inactive_bg = "#2c3843",
     }
 
-    -- local function getBufferCount()
-    --   return len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
-    -- end
-
     local function getWords()
       return tostring(vim.fn.wordcount().words) .. "w"
+    end
+
+    local function neorg_workspace()
+      local neorg_module_dirman = require("neorg").modules.get_module("core.dirman")
+      local ws                  = neorg_module_dirman.get_current_workspace()
+      return "  " .. ws[1]
+    end
+
+    local function zen_mode()
+      if _G.zen_toggle == true then
+        return "󰹞"
+      else
+        return "󰹟"
+      end
     end
 
     local custom_theme = {
@@ -94,24 +104,39 @@ return {
         lualine_y = {},
         lualine_z = { 'location' },
       },
-      -- tabline = {
-      --   lualine_a = { getWords },
-      --   lualine_b = {
-      --     {
-      --       "buffers",
-      --       max_length = vim.o.columns*0.5,
-      --     },
-      --   }, -- { "filename" },
-      --   lualine_c = {
-      --     -- {
-      --     --   require("noice").api.status.message.get_hl,
-      --     --   cond = require("noice").api.status.message.has,
-      --     -- },
-      --   },
-      --   lualine_x = { getWords },
-      --   lualine_y = { { 'aerial', sep=' | ' }, 'filetype' },
-      --   lualine_z = {'progress'}
-      -- },
+      tabline = {
+        -- "현재 버퍼 위치 / 총 버퍼 수" 표시
+        lualine_a = {
+          'function',
+          function ()
+            local current_bufnr = vim.fn.bufnr('%')                    -- 현재 활성화된 버퍼의 번호
+            local buf_list      = vim.fn.getbufinfo({buflisted = 1})   -- 버퍼 목록 정보
+            local current_buffer_index
+            for i, buf_info in ipairs(buf_list) do
+                if buf_info.bufnr == current_bufnr then
+                    current_buffer_index = i
+                    break
+                end
+            end
+            return current_buffer_index .. "/" .. #buf_list
+          end
+        },
+        lualine_b = {
+          {
+            "buffers",
+            max_length = vim.o.columns*0.5,
+          },
+        }, -- { "filename" },
+        lualine_c = {
+          -- {
+          --   require("noice").api.status.message.get_hl,
+          --   cond = require("noice").api.status.message.has,
+          -- },
+        },
+        lualine_x = { { 'aerial', sep=' | ' } },
+        lualine_y = { neorg_workspace, getWords, 'filetype' },
+        lualine_z = { zen_mode, 'progress'}
+      },
       extensions = {},
     })
 

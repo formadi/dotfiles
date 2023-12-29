@@ -38,6 +38,11 @@ if     _G.color_scheme.name == "catppuccin" then
   vim.cmd([[ hi @ibl.indent.char.1       guifg=#415162                           ]])      -- default indent line color
   vim.cmd([[ hi GitSignsCurrentLineBlame guifg=#7aa1a6  cterm=italic  gui=italic ]])      -- default indent line color
   vim.cmd([[ hi WhichKeyGroup            guifg=#eaeef2                           ]])      -- default indent line color
+  vim.cmd([[ hi lualine_b_inactive       guifg=#7f89b1                           ]])      -- default indent line color
+  vim.cmd([[ hi lualine_b_normal         guifg=#b4cbff  guibg=#4e536d            ]])      -- default indent line color
+  -- vim.cmd([[ hi lualine_b_normal         guifg=#262938  guibg=#99d1db            ]])      -- default indent line color
+  -- vim.cmd([[ hi NormalFloat                             guibg=#3c4158            ]])      -- default indent line color
+  -- vim.cmd([[ hi FloatBorder              guifg=#8caaee  guibg=#3c4158            ]])      -- floating border
 
 elseif _G.color_scheme.name == "everforest" then
   vim.cmd([[ hi Winseparator  guibg=NONE guifg=#7f989b                           ]])

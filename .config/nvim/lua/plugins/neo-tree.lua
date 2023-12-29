@@ -11,19 +11,13 @@ return {
     vim.g.neo_tree_remove_legacy_commands = true
   end,
   config = function()
-    -- If you want icons for diagnostic errors, you'll need to define them somewhere:
-    vim.fn.sign_define("DiagnosticSignError", {text = " ", texthl = "DiagnosticSignError"})
-    vim.fn.sign_define("DiagnosticSignWarn",  {text = " ", texthl = "DiagnosticSignWarn"})
-    vim.fn.sign_define("DiagnosticSignInfo",  {text = " ", texthl = "DiagnosticSignInfo"})
-    vim.fn.sign_define("DiagnosticSignHint",  {text = "󰌵",  texthl = "DiagnosticSignHint"})
-
     require("neo-tree").setup({
       event_handlers = {
         {
           event = "neo_tree_buffer_enter",
           handler = function()
             -- hide cursor
-            local hl = vim.api.nvim_get_hl_by_name('Cursor', true)
+            local hl = vim.api.nvim_get_hl(0,{name = 'Cursor'})
             hl.blend = 100
             vim.api.nvim_set_hl(0, 'Cursor', hl)
             vim.opt.guicursor:append('a:Cursor/lCursor')
@@ -34,7 +28,7 @@ return {
           event = "neo_tree_buffer_leave",
           handler = function()
             -- show cursor
-            local hl = vim.api.nvim_get_hl_by_name('Cursor', true)
+            local hl = vim.api.nvim_get_hl(0, {name = 'Cursor'})
             hl.blend = 0
             vim.api.nvim_set_hl(0, 'Cursor', hl)
             vim.opt.guicursor:remove('a:Cursor/lCursor')
@@ -84,6 +78,7 @@ return {
       },
     })
 
+
     vim.keymap.set('n', '<leader>eb', function()
       local reveal_file = vim.fn.expand('%:p')
       if (reveal_file == '') then
@@ -103,9 +98,15 @@ return {
         reveal_file      = reveal_file,      -- path to file or folder to reveal
         reveal_force_cwd = true,             -- change cwd without asking if needed
       })
-      end,
-      {desc = "buffer's directory"}
-    );
+    end,
+    {desc = "buffer's directory"})
+
+
+    vim.keymap.set('n', '<leader>ew', function()
+      local command = "Neotree dir=" .. _G.working_directory
+      vim.api.nvim_command(command)
+    end,
+    {desc = "working directory"})
 
     -- customize highlight color
     vim.cmd([[ hi NeoTreeDotfile  guifg=#808080 ]])

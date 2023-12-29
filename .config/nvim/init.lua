@@ -1,34 +1,35 @@
 -- catppuccin ,  everforest  , nord , iceberg , vscode , poimandres , monochrome
 _G.color_scheme_name = "catppuccin"
 _G.color_scheme      = nil
-_G.zem_toggle        = false
+_G.zen_toggle        = false
+_G.working_directory = vim.fn.getcwd()
+
+print("현재의 디렉코리는 : " .. _G.working_directory)
 
 require("core")
 
 
 -- for image.nvim
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
-
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
 vim.g.python3_host_prog    = "/Users/elsa/.config/venv/bin/python3"
 vim.g.loaded_perl_provider = 0
 
-
 -- fold setting
-vim.o.foldlevel      = 99
-vim.o.foldcolumn     = '1'
-vim.wo.foldnestmax   = 10
-vim.wo.conceallevel  = 2
-vim.wo.foldminlines  = 2
-vim.o.foldenable     = true
-vim.o.foldlevelstart = 99
-vim.o.fillchars      = [[eob: ,fold: ,foldopen:▽,foldsep:┊,foldclose:▷]]
-vim.o.foldtext       = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' . '󱝁  ' . (v:foldend - v:foldstart + 1) . ' lines']]
-vim.wo.foldmethod    = "indent"
-vim.wo.foldexpr      = "nvim_treesitter#foldexpr()"
-vim.cmd('highlight Folded     ctermbg=NONE guibg=NONE')
-vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
+-- vim.o.foldlevel      = 99
+-- vim.o.foldcolumn     = '1'
+-- vim.wo.foldnestmax   = 10
+-- vim.wo.conceallevel  = 2
+-- vim.wo.foldminlines  = 2
+-- vim.o.foldenable     = true
+-- vim.o.foldlevelstart = 99
+-- vim.o.fillchars      = [[eob: ,fold: ,foldopen:▽,foldsep:┊,foldclose:▷]]
+-- vim.o.foldtext       = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' . '󱝁  ' . (v:foldend - v:foldstart + 1) . ' lines']]
+-- vim.wo.foldmethod    = "indent"
+-- vim.wo.foldexpr      = "nvim_treesitter#foldexpr()"
+-- vim.cmd('highlight Folded     ctermbg=NONE guibg=NONE')
+-- vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
 
 
 
