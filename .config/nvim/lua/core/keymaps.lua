@@ -14,8 +14,8 @@ keymap.set("i", "<C-s>",           "<ESC>:w<CR>",     { desc = "save"           
 keymap.set("n", "<leader>c",       ":nohl<CR>",       { desc = "clear search highlights"  })
 
 -- increment/decrement numbers
-keymap.set("n", "<leader>+",       "<C-a>",           { desc = "increment number"         })
-keymap.set("n", "<leader>-",       "<C-x>",           { desc = "decrement number"         })
+-- keymap.set("n", "<leader>+",       "<C-a>",           { desc = "increment number"         })
+-- keymap.set("n", "<leader>-",       "<C-x>",           { desc = "decrement number"         })
 
 -- windows & tabs
 -- Refer to nvim/lua/lougins/which-key.nim
