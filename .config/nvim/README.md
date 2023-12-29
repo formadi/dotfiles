@@ -56,7 +56,7 @@ catppuccin
 </details>
 
 ------
-### kitty, zen-mode, neorg, image
+### kitty, zen-mode, neorg, image(highly experimental plugin)
 <details>
   <summary>screenshot</summary>
   <img src="https://github.com/formadi/dotfiles/blob/main/.config/nvim/doc/kitty.png"/>
