@@ -140,7 +140,11 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 
 
 -- insert mode : no cusorline, the other mode : cursorline
+-- Display cusorline only in active window
 vim.cmd [[
   :autocmd InsertEnter * set nocul
   :autocmd InsertLeave * set cul
+
+  :autocmd WinEnter    * set cursorline
+  :autocmd WinLeave    * set nocursorline
 ]]
