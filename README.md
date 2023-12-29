@@ -6,9 +6,10 @@ macOS에 적용 중인 dotfile 저장소
 ------
 <details>
   <Summary>tmux 설정</summary>
-### tmux true color 설정
-~/.tmux.conf에 다음과 같이 설정
 
+### tmux true color 설정
+
+~/.tmux.conf에 다음과 같이 설정
 ```
 set -g default-terminal "tmux-256color"
 set-option -sa terminal-features ",xterm-256color:RGB"
