@@ -301,26 +301,3 @@ vim.cmd(
   ]],
   false
 )
-
-
-
--- vim.cmd([[
---   augroup NorgFold
---     autocmd!
---     autocmd BufRead,BufNewFile *.norg setlocal foldmethod=expr foldexpr=v:lua.MyNorgFold(v:lnum)
---   augroup END
--- ]], false)
---
--- function MyNorgFold(lnum)
---   -- 현재 라인의 텍스트를 가져오기
---   local line_text = vim.fn.getline(lnum)
---
---   -- "Document Metadata" 문자열이 포함되어 있으면 1을 반환하여 펼치지 않도록 함
---   if string.find(tostring(line_text), "@document.meta") ~= nil then
---     vim.api.nvim_command('echom " 찾음"')
---     return 1
---   end
---
---   -- 그 외의 경우에는 0을 반환하여 펼치도록 함
---   return 0
--- end
