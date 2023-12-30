@@ -5,7 +5,6 @@ return {
     require("statuscol").setup ({
       relculright = true,
       segments = {
-        -- { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
         { text = { "%s", ' '}, click = "v:lua.ScSa", auto=false },
         {
           text      = { " ", builtin.lnumfunc, " " },
@@ -13,10 +12,6 @@ return {
           click     = "v:lua.ScLa",
         },
         { text = { builtin.foldfunc, ' ' }, click = "v:lua.ScFa" },
-        -- {
-        --   sign = { name = { ".*" }, maxwidth = 4, colwidth = 2, auto = true, wrap = false },
-        --   click = "v:lua.ScSa"
-        -- },
       }
     })
   end,

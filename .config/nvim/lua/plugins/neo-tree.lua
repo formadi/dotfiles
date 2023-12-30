@@ -34,9 +34,6 @@ return {
             hide_cursor(true)
             vim.cmd("setlocal nonumber")
             _G.neotree_open = true
-
-            -- 현재 윈도우 ID 획득
-            -- _G.neotree_win_id = vim.fn.win_getid()
           end
         },
         {
@@ -78,33 +75,6 @@ return {
             hide_cursor(true)
           end
         },
-        -- debug
-        -- {
-        --   event   = "vim_win_enter",
-        --   handler = function()
-        --     -- 현재 윈도우 ID 획득
-        --     local current_window_id = vim.fn.win_getid()
-        --     -- 모든 윈도우 정보 얻기
-        --     -- local windows_info = vim.fn.getwininfo()
-        --     -- -- 해당 window_id가 있는지 확인
-        --     -- local found = false
-        --     -- for _, win_info in ipairs(windows_info) do
-        --     --     if win_info.winid ==  _G.neotree_win_id then
-        --     --         found = true
-        --     --         break
-        --     --     end
-        --     -- end
-        --     --
-        --     -- -- 이전의 window가 유효하다면
-        --     -- if found == true and  _G.neotree_win_id ~= nil then
-        --     --   -- cursorline을 제거하고..
-        --     --   vim.api.nvim_set_option_value( 'cursorline', false, {win = _G.neotree_win_id} )
-        --     -- end
-        --     -- -- 현재 window에 cursorline을 표시한다
-        --     -- _G.neotree_win_id = current_window_id
-        --     -- vim.api.nvim_set_option_value( 'cursorline', true, {win = _G.neotree_win_id} )
-        --   end
-        -- },
       },
 
       default_component_configs = {
@@ -132,10 +102,10 @@ return {
       },
 
       window = {
-        position = "left",     -- default mode
+        position = "left",      -- default mode
         popup = {               -- settings that apply to float position only
           size = { height = "25", width = "60" },
-          position = "50%",      -- 50% means center it
+          position = "50%",     -- 50% means center it
         },
       },
     })
@@ -154,7 +124,6 @@ return {
         },
       },
     })
-
 
     vim.keymap.set('n', '<leader>eb', function()
       local reveal_file = vim.fn.expand('%:p')
@@ -177,7 +146,6 @@ return {
       })
     end,
     {desc = "buffer's directory"})
-
 
     vim.keymap.set('n', '<leader>ew', function()
       local command = "Neotree dir=" .. _G.working_directory

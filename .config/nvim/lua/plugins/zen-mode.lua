@@ -29,12 +29,6 @@ return {
           bo = {
             filetype = "norg"
           },
-          -- left = {
-          --   backgroundColor = "catppuccin-frappe",
-          -- },
-          -- right = {
-          --   backgroundColor = "tokyonight-frappe",
-          -- },
         },
       })
 

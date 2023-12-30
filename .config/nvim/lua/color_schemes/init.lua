@@ -29,8 +29,6 @@ local color_schemes = {
 
   -- nord
   {
-    -- "gbprod/nord.nvim",
-    -- "arcticicestudio/nord-vim",
     "nordtheme/vim",
     name     = "nord",
     setup    = false,
@@ -67,7 +65,7 @@ local color_schemes = {
 }
 
 
--- -- _G.color_scheme에 따라 선택된 컬러 스키마를 설정합니다.
+-- set the selected color theme according to _G.color_scheme
 _G.color_scheme = nil
 for _, scheme in ipairs(color_schemes) do
   if scheme.name == _G.color_scheme_name then

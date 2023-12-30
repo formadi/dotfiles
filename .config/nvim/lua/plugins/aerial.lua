@@ -34,7 +34,8 @@ return {
       ["<leader>"] = {
         a = {
           name = "Aerial",
-          t = { "<cmd>AerialToggle! right<CR>",   "toggle left"     },   -- ! .. cursor remain at source buffer
+          a = { "<cmd>AerialToggle<CR>",          "toggle (left)"   },   -- ! .. cursor remain at source buffer
+          l = { "<cmd>AerialToggle! right<CR>",   "toggle left"     },   -- ! .. cursor remain at source buffer
           f = { "<cmd>AerialToggle  float<CR>",   "toggle float"    },
         },
       },

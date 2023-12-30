@@ -12,8 +12,8 @@ return {
       violet      = "#FF61EF",
       yellow      = "#FFDA7B",
       red         = "#FF4A4A",
-      fg          = "#d6d9d4", -- "#232323",
-      bg          = "#11293d",    -- "#112638",
+      fg          = "#d6d9d4",
+      bg          = "#11293d",
       inactive_bg = "#2c3843",
     }
 
@@ -105,12 +105,11 @@ return {
         lualine_z = { 'location' },
       },
       tabline = {
-        -- "현재 버퍼 위치 / 총 버퍼 수" 표시
         lualine_a = {
           'function',
           function ()
-            local current_bufnr = vim.fn.bufnr('%')                    -- 현재 활성화된 버퍼의 번호
-            local buf_list      = vim.fn.getbufinfo({buflisted = 1})   -- 버퍼 목록 정보
+            local current_bufnr = vim.fn.bufnr('%')
+            local buf_list      = vim.fn.getbufinfo({buflisted = 1})
             local current_buffer_index
             for i, buf_info in ipairs(buf_list) do
                 if buf_info.bufnr == current_bufnr then

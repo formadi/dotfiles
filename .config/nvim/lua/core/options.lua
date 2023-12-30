@@ -41,16 +41,6 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright      = true    -- split vertical window to the right
 opt.splitbelow      = true    -- split horizontal window to the bottom
 
-
--- undo files
--- local undodir = vim.fn.expand("~/.config/nvim_undodir")
--- if vim.fn.isdirectory(undodir) == 0 then
---   vim.fn.mkdir(undodir, "", 0700)
--- end
---
--- opt.undodir  = undodir
--- opt.undofile = true
-
 -- fold setting
 vim.o.foldlevel      = 99
 vim.o.foldcolumn     = '1'
@@ -68,7 +58,7 @@ vim.cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
 
 
 opt.signcolumn = "auto:3"
--- opt.numberwidth = 3
+
 
 -- remove vim-signature mark "~"
 vim.opt.shada = "!,'0,f0,<50,s10,h"

@@ -10,6 +10,10 @@ return {
     require("search").setup ({
       tabs = {
         {
+          name = "Hightlight",
+          tele_func = builtin.highlights,
+        },
+        {
           name = "Grep",
           tele_func = builtin.live_grep, -- find_files,
         },
@@ -24,10 +28,6 @@ return {
         {
           name = "Keymaps",
           tele_func = builtin.keymaps,
-        },
-        {
-          name = "Hightlight",
-          tele_func = builtin.highlights,
         },
       },
     })
