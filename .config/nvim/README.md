@@ -1,6 +1,6 @@
 <!-- panvimdoc-ignore-start -->
 
-<img src="https://github.com/formadi/dotfiles/raw/main/.config/nvim/doc/screenshot.jpg"/>
+<img src="https://github.com/formadi/dotfiles/raw/main/.config/nvim/doc/screenshot2.jpg"/>
 
 
 nvim 0.9.4 이상에서 확인
