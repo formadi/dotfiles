@@ -5,12 +5,7 @@ _G.zen_toggle        = false
 _G.working_directory = vim.fn.getcwd()
 _G.neotree_open      = false
 
-
-
-print("현재의 디렉코리는 : " .. _G.working_directory)
-
 require("core")
-
 
 -- for image.nvim
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
