@@ -144,3 +144,20 @@ vim.cmd [[
   :autocmd WinEnter    * set cursorline
   :autocmd WinLeave    * set nocursorline
 ]]
+
+
+
+-- -- call function when change to command mode
+-- vim.cmd[[
+--   autocmd CmdlineEnter * lua changeInputSource()
+-- ]]
+--
+-- -- call function when change to visual mode
+-- vim.cmd[[
+--   autocmd VisualEnter * lua changeInputSource()
+-- ]]
+--
+-- function YourFunction()
+--   -- 여기에 실행할 함수 내용을 적습니다.
+--   print("모드가 변경되었습니다.")
+-- end
