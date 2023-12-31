@@ -25,7 +25,7 @@ return {
         d = {
           name = "DAP",
           x = { "<cmd>:DapTerminate<CR>"                        , "exit"              },
-          -- c = { "<cmd>lua require'dap'.continue()<CR>"          , "continue"          },
+          c = { "<cmd>lua require'dap'.continue()<CR>"          , "continue"          },
           -- o = { "<cmd>lua require'dap'.step_over()<CR>"         , "step over"         },
           -- i = { "<cmd>lua require'dap'.step_into()<CR>"         , "step into"         },
           -- t = { "<cmd>lua require'dap'.step_out()<CR>"          , "step out"          },

@@ -8,6 +8,8 @@ return {
     "nvim-telescope/telescope.nvim",
     "MunifTanjim/nui.nvim",
   },
+
+
   config = function()
     local xb             = require("xcodebuild")
     local mason_registry = require("mason-registry")
@@ -43,6 +45,7 @@ return {
         runinTerminal = false,
       }
     }
+
 
     dap.adapters.codelldb = {
       type       = "server",
