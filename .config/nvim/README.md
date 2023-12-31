@@ -3,7 +3,7 @@
 <img src="https://github.com/formadi/dotfiles/raw/main/.config/nvim/doc/screenshot2.png"/>
 
 
-nvim 0.9.4 이상에서 확인
+nvim 0.10.0 이상에서 확인
 - 심플한 구조,
 - plugin 관리를 용이하게 하기 위해 개별 파일로 구성 (Install, config, keymap).
 - [cappuccin(Mocha)](https://github.com/catppuccin/nvim) 외 다수의 colors scheme 적용.
