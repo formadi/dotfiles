@@ -81,6 +81,8 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 | Prefix  z              | pane zoom toggle                                            |
 | Prefix  a              | pane zoom 상태에서 이전 pane으로 변경 (a 연타 가능)         |
 | Prefix  s              | pane zoom 상태에서 다음 pane으로 변경 (s 연타 가능)         |
+| Prefix  ctrl-s         | 현재 세션 저장                                              |
+| Prefix  ctrl-r         | 저장된 세션 불러오기                                        |
 
 
 
