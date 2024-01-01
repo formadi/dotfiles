@@ -150,12 +150,16 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 </details>
 <details>
 <summary>yabai & skhd</summary>
-<p>
+
 기본키는 alt(option)키와 방향키
+
 alt        : 윈도우 포커스 이동
+
 ctrl + alt : 윈도우 이동
+
 cmd + alt  : 윈도우 바꾸기
-</p>
+
+
 ```
 # change focus within space
 alt - left  : focus west
