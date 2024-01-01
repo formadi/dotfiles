@@ -147,9 +147,7 @@ Prefix + I
 ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면서  plugin을 설치하게 된다.
 
 ![tpm](doc/tmux_plugin_install.png)
-</detail>
-
-
+</details>
 <details>
  <summary>yabai & skhd</summary>
     ```shell
