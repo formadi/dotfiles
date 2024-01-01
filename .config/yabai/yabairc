@@ -14,6 +14,7 @@
 # yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 yabai -m config mouse_modifier                alt
+
 set modifier + left-click drag to move        window
 set modifier + right-click drag to resize     window
 
@@ -44,8 +45,8 @@ yabai -m config mouse_drop_action             swap
 yabai -m config layout                        bsp
 yabai -m config top_padding                   60
 yabai -m config bottom_padding                60
-yabai -m config left_padding                  30
-yabai -m config right_padding                 30
+yabai -m config left_padding                  50
+yabai -m config right_padding                 50
 yabai -m config window_gap                    20
 echo "yabai configuration loaded.."
 
@@ -81,3 +82,11 @@ yabai -m rule --add app="^Leaf$" manage=off
 yabai -m rule --add app="^Xcode$" manage=off
 yabai -m rule --add app="^Magnetola$" manage=off
 yabai -m rule --add app="^Git Credential Manager$" manage=off
+
+# restore position of floating windows when they are manually unfloated
+# ~/.config/yabai/yabai_float_restore.sh
+# tempDir=/tmp/yabai-tiling-floating-toggle
+# [ -d $tempDir ] && rm -rf $tempDir
+# mkdir $tempDir
+#
+# yakite-daemon 2>/dev/null 1>&2 &
