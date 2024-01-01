@@ -71,12 +71,22 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 | ------------------- | ----------------------------------------------------------- |
 | Prefix  %           | pane를 세로로 추가                                          |
 | Prefix  "           | pane을 가로로 추가                                          |
-| Prefix  {           | 현재 pane의 위치를 시계 방향으로 변경(swap)                 |
-| Prefix  }           | 현재 pane의 위치를 반 시계 방향으로 변경(swap)              |
-| Prefix  [space key] | 가로로 분할돤 pane을 세로로 변경 혹은 그 반대 경우로 toggle |
 | Prefix  x           | 사용 중인 pane을 종료                                       |
+| ------------------- | ----------------------------------------------------------- |
+| Prefix  {           | 현재 pane의 위치를 반 시계 방향으로 변경(swap)              |
+| Prefix  }           | 현재 pane의 위치를 시계 방향으로 변경(swap)                 |
+| ------------------- | ----------------------------------------------------------- |
+| Prefix  [space key] | 가로로 분할돤 pane을 세로로 변경 혹은 그 반대 경우로 toggle |
+| ------------------- | ----------------------------------------------------------- |
 | Prefix ?            | tmux의 단축키 help, 종료는 q                                |
+| ------------------- | ----------------------------------------------------------- |
 | Prefix  방향키      | 커서를 해당 방향의 panel로 이동 (change focus)              |
+| ------------------- | ----------------------------------------------------------- |
+| Prefix  cmd key     | pane의 크기를 해당 방향으로 늘리거나 줄임 (resize pane)     |
+| ------------------- | ----------------------------------------------------------- |
+| Prefix  z           | pane zoom toggle                                            |
+| Prefix  a           | pane zoom 상태에서 이전 pane으로 변경 (a 연타 가능)         |
+| Prefix  s           | pane zoom 상태에서 다음 pane으로 변경 (s 연타 가능)         |
 
 
 
@@ -149,16 +159,7 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 ![tpm](doc/tmux_plugin_install.png)
 </details>
 <details>
-<summary>yabai & skhd</summary>
-
-기본키는 alt(option)키와 방향키
-
-alt        : 윈도우 포커스 이동
-
-ctrl + alt : 윈도우 이동
-
-cmd + alt  : 윈도우 바꾸기
-
+<summary>yabai & skhd - shortcuts</summary>
 
 ```
 # change focus within space
@@ -167,14 +168,37 @@ alt - right : focus east
 alt - down  : focus south
 alt - up    : focus north
 
-# move window (warp)
-ctrl + alt - <arrow key>
-
-# swap windows
-cmd + alt - <arrow key>
-
 # resize window
 shift + alt - <arrow key>
+
+# warp window (move)
+cmd + alt - <arrow key>
+
+# swap windows
+ctrl + alt - <arrow key>
 ```
 
+</details>
+<details>
+<summary>tmux - shortcuts</summary>
+
+```
+- prefix를 먼저 누른 다는 것 빼고는 기본 규칙은 yabai와 동일
+
+# prefix : ctrl-b
+
+# change pane focus within window
+prefix , <arrow key>   : comma의 의미는 prifix를 일단 누른 후 때고, 방향키를 누르라는 의미
+
+# resize pane
+prefix , cmd-<arrow key>
+
+# swap pane
+prefix , ctrl-<arrow key>
+
+
+
+
+
+```
 </details>
