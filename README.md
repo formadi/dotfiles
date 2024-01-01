@@ -161,13 +161,13 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 | alt + shift + [방향키]         | 현재 window의 크기를 해당 방향으로 변경 (resize)  |
 | alt + ctrl  + [방향키]         | 해당 방향의 window와 자리를 서로 바꿈 (swap)      |
 | alt + cmd   + [방향키]         | 해당 방향으로 현재의 윈도우를 이동 시킴 (warp)    |
-| alt + f                        | 현재 window를 *f*loating 모드로 toggle            |
-| alt + z                        | 현재 window을 *z*oom-full 모드로 toggle           |
-| alt + b                        | 전체 window들의 크기를  re*b*alancing             |
+| alt + f                        | 현재 window를 **f**loating 모드로 toggle            |
+| alt + z                        | 현재 window을 **z**oom-full 모드로 toggle           |
+| alt + b                        | 전체 window들의 크기를  re**b**alancing             |
 | alt + y                        | y축을 기준으로 180도 회전  (y-axis flip)          |
 | alt + x                        | x축을 기준으로 180도 회전 (x-axis flip)           |
-| alt + r                        | 시계방향으로 90도 회전(*r*ote)                    |
-| alt + p                        | 이전(*p*revious) space로 window를 보냄            |
-| alt + n                        | 다음(*n*ext)     space로 window를 보냄            |
+| alt + r                        | 시계방향으로 90도 회전(**r**ote)                    |
+| alt + p                        | 이전(**p**revious) space로 window를 보냄            |
+| alt + n                        | 다음(**n**ext)     space로 window를 보냄            |
 
 </details>
