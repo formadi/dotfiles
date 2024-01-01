@@ -149,7 +149,9 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 ![tpm](doc/tmux_plugin_install.png)
 </details>
 <details>
- <summary>yabai & skhd</summary>
+
+    <summary>yabai & skhd</summary>
+
     ```shell
     # change focus within space
     alt - left  : focus west
@@ -166,4 +168,5 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
     # resize window
     shift + alt - <arrow key>
     ```
+
  </details>
