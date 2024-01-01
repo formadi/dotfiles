@@ -11,7 +11,6 @@ export LANG=ko_KR.UTF-8
 
 export PAGER="most"
 export EDITOR='nvim'
-export EXA_COLORS='xa=38;5;135:lc=38;5;124:lm=38;5;196:uu=38;5;178:gu=38;5;178:un=38;5;141:gn=38;5;141:bO=38;5;009'
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -31,7 +30,7 @@ alias cdxp="cd /Volumes/Kali/_xcode_projects"   # change directory xcode project
 alias ls="exa"
 alias ll="exa -lah"
 alias la="exa -a"
-alias lt="exa -aT -L1 --color=always --group-directories-first --icons"
+alias lt="exa -aT -L1  --color=always --group-directories-first --icons"
 alias lt2="exa -aT -L2 --color=always --group-directories-first --icons"
 alias lt3="exa -aT -L3 --color=always --group-directories-first --icons"
 alias cat="bat"
@@ -50,7 +49,5 @@ eval "$(zoxide init zsh)"
 tmux source ~/.tmux.conf
 [ -z "$TMUX" ] && command -v tmux &> /dev/null && tmux
 
-# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-
-
+# default directiory
 cd ~/.config/nvim
