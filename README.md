@@ -90,7 +90,7 @@ Tmux  Plugin Manager (TPM) 설치
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-git lone이 완료되면, ~/.tmux.conf를 열고, 파일 제일 하단에 아래의 내용을 추가한다.
+git clone이 완료되면, ~/.tmux.conf를 열고, 파일 제일 하단에 아래의 내용을 추가한다.
 
 ```shell
 # List of plugins
@@ -150,8 +150,12 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 </details>
 <details>
 <summary>yabai & skhd</summary>
-
-
+<p>
+기본키는 alt(option)키와 방향키
+alt        : 윈도우 포커스 이동
+ctrl + alt : 윈도우 이동
+cmd + alt  : 윈도우 바꾸기
+</p>
 ```
 # change focus within space
 alt - left  : focus west
