@@ -75,10 +75,9 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 | Prefix  {           | 현재 pane의 위치를 반 시계 방향으로 변경(swap)              |
 | Prefix  }           | 현재 pane의 위치를 시계 방향으로 변경(swap)                 |
 | Prefix  [space key] | 가로로 분할돤 pane을 세로로 변경 혹은 그 반대 경우로 toggle |
-| Prefix ?            | tmux의 단축키 help, 종료는 q                                |
-| Prefix  방향키      | 커서를 해당 방향의 panel로 이동 (change focus)              |
-| Prefix  cmd key     | pane의 크기를 해당 방향으로 늘리거나 줄임 (resize pane)     |
-| ---                 | ---                                                         |
+| Prefix  ?           | tmux의 단축키 help, 종료는 q                                |
+| Prefix  [방향키]    | 커서를 해당 방향의 panel로 이동 (change focus)              |
+| Prefix  [cmd key]   | pane의 크기를 해당 방향으로 늘리거나 줄임 (resize pane)     |
 | Prefix  z           | pane zoom toggle                                            |
 | Prefix  a           | pane zoom 상태에서 이전 pane으로 변경 (a 연타 가능)         |
 | Prefix  s           | pane zoom 상태에서 다음 pane으로 변경 (s 연타 가능)         |
@@ -156,44 +155,19 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 <details>
 <summary>yabai & skhd - shortcuts</summary>
 
-```
-# change focus within space
-alt - left  : focus west
-alt - right : focus east
-alt - down  : focus south
-alt - up    : focus north
+| 단축키                         | 설명                                              |
+| ------------------------------ | --------------------------------------------------|
+| alt         + [방향키]         | 해당 방향의 window로 포커스 이동 (change focus)   |
+| alt + shift + [방향키]         | 현재 window의 크기를 해당 방향으로 변경 (resize)  |
+| alt + ctrl  + [방향키]         | 해당 방향의 window와 자리를 서로 바꿈 (swap)      |
+| alt + cmd   + [방향키]         | 해당 방향으로 현재의 윈도우를 이동 시킴 (warp)    |
+| alt + f                        | 현재 window를 *f*loating 모드로 toggle            |
+| alt + z                        | 현재 window을 *z*oom-full 모드로 toggle           |
+| alt + b                        | 전체 window들의 크기를  re*b*alancing             |
+| alt + y                        | y축을 기준으로 180도 회전  (y-axis flip)          |
+| alt + x                        | x축을 기준으로 180도 회전 (x-axis flip)           |
+| alt + r                        | 시계방향으로 90도 회전(*r*ote)                    |
+| alt + p                        | 이전(*p*revious) space로 window를 보냄            |
+| alt + n                        | 다음(*n*ext)     space로 window를 보냄            |
 
-# resize window
-shift + alt - <arrow key>
-
-# warp window (move)
-cmd + alt - <arrow key>
-
-# swap windows
-ctrl + alt - <arrow key>
-```
-
-</details>
-<details>
-<summary>tmux - shortcuts</summary>
-
-```
-- prefix를 먼저 누른 다는 것 빼고는 기본 규칙은 yabai와 동일
-
-# prefix : ctrl-b
-
-# change pane focus within window
-prefix , <arrow key>   : comma의 의미는 prifix를 일단 누른 후 때고, 방향키를 누르라는 의미
-
-# resize pane
-prefix , cmd-<arrow key>
-
-# swap pane
-prefix , ctrl-<arrow key>
-
-
-
-
-
-```
 </details>
