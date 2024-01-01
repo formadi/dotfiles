@@ -6,7 +6,7 @@ macOS에 적용 중인 dotfile 저장소
 ------
 
 <details>
-  <summary>tmux 설치/설정</summary>
+<summary>tmux 설치/설정</summary>
 
 ### 설치
 ```shell
@@ -149,24 +149,24 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 ![tpm](doc/tmux_plugin_install.png)
 </details>
 <details>
+<summary>yabai & skhd</summary>
 
-    <summary>yabai & skhd</summary>
 
-    ```shell
-    # change focus within space
-    alt - left  : focus west
-    alt - right : focus east
-    alt - down  : focus south
-    alt - up    : focus north
+```shell
+# change focus within space
+alt - left  : focus west
+alt - right : focus east
+alt - down  : focus south
+alt - up    : focus north
 
-    # move window (warp)
-    ctrl + alt - <arrow key>
+# move window (warp)
+ctrl + alt - <arrow key>
 
-    # swap windows
-    cmd + alt - <arrow key>
+# swap windows
+cmd + alt - <arrow key>
 
-    # resize window
-    shift + alt - <arrow key>
-    ```
+# resize window
+shift + alt - <arrow key>
+```
 
- </details>
+</details>
