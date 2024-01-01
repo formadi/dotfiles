@@ -152,7 +152,7 @@ ctrl-b + I (대문자 i)를 눌러주면, 아래와 같은 화면이 나오면�
 <summary>yabai & skhd</summary>
 
 
-```shell
+```
 # change focus within space
 alt - left  : focus west
 alt - right : focus east
