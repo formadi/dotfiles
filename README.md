@@ -67,20 +67,20 @@ tmux shell에서 tmux kill-server를 실행 한 후, 다시 tmux를 실행하면
 - 아래의 테이블에서 ctrl-b(command prefix)는 그냥 Prefix로 표현함
 - pane은 tmux window의 분활된 화면(panel)을 의미
 
-| 단축키              | 설명                                                        |
-| ------------------- | ----------------------------------------------------------- |
-| Prefix  %           | pane를 세로로 추가                                          |
-| Prefix  "           | pane을 가로로 추가                                          |
-| Prefix  x           | 사용 중인 pane을 종료                                       |
-| Prefix  {           | 현재 pane의 위치를 반 시계 방향으로 변경(swap)              |
-| Prefix  }           | 현재 pane의 위치를 시계 방향으로 변경(swap)                 |
-| Prefix  [space key] | 가로로 분할돤 pane을 세로로 변경 혹은 그 반대 경우로 toggle |
-| Prefix  ?           | tmux의 단축키 help, 종료는 q                                |
-| Prefix  [방향키]    | 커서를 해당 방향의 panel로 이동 (change focus)              |
-| Prefix  [cmd key]   | pane의 크기를 해당 방향으로 늘리거나 줄임 (resize pane)     |
-| Prefix  z           | pane zoom toggle                                            |
-| Prefix  a           | pane zoom 상태에서 이전 pane으로 변경 (a 연타 가능)         |
-| Prefix  s           | pane zoom 상태에서 다음 pane으로 변경 (s 연타 가능)         |
+| 단축키                 | 설명                                                        |
+| -----------------------| ----------------------------------------------------------- |
+| Prefix  %              | pane를 세로로 추가                                          |
+| Prefix  "              | pane을 가로로 추가                                          |
+| Prefix  x              | 사용 중인 pane을 종료                                       |
+| Prefix  {              | 현재 pane의 위치를 반 시계 방향으로 변경(swap)              |
+| Prefix  }              | 현재 pane의 위치를 시계 방향으로 변경(swap)                 |
+| Prefix  [space key]    | 가로로 분할돤 pane을 세로로 변경 혹은 그 반대 경우로 toggle |
+| Prefix  ?              | tmux의 단축키 help, 종료는 q                                |
+| Prefix  [방향키]       | 커서를 해당 방향의 panel로 이동 (change focus)              |
+| Prefix  [cmd+방향키]   | pane의 크기를 해당 방향으로 늘리거나 줄임 (resize pane)     |
+| Prefix  z              | pane zoom toggle                                            |
+| Prefix  a              | pane zoom 상태에서 이전 pane으로 변경 (a 연타 가능)         |
+| Prefix  s              | pane zoom 상태에서 다음 pane으로 변경 (s 연타 가능)         |
 
 
 
