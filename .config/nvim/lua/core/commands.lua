@@ -33,7 +33,7 @@ if     _G.color_scheme.name == "catppuccin" then
   vim.cmd([[ hi LineNr                   guifg=#676a88                           ]])
   vim.cmd([[ hi CursorLineNr             guifg=#cee6fe                           ]])
   vim.cmd([[ hi Comment                  guifg=#8187a5  cterm=italic  gui=italic ]])
-  vim.cmd([[ hi Visual                   guibg=#45475b                           ]])
+  vim.cmd([[ hi Visual                   guibg=#606380                           ]])
   vim.cmd([[ hi NonText                  guifg=#828990  cterm=italic  gui=italic ]])      -- virtual text
   vim.cmd([[ hi @ibl.indent.char.1       guifg=#415162                           ]])      -- default indent line color
   vim.cmd([[ hi GitSignsCurrentLineBlame guifg=#7aa1a6  cterm=italic  gui=italic ]])      -- default indent line color
