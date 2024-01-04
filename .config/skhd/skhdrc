@@ -7,20 +7,20 @@ cmd - up            : yabai -m window --focus north
 # cmd - e           : yabai -m window --focus next
 
 # move window and split
-cmd + ctrl - left   : yabai -m window --warp west
-cmd + ctrl - right  : yabai -m window --warp east
-cmd + ctrl - down   : yabai -m window --warp south
-cmd + ctrl - up     : yabai -m window --warp north
+cmd + alt - left   : yabai -m window --warp west
+cmd + alt - right  : yabai -m window --warp east
+cmd + alt - down   : yabai -m window --warp south
+cmd + alt - up     : yabai -m window --warp north
 
 #move window to prev and next space
 # alt - p             : yabai -m window --space prev
 # alt - n             : yabai -m window --space next
 
 # swap windows
-cmd + alt - left    : yabai -m window --swap west
-cmd + alt - right   : yabai -m window --swap east
-cmd + alt - down    : yabai -m window --swap south
-cmd + alt - up      : yabai -m window --swap north
+cmd + ctrl - left    : yabai -m window --swap west
+cmd + ctrl - right   : yabai -m window --swap east
+cmd + ctrl - down    : yabai -m window --swap south
+cmd + ctrl - up      : yabai -m window --swap north
 
 # resize window
 cmd + shift - left  : yabai -m window --resize right:-20:0 2> /dev/null || yabai -m window --resize left:-20:0 2> /dev/null
