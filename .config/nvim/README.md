@@ -148,5 +148,4 @@ Xcodebuild 키맵
 <leader>xl : select project
 <leader>xr : run
 <leader>xs : setup
-
 ```

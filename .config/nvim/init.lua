@@ -1,3 +1,8 @@
+
+-- for image.nvim
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+-- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
+
 -- catppuccin ,  everforest  , nord , iceberg , vscode , poimandres , monochrome
 _G.color_scheme_name = "catppuccin"
 _G.color_scheme      = nil
@@ -7,30 +12,10 @@ _G.neotree_open      = false
 
 require("core")
 
--- for image.nvim
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
-vim.g.python3_host_prog    = "/Users/elsa/.config/venv/bin/python3"
+vim.g.python3_host_prog    = "~/.config/venv/bin/python3"
 vim.g.loaded_perl_provider = 0
 
--- ### when using neovide.app
--- ------------------------------------------------------------
--- if vim.g.neovide then
---   vim.o.guifont = "Sarasa Term K Nerd Font ExtraLight:h12"
---   vim.g.neovide_padding_top   = 10
---   vim.g.neovide_padding_down  = 10
---   vim.g.neovide_padding_left  = 10
---   vim.g.neovide_padding_right = 10
---
---   local alpha = function ()
---     return string.format("%x", math.floor(0.8))
---   end
---
---   vim.g.neovide_transparency = 0.0
---   vim.g.tranparency = 1.0
---   vim.g.neovide_background_color = "#242e41" .. alpha()
--- end
 
 
 -- If you need to verify whether image.nvim is functioning correctly
@@ -55,4 +40,4 @@ vim.g.loaded_perl_provider = 0
 
 
 -- auto execute Neotree at nvim start
-vim.cmd('autocmd VimEnter * Neotree')
+-- vim.cmd('autocmd VimEnter * Neotree')
