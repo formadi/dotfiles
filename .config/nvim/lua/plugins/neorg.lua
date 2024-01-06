@@ -2,14 +2,16 @@ return {
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
   run = ":Neorg sync-parsers",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = { { "nvim-lua/plenary.nvim" }, { "nvim-neorg/neorg-telescope" } },
   config = function()
     require("neorg").setup ({
       load = {
         ["core.defaults"]    = {}, -- Loads default behaviour
+        ["core.integrations.telescope"] = {},
         ["core.ui"]          = {},
         ["core.syntax"]      = {},
-				["core.ui.calendar"] = {},
+				-- ["core.ui.calendar"] = {},
+        ["core.keybinds"]    = {},
         ["core.concealer"]   = { -- Adds pretty icons to your documents
           config = {
             icons = {
@@ -70,6 +72,13 @@ return {
           n = { "<cmd>Neorg keybind all core.dirman.new.note<CR>",                   "create new note"     },
           d = { "<cmd>Neorg keybind all core.tempus.insert-date-insert-mode<CR>",    "insert date"         },
           t = { "<cmd>Neorg toc<CR>",                                                "show toc"            },
+          s = {
+            name = "Search",
+            l = { "<cmd>Neorg keybind all core.integrations.telescope.find_linkable<CR>",   "linkable"  },
+            f = { "<cmd>Neorg keybind all core.integrations.telescope.find_norg_files<CR>", "files"     },
+            h = { "<cmd>Neorg keybind all core.integrations.telescope.find_headings<CR>",   "headings"  },
+            -- f = { "<cmd>Neorg keybind all core.integrations.telescope.find_headings<CR>",   "headings"  },
+          },
           k = {
             name = "Keybind",
             t = { "<cmd>Neorg keybind all core.pivot.toggle-list-type<CR>",          "list type toggle"    },
@@ -94,22 +103,6 @@ return {
     vim.wo.concealcursor = "n"
     vim.wo.conceallevel  = 2
 
-
-    -- vim.keymap.set("n", "<Leader>njt", function()
-    --   local neorg_module_dirman = require("neorg").modules.get_module("core.dirman")
-    --   local ws                  = neorg_module_dirman.get_current_workspace()
-    --
-    --   -- 결과를 출력하거나 변수에 저장
-    --   print("현재의 디렉토리 1 = " .. vim.inspect(ws))
-    --   print("현재의 디렉토리 2 = " .. vim.inspect(ws[1]))
-    --
-    --   if ws[1] ~= "main" then
-    --       vim.com([[:Neorg journal today]])
-    --   else
-    --     vim.api.nvim_command("Neorg journal today")
-    --   end
-    --
-    -- end, { desc = "journal today", noremap = true, silent = true })
 
   end,
 }
