@@ -15,10 +15,17 @@ keymap.set("n", "<leader>c",       ":nohl<CR>",       { desc = "clear search hig
 
 -- windows & tabs
 -- Refer to nvim/lua/lougins/which-key.nim
-keymap.set("n", "<leader>w<Up>",    "<C-w>k",         { desc = "move to upper window"     })
-keymap.set("n", "<leader>w<Down>",  "<C-w>j",         { desc = "move to lower window"     })
-keymap.set("n", "<leader>w<Left>",  "<C-w>h",         { desc = "move to left window"      })
-keymap.set("n", "<leader>w<Right>", "<C-w>l",         { desc = "move to right window"     })
+-- focus move to
+keymap.set("n", "<leader><Up>",    "<C-w>k",         { desc = "focus move to upper window"     })
+keymap.set("n", "<leader><Down>",  "<C-w>j",         { desc = "focus move to lower window"     })
+keymap.set("n", "<leader><Left>",  "<C-w>h",         { desc = "focus move to left window"      })
+keymap.set("n", "<leader><Right>", "<C-w>l",         { desc = "focus move to right window"     })
+
+-- window move to
+keymap.set("n", "<leader>w<Up>",    "<C-w>K",         { desc = "window move to up"        })
+keymap.set("n", "<leader>w<Down>",  "<C-w>J",         { desc = "window move to down"      })
+keymap.set("n", "<leader>w<Left>",  "<C-w>H",         { desc = "window move to left"      })
+keymap.set("n", "<leader>w<Right>", "<C-w>L",         { desc = "window move to right"     })
 
 -- save & quit
 keymap.set("n", "<leader>q",       ":q<CR>",          { desc = "quit"                     })
