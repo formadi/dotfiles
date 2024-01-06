@@ -34,6 +34,6 @@ return {
 
     -- set keymaps
     local search = require("search")
-    vim.keymap.set("n", "<leader>s", function() search.open() end, {desc = "search"})
+    vim.keymap.set("n", "<leader>se", function() search.open() end, {desc = "etc search"})
   end,
 }
