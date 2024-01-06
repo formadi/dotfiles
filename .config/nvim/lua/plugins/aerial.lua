@@ -17,6 +17,9 @@ return {
         nested_top = "│ ",
         whitespace = "  ",
       },
+      layout = {
+        min_width = 40,
+      },
       -- nerd_font = "Hack Nerd Font",
       -- optionally use on_attach to set keymaps when aerial has attached to a buffer
       on_attach = function(bufnr)
@@ -40,5 +43,7 @@ return {
         },
       },
     })
+
+
   end,
 }
