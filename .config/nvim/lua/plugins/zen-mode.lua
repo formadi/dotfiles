@@ -44,6 +44,11 @@ return {
         },
       })
 
+
+
+
+      local center_buffer_width_ratio = 0.55
+
       -- Zen Mode Toggle = Neotree Toggle
       vim.keymap.set("n", "<Leader>zz", function()
         if _G.zen_toggle == false then
@@ -51,7 +56,9 @@ return {
             vim.api.nvim_command("Neotree toggle")
           end
           vim.api.nvim_command("NoNeckPain")
-          vim.api.nvim_command("NoNeckPainResize 120")  -- customiz size...
+
+          local nvim_width = vim.o.columns
+          vim.api.nvim_command("NoNeckPainResize " .. math.floor(nvim_width * center_buffer_width_ratio))  -- customiz size...
           _G.zen_toggle = true
         else
           if _G.neotree_open == false then
@@ -61,6 +68,19 @@ return {
           _G.zen_toggle = false
         end
       end, { desc = "toggle", noremap = true, silent = true })
+
+
+      -- in zenmode, auto resize center buffer's width : 60%
+      function MyResizeFunction()
+        if _G.zen_toggle == true then
+          local nvim_width = vim.o.columns
+          vim.api.nvim_command("NoNeckPainResize " .. math.floor(nvim_width * center_buffer_width_ratio))  -- customiz size...
+        end
+      end
+
+      vim.api.nvim_exec([[
+        autocmd VimResized * lua MyResizeFunction()
+      ]], false)
     end,
   },
 
