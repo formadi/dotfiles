@@ -1,42 +1,42 @@
 # change focus within space
-cmd - left          : yabai -m window --focus west
-cmd - right         : yabai -m window --focus east
-cmd - down          : yabai -m window --focus south
-cmd - up            : yabai -m window --focus north
+alt - left          : yabai -m window --focus west
+alt - right         : yabai -m window --focus east
+alt - down          : yabai -m window --focus south
+alt - up            : yabai -m window --focus north
 # cmd - q           : yabai -m window --focus prev
 # cmd - e           : yabai -m window --focus next
 
 # move window and split
-cmd + alt - left   : yabai -m window --warp west
-cmd + alt - right  : yabai -m window --warp east
-cmd + alt - down   : yabai -m window --warp south
-cmd + alt - up     : yabai -m window --warp north
+alt + ctrl - left   : yabai -m window --warp west
+alt + ctrl - right  : yabai -m window --warp east
+alt + ctrl - down   : yabai -m window --warp south
+alt + ctrl - up     : yabai -m window --warp north
 
 #move window to prev and next space
 # alt - p             : yabai -m window --space prev
 # alt - n             : yabai -m window --space next
 
 # swap windows
-cmd + ctrl - left    : yabai -m window --swap west
-cmd + ctrl - right   : yabai -m window --swap east
-cmd + ctrl - down    : yabai -m window --swap south
-cmd + ctrl - up      : yabai -m window --swap north
+alt + cmd - left    : yabai -m window --swap west
+alt + cmd - right   : yabai -m window --swap east
+alt + cmd - down    : yabai -m window --swap south
+alt + cmd - up      : yabai -m window --swap north
 
 # resize window
-cmd + shift - left  : yabai -m window --resize right:-20:0 2> /dev/null || yabai -m window --resize left:-20:0 2> /dev/null
-cmd + shift - down  : yabai -m window --resize bottom:0:20 2> /dev/null || yabai -m window --resize top:0:20 2> /dev/null
-cmd + shift - up    : yabai -m window --resize bottom:0:-20 2> /dev/null || yabai -m window --resize top:0:-20 2> /dev/null
-cmd + shift - right : yabai -m window --resize right:20:0 2> /dev/null || yabai -m window --resize left:20:0 2> /dev/null
+alt + shift - left  : yabai -m window --resize right:-20:0 2> /dev/null || yabai -m window --resize left:-20:0 2> /dev/null
+alt + shift - down  : yabai -m window --resize bottom:0:20 2> /dev/null || yabai -m window --resize top:0:20 2> /dev/null
+alt + shift - up    : yabai -m window --resize bottom:0:-20 2> /dev/null || yabai -m window --resize top:0:-20 2> /dev/null
+alt + shift - right : yabai -m window --resize right:20:0 2> /dev/null || yabai -m window --resize left:20:0 2> /dev/null
 
 # toggle window "f"loat
-cmd - a             : yabai -m window --toggle float --grid 10:10:2:1:6:8
+alt - f             : yabai -m window --toggle float --grid 10:10:2:1:6:8
 # "z"oom-full(maximize) a window
-cmd - z             : yabai -m window --toggle zoom-fullscreen
+alt - z             : yabai -m window --toggle zoom-fullscreen
 # "b"alance out tree of windows (resize to occupy same area)
-cmd - b             : yabai -m space --balance
+alt - b             : yabai -m space --balance
 # flip along "y"-axis
-cmd - y             : yabai -m space --mirror y-axis
+alt - y             : yabai -m space --mirror y-axis
 # flip along "x"-axis
-cmd - x             : yabai -m space --mirror x-axis
+alt - x             : yabai -m space --mirror x-axis
 # "r"otate layout clockwise
-cmd - r             : yabai -m space --rotate 90
+alt - r             : yabai -m space --rotate 90
